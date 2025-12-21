@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>马来西亚注册导游｜线上旅行咨询支持 – S9Trip</title>
+<title>马来西亚注册导游｜线上旅行支持 – S9Trip</title>
 
-<meta name="description" content="Terence，拥有21年经验的马来西亚注册导游，提供专业线上旅行咨询与支持，让您的马来西亚自由行安心无忧。" />
+<meta name="description" content="Terence，拥有21年经验的马来西亚注册导游，提供专业线上旅行支持，让您的马来西亚行程安心、顺畅、无忧。" />
 <meta name="robots" content="index, follow">
 
 <!-- Google Fonts -->
@@ -14,6 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
+<!-- Icons -->
 <link rel="stylesheet" href="assets/icons.css">
 
 <style>
@@ -34,7 +35,7 @@ body {
   line-height:1.7;
 }
 
-/* ===== Header（与英文页完全一致） ===== */
+/* ===== Header ===== */
 header {
   background:linear-gradient(135deg,#0b1f3a,#102a4c);
   color:#fff;
@@ -52,30 +53,6 @@ header::after {
   color:rgba(255,255,255,.35);
 }
 
-/* ===== Language Switch ===== */
-.lang-switch {
-  position:absolute;
-  top:18px;
-  right:20px;
-  font-size:0.85rem;
-}
-
-.lang-switch a,
-.lang-switch span {
-  color:rgba(255,255,255,.85);
-  text-decoration:none;
-}
-
-.lang-switch .active {
-  color:var(--gold);
-  font-weight:500;
-}
-
-.lang-switch a:hover {
-  text-decoration:underline;
-}
-
-/* ===== Logo（关键修正点） ===== */
 .site-logo {
   display:block;
   margin:0 auto 1.2rem;
@@ -131,6 +108,7 @@ h2 {
   border-radius:50%;
   border:2px solid var(--gold);
   box-shadow:0 14px 30px rgba(11,31,58,.25);
+  flex-shrink:0;
 }
 
 .profile-text h2 { margin:0 0 .6rem; }
@@ -147,7 +125,7 @@ h2 {
   color:#374151;
 }
 
-/* ===== WhatsApp ===== */
+/* ===== WhatsApp CTA ===== */
 .whatsapp {
   position:fixed;
   right:18px;
@@ -177,29 +155,23 @@ h2 {
 }
 </style>
 
+<!-- Stripe Buy Button Script (LOAD ONCE ONLY) -->
 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
 </head>
 
 <body>
 
 <header>
-  <!-- Language Switch（中文页反向） -->
-  <div class="lang-switch">
-    <a href="index.html">EN</a> |
-    <span class="active">中文</span>
-  </div>
-
-  <!-- Logo（与英文页完全一致） -->
-  <a href="index.html" aria-label="S9Trip 首页">
+  <a href="/" aria-label="S9Trip 首页">
     <img
       src="assets/images/s9trip-malaysia-travel-support-logo.png"
-      alt="S9Trip 马来西亚旅行咨询服务"
+      alt="S9Trip 马来西亚旅行支持与线上咨询服务标志"
       class="site-logo"
       width="140"
       height="40"
     />
   </a>
-
   <h1>您好，我是 Terence</h1>
   <p>马来西亚注册导游 · 21 年经验</p>
 </header>
@@ -209,22 +181,49 @@ h2 {
 <section class="profile">
   <img
     src="assets/images/terence-malaysia-registered-tourist-guide.jpg"
-    alt="Terence｜马来西亚注册导游"
+    alt="Terence – 拥有21年经验的马来西亚注册导游"
     loading="lazy"
+    width="150"
+    height="150"
   />
   <div class="profile-text">
     <h2>Terence Foong</h2>
     <p>
       拥有 <strong>21 年经验</strong> 的马来西亚注册导游，
-      提供专业线上旅行咨询与陪跑式支持，
-      协助自由行旅客安心探索马来西亚。
+      提供值得信赖的本地视角与专业线上旅行支持，
+      协助旅客安心、无忧地探索马来西亚。
     </p>
   </div>
 </section>
 
+<section>
+  <h2><span class="icon"></span> 服务简介</h2>
+  <p>
+    我是一名专业且可靠的马来西亚持牌导游，
+    曾为来自世界各地的旅客提供服务。
+    现在我提供线上旅行支持，
+    从行程规划到出发前的准备，全程协助您安心出行。
+  </p>
+</section>
+
+<section>
+  <h2><span class="icon"></span> 关于我</h2>
+  <p>
+    旅行方式已经改变。
+    作为一名专业马来西亚导游，
+    我也不断进化，
+    透过线上方式为自由行旅客提供本地专业建议，
+    协助避开文化误区、旅游陷阱与潜在风险。
+  </p>
+</section>
+
+<!-- ===== Payment Option A ===== -->
 <section class="payment">
-  <h2><span class="icon"></span> 线上旅行咨询服务费</h2>
-  <p>适用于完整线上旅行咨询与行程支持服务。</p>
+  <h2><span class="icon"></span> 线上旅行支持服务付款</h2>
+  <p>
+    适用于个性化线上旅行咨询与行程建议服务。
+    所有付款均由 Stripe 加密处理，安全可靠。
+  </p>
 
   <stripe-buy-button
     buy-button-id="buy_btn_1SYHduBjPDWSit5N6XbDiGRc"
@@ -232,14 +231,37 @@ h2 {
   </stripe-buy-button>
 </section>
 
+<!-- ===== Payment Option B ===== -->
+<section class="payment">
+  <h2><span class="icon"></span> 快速 / 单次咨询付款</h2>
+  <p>
+    适用于短时间咨询、临时行程问题或一次性旅行建议。
+  </p>
+
+  <stripe-buy-button
+    buy-button-id="buy_btn_1SYHm9BjPDWSit5NiiF4tOgq"
+    publishable-key="pk_live_51SY5FmBjPDWSit5Ns8phOmoGlGm3UaFctXthIBqpQX02DOkdQglkZnomZiJkFQfSbuqctbas1ArNMzVv32072Qf000gFM7CAJN">
+  </stripe-buy-button>
+</section>
+
+<section>
+  <h2><span class="icon"></span> 合作机会</h2>
+  <p>
+    我们欢迎认同「以人为本」旅行理念的伙伴加入合作，
+    一起打造更专业、更有温度的旅行支持服务。
+  </p>
+</section>
+
 </main>
 
+<!-- WhatsApp CTA -->
 <a class="whatsapp"
-   href="https://wa.me/60123632338?text=你好%20Terence，我想咨询马来西亚旅行相关服务。">
+   href="https://wa.me/60123632338?text=你好%20Terence，我想咨询马来西亚旅行支持服务。"
+   aria-label="WhatsApp 咨询">
   WhatsApp <span>咨询</span>
 </a>
 
-<!-- Tawk.to -->
+<!-- Tawk.to Chat -->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
