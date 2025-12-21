@@ -9,12 +9,11 @@
 <meta name="description" content="Terence，拥有21年经验的马来西亚注册导游，提供专业线上旅行咨询与支持，让您的马来西亚自由行安心无忧。" />
 <meta name="robots" content="index, follow">
 
-<!-- Google 字体（马航风格） -->
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- 图标 -->
 <link rel="stylesheet" href="assets/icons.css">
 
 <style>
@@ -35,7 +34,7 @@ body {
   line-height:1.7;
 }
 
-/* ===== 头部 ===== */
+/* ===== Header（与英文页完全一致） ===== */
 header {
   background:linear-gradient(135deg,#0b1f3a,#102a4c);
   color:#fff;
@@ -53,10 +52,35 @@ header::after {
   color:rgba(255,255,255,.35);
 }
 
+/* ===== Language Switch ===== */
+.lang-switch {
+  position:absolute;
+  top:18px;
+  right:20px;
+  font-size:0.85rem;
+}
+
+.lang-switch a,
+.lang-switch span {
+  color:rgba(255,255,255,.85);
+  text-decoration:none;
+}
+
+.lang-switch .active {
+  color:var(--gold);
+  font-weight:500;
+}
+
+.lang-switch a:hover {
+  text-decoration:underline;
+}
+
+/* ===== Logo（关键修正点） ===== */
 .site-logo {
   display:block;
   margin:0 auto 1.2rem;
   max-width:160px;
+  height:auto;
 }
 
 h1 {
@@ -71,7 +95,7 @@ header p {
   margin:0;
 }
 
-/* ===== 页面布局 ===== */
+/* ===== Layout ===== */
 main {
   max-width:920px;
   margin:0 auto;
@@ -93,7 +117,7 @@ h2 {
   margin-bottom:1rem;
 }
 
-/* ===== 个人介绍 ===== */
+/* ===== Profile ===== */
 .profile {
   display:flex;
   align-items:center;
@@ -112,7 +136,7 @@ h2 {
 .profile-text h2 { margin:0 0 .6rem; }
 .profile-text p { margin:0; font-size:.96rem; }
 
-/* ===== 支付 ===== */
+/* ===== Payment ===== */
 .payment {
   text-align:center;
 }
@@ -143,7 +167,7 @@ h2 {
   font-weight:500;
 }
 
-/* ===== 手机 ===== */
+/* ===== Mobile ===== */
 @media (max-width:768px){
   h1 { font-size:2rem; }
   .profile {
@@ -153,23 +177,29 @@ h2 {
 }
 </style>
 
-<!-- Stripe Buy Button（只加载一次） -->
 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-
 </head>
 
 <body>
 
 <header>
+  <!-- Language Switch（中文页反向） -->
+  <div class="lang-switch">
+    <a href="index.html">EN</a> |
+    <span class="active">中文</span>
+  </div>
+
+  <!-- Logo（与英文页完全一致） -->
   <a href="index.html" aria-label="S9Trip 首页">
     <img
       src="assets/images/s9trip-malaysia-travel-support-logo.png"
-      alt="S9Trip 马来西亚旅行咨询服务标志"
+      alt="S9Trip 马来西亚旅行咨询服务"
       class="site-logo"
       width="140"
       height="40"
     />
   </a>
+
   <h1>您好，我是 Terence</h1>
   <p>马来西亚注册导游 · 21 年经验</p>
 </header>
@@ -186,38 +216,15 @@ h2 {
     <h2>Terence Foong</h2>
     <p>
       拥有 <strong>21 年经验</strong> 的马来西亚注册导游，
-      现提供专业线上旅行咨询与陪跑式支持，
-      协助自由行旅客更安心、更聪明地探索马来西亚。
+      提供专业线上旅行咨询与陪跑式支持，
+      协助自由行旅客安心探索马来西亚。
     </p>
   </div>
 </section>
 
-<section>
-  <h2><span class="icon"></span> 服务介绍</h2>
-  <p>
-    我曾服务来自世界各地的旅客，熟悉马来西亚的文化、交通、
-    风俗与实际旅行风险。
-    现在通过线上方式，为自由行旅客提供可靠的本地指导。
-  </p>
-</section>
-
-<section>
-  <h2><span class="icon"></span> 关于我</h2>
-  <p>
-    旅行方式已经改变。
-    作为专业导游，我也顺应时代，
-    将多年经验转化为线上支持服务，
-    帮助旅客避开文化误区、旅游陷阱与潜在风险。
-  </p>
-</section>
-
-<!-- 支付选项一（已替换的新按钮） -->
 <section class="payment">
   <h2><span class="icon"></span> 线上旅行咨询服务费</h2>
-  <p>
-    适用于完整线上旅行咨询、行程建议与实时支持服务。
-    所有付款由 Stripe 安全处理。
-  </p>
+  <p>适用于完整线上旅行咨询与行程支持服务。</p>
 
   <stripe-buy-button
     buy-button-id="buy_btn_1SYHduBjPDWSit5N6XbDiGRc"
@@ -225,37 +232,14 @@ h2 {
   </stripe-buy-button>
 </section>
 
-<!-- 支付选项二 -->
-<section class="payment">
-  <h2><span class="icon"></span> 快速 / 单次咨询付款</h2>
-  <p>
-    适用于短时间咨询、临时行程问题或快速建议。
-  </p>
-
-  <stripe-buy-button
-    buy-button-id="buy_btn_1SYHm9BjPDWSit5NiiF4tOgq"
-    publishable-key="pk_live_51SY5FmBjPDWSit5Ns8phOmoGlGm3UaFctXthIBqpQX02DOkdQglkZnomZiJkFQfSbuqctbas1ArNMzVv32072Qf000gFM7CAJN">
-  </stripe-buy-button>
-</section>
-
-<section>
-  <h2><span class="icon"></span> 合作机会</h2>
-  <p>
-    如果你认同以人为本的旅行理念，
-    欢迎与我们合作，一起打造更有温度与专业度的旅行支持服务。
-  </p>
-</section>
-
 </main>
 
-<!-- WhatsApp -->
 <a class="whatsapp"
-   href="https://wa.me/60123632338?text=你好%20Terence，我想咨询马来西亚旅行相关服务。"
-   aria-label="WhatsApp 咨询">
+   href="https://wa.me/60123632338?text=你好%20Terence，我想咨询马来西亚旅行相关服务。">
   WhatsApp <span>咨询</span>
 </a>
 
-<!-- Tawk.to 在线客服 -->
+<!-- Tawk.to -->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
