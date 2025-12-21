@@ -53,11 +53,33 @@ header::after {
   color:rgba(255,255,255,.35);
 }
 
+/* ===== Language Switch ===== */
+.lang-switch {
+  position:absolute;
+  top:18px;
+  right:20px;
+  font-size:0.85rem;
+}
+
+.lang-switch a,
+.lang-switch span {
+  color:rgba(255,255,255,.85);
+  text-decoration:none;
+}
+
+.lang-switch .active {
+  color:var(--gold);
+  font-weight:500;
+}
+
+.lang-switch a:hover {
+  text-decoration:underline;
+}
+
 .site-logo {
   display:block;
   margin:0 auto 1.2rem;
   max-width:160px;
-  height:auto;
 }
 
 h1 {
@@ -108,7 +130,6 @@ h2 {
   border-radius:50%;
   border:2px solid var(--gold);
   box-shadow:0 14px 30px rgba(11,31,58,.25);
-  flex-shrink:0;
 }
 
 .profile-text h2 { margin:0 0 .6rem; }
@@ -125,7 +146,7 @@ h2 {
   color:#374151;
 }
 
-/* ===== WhatsApp CTA ===== */
+/* ===== WhatsApp ===== */
 .whatsapp {
   position:fixed;
   right:18px;
@@ -155,7 +176,7 @@ h2 {
 }
 </style>
 
-<!-- Stripe Buy Button Script (LOAD ONCE ONLY) -->
+<!-- Stripe Buy Button (load once) -->
 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
 </head>
@@ -163,7 +184,13 @@ h2 {
 <body>
 
 <header>
-  <a href="/" aria-label="S9Trip Home">
+  <!-- Language Switch -->
+  <div class="lang-switch">
+    <span class="active">EN</span> |
+    <a href="zh.html">中文</a>
+  </div>
+
+  <a href="index.html" aria-label="S9Trip Home">
     <img
       src="assets/images/s9trip-malaysia-travel-support-logo.png"
       alt="S9Trip Malaysia travel support and online trip consultation logo"
@@ -172,6 +199,7 @@ h2 {
       height="40"
     />
   </a>
+
   <h1>Hi, I’m Terence</h1>
   <p>Malaysia Registered Tourist Guide · 21 Years Experience</p>
 </header>
@@ -181,16 +209,14 @@ h2 {
 <section class="profile">
   <img
     src="assets/images/terence-malaysia-registered-tourist-guide.jpg"
-    alt="Terence – Malaysia Registered Tourist Guide with 21 years of experience"
+    alt="Terence – Malaysia Registered Tourist Guide"
     loading="lazy"
-    width="150"
-    height="150"
   />
   <div class="profile-text">
     <h2>Terence Foong</h2>
     <p>
       Malaysia Registered Tourist Guide with over <strong>21 years of experience</strong>,
-      providing trusted local insight and professional online travel support
+      offering trusted local insight and professional online travel support
       for worry-free Malaysia trips.
     </p>
   </div>
@@ -214,13 +240,10 @@ h2 {
   </p>
 </section>
 
-<!-- ===== Payment Option A (REPLACED) ===== -->
+<!-- Payment Option A -->
 <section class="payment">
   <h2><span class="icon"></span> Online Travel Support Payment</h2>
-  <p>
-    Secure payment for personalised online travel support and consultation services.
-    All transactions are encrypted and processed by Stripe.
-  </p>
+  <p>Secure payment for personalised online travel support and consultation services.</p>
 
   <stripe-buy-button
     buy-button-id="buy_btn_1SYHduBjPDWSit5N6XbDiGRc"
@@ -228,13 +251,10 @@ h2 {
   </stripe-buy-button>
 </section>
 
-<!-- ===== Payment Option B (UNCHANGED) ===== -->
+<!-- Payment Option B -->
 <section class="payment">
   <h2><span class="icon"></span> Quick / One-Time Payment</h2>
-  <p>
-    This option is suitable for quick consultations, short travel advice,
-    or one-time support requests.
-  </p>
+  <p>Suitable for short consultations or quick travel advice.</p>
 
   <stripe-buy-button
     buy-button-id="buy_btn_1SYHm9BjPDWSit5NiiF4tOgq"
@@ -242,24 +262,16 @@ h2 {
   </stripe-buy-button>
 </section>
 
-<section>
-  <h2><span class="icon"></span> Collaborate With Us</h2>
-  <p>
-    We welcome passionate individuals who believe in people-first travel experiences.
-    Together, we can build meaningful and trusted travel support.
-  </p>
-</section>
-
 </main>
 
-<!-- WhatsApp CTA -->
+<!-- WhatsApp -->
 <a class="whatsapp"
    href="https://wa.me/60123632338?text=Hi%20Terence,%20I%20would%20like%20to%20enquire%20about%20Malaysia%20travel%20support."
-   aria-label="WhatsApp Travel Support">
+   aria-label="WhatsApp Support">
   WhatsApp <span>Support</span>
 </a>
 
-<!-- Tawk.to Chat -->
+<!-- Tawk.to -->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
