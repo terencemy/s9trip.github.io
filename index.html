@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
+<!-- Icons -->
 <link rel="stylesheet" href="assets/icons.css">
 
 <style>
@@ -28,22 +29,26 @@
   --bg:#f8f9fb;
   --text:#1e2a3a;
 }
-*{box-sizing:border-box;}
-body{
+
+* { box-sizing:border-box; }
+
+body {
   margin:0;
   font-family:Inter,system-ui,sans-serif;
   background:var(--bg);
   color:var(--text);
   line-height:1.7;
 }
-header{
+
+header {
   background:linear-gradient(135deg,#0b1f3a,#102a4c);
   color:#fff;
   padding:3.5rem 1.5rem 4rem;
   text-align:center;
   position:relative;
 }
-header::after{
+
+header::after {
   content:"S9Trip.com";
   position:absolute;
   right:14px;
@@ -51,83 +56,107 @@ header::after{
   font-size:.75rem;
   color:rgba(255,255,255,.35);
 }
-.lang-switch{
+
+.lang-switch {
   position:absolute;
   top:18px;
   right:20px;
-  font-size:.85rem;
+  font-size:0.85rem;
 }
+
 .lang-switch a,
-.lang-switch span{
+.lang-switch span {
   color:rgba(255,255,255,.85);
   text-decoration:none;
 }
-.lang-switch .active{
+
+.lang-switch .active {
   color:var(--gold);
   font-weight:500;
 }
-.site-logo{
+
+.site-logo {
   display:block;
   margin:0 auto 1.2rem;
   max-width:160px;
 }
-h1{
+
+h1 {
   font-family:"Playfair Display",serif;
   font-size:2.2rem;
   font-weight:500;
   margin:0 0 .4rem;
 }
-header p{margin:0;color:#e6e9ee;}
 
-main{
-  max-width:920px;
-  margin:auto;
-  padding:3rem 1.5rem;
+header p {
+  color:#e6e9ee;
+  margin:0;
 }
-section{
+
+main {
+  max-width:920px;
+  margin:0 auto;
+  padding:3rem 1.5rem 3rem;
+}
+
+section {
   background:#fff;
   padding:2rem;
   border-radius:16px;
   margin-bottom:2.8rem;
   box-shadow:0 12px 32px rgba(11,31,58,.08);
 }
-h2{
+
+h2 {
   font-family:"Playfair Display",serif;
   color:var(--navy);
   font-weight:500;
 }
-.profile{
+
+.profile {
   display:flex;
   align-items:center;
   gap:2.2rem;
 }
-.profile img{
+
+.profile img {
   width:150px;
   height:150px;
   border-radius:50%;
   border:2px solid var(--gold);
 }
-.payment{text-align:center;}
-.payment p{max-width:640px;margin:auto auto 1.5rem;}
 
-.article-links ul{
+.article-links ul {
   list-style:none;
   padding:0;
+  margin:0;
 }
-.article-links li{
-  margin:14px 0;
+
+.article-links li {
+  margin:12px 0;
 }
-.article-links a{
+
+.article-links a {
   color:var(--navy);
   text-decoration:none;
   font-weight:500;
 }
-.article-links a:hover{
+
+.article-links a:hover {
   color:var(--gold);
   text-decoration:underline;
 }
 
-.whatsapp{
+.payment {
+  text-align:center;
+}
+
+.payment p {
+  max-width:640px;
+  margin:0 auto 1.5rem;
+}
+
+.whatsapp {
   position:fixed;
   right:18px;
   bottom:18px;
@@ -137,11 +166,18 @@ h2{
   border-radius:999px;
   text-decoration:none;
   font-size:.9rem;
-  box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
-.whatsapp span{color:var(--gold);font-weight:500;}
-@media(max-width:768px){
-  .profile{flex-direction:column;text-align:center;}
+
+.whatsapp span {
+  color:var(--gold);
+  font-weight:500;
+}
+
+@media (max-width:768px){
+  .profile {
+    flex-direction:column;
+    text-align:center;
+  }
 }
 </style>
 
@@ -156,9 +192,11 @@ h2{
     <a href="zh.html">中文</a>
   </div>
 
-  <img src="assets/images/s9trip-malaysia-travel-support-logo.png"
-       alt="S9Trip Malaysia travel support logo"
-       class="site-logo">
+  <a href="/" aria-label="S9Trip Home">
+    <img src="assets/images/s9trip-malaysia-travel-support-logo.png"
+         alt="S9Trip Malaysia travel support logo"
+         class="site-logo">
+  </a>
 
   <h1>Hi, I’m Terence</h1>
   <p>Malaysia Registered Tourist Guide</p>
@@ -170,32 +208,36 @@ h2{
   <img src="assets/images/terence-malaysia-registered-tourist-guide.jpg" alt="Terence Malaysia Tourist Guide">
   <div>
     <h2>Terence Foong</h2>
-    <p>Malaysia Registered Tourist Guide with over <strong>21 years of experience</strong>, providing trusted local insight and professional online travel support.</p>
+    <p>
+      Malaysia Registered Tourist Guide with over <strong>21 years of experience</strong>,
+      providing trusted local insight and professional online travel support.
+    </p>
   </div>
 </section>
 
 <section>
   <h2>Introduction</h2>
-  <p>A professional and reliable licensed Malaysia tourist guide with 21 years of experience, now offering online travel support for smoother and worry-free trips.</p>
+  <p>
+    A professional and reliable licensed Malaysia tourist guide with 21 years of experience,
+    now offering online travel support for smoother and worry-free trips.
+  </p>
 </section>
 
 <section>
   <h2>About Me</h2>
-  <p>I provide personalised online travel support so travellers can explore Malaysia independently while avoiding misunderstandings and risky situations.</p>
+  <p>
+    I provide personalised online travel support so travellers can explore Malaysia independently
+    while avoiding misunderstandings and risky situations.
+  </p>
 </section>
 
-<!-- ✅ NEW: ARTICLE LINKS -->
+<!-- ✅ NEW: DIRECT ARTICLE LINK -->
 <section class="article-links">
   <h2>Travel Guides & Articles</h2>
   <ul>
     <li>
       <a href="https://terencemy.github.io/s9trip.github.io/articles/klia-to-klia2-shuttle.html">
-        KLIA to KLIA2 Free Shuttle Bus Guide (English)
-      </a>
-    </li>
-    <li>
-      <a href="https://terencemy.github.io/s9trip.github.io/articles/klia-klia2-free-shuttle-bus-guide-zh.html">
-        KLIA 至 KLIA2 免费机场穿梭巴士指南（中文）
+        KLIA to KLIA2 Free Shuttle Bus Guide
       </a>
     </li>
   </ul>
@@ -203,23 +245,24 @@ h2{
 
 <section class="payment">
   <h2>Online Travel Support Payment</h2>
-  <stripe-buy-button buy-button-id="buy_btn_1SYHduBjPDWSit5N6XbDiGRc"
+  <stripe-buy-button
+    buy-button-id="buy_btn_1SYHduBjPDWSit5N6XbDiGRc"
     publishable-key="pk_live_51SY5FmBjPDWSit5Ns8phOmoGlGm3UaFctXthIBqpQX02DOkdQglkZnomZiJkFQfSbuqctbas1ArNMzVv32072Qf000gFM7CAJN">
   </stripe-buy-button>
 </section>
 
 <section class="payment">
   <h2>One-Time Payment</h2>
-  <stripe-buy-button buy-button-id="buy_btn_1SYHm9BjPDWSit5NiiF4tOgq"
+  <stripe-buy-button
+    buy-button-id="buy_btn_1SYHm9BjPDWSit5NiiF4tOgq"
     publishable-key="pk_live_51SY5FmBjPDWSit5Ns8phOmoGlGm3UaFctXthIBqpQX02DOkdQglkZnomZiJkFQfSbuqctbas1ArNMzVv32072Qf000gFM7CAJN">
   </stripe-buy-button>
 </section>
 
 </main>
 
-<a class="whatsapp"
-   href="https://wa.me/60123632338">
-   WhatsApp <span>Support</span>
+<a class="whatsapp" href="https://wa.me/60123632338">
+  WhatsApp <span>Support</span>
 </a>
 
 <script type="text/javascript">
