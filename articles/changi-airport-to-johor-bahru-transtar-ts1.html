@@ -48,6 +48,29 @@
       letter-spacing: 1px;
     }
 
+    /* ===== Language Option ===== */
+    .lang-switch {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      font-size: 0.8rem;
+    }
+
+    .lang-switch a,
+    .lang-switch span {
+      color: rgba(255,255,255,0.9);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .lang-switch .active {
+      color: var(--gold);
+    }
+
+    .lang-switch a:hover {
+      text-decoration: underline;
+    }
+
     h1 {
       font-size: 1.6rem;
       margin-bottom: 0.4rem;
@@ -103,6 +126,12 @@
 <div class="container">
 
   <header>
+    <!-- Language Option -->
+    <div class="lang-switch">
+      <span class="active">English</span> |
+      <a href="https://terencemy.github.io/s9trip.github.io/articles/changi-airport-to-johor-bahru-transtar-ts1-zh.html">中文</a>
+    </div>
+
     <h1>Changi Airport to Johor Bahru by Cross-Border Coach</h1>
     <p>A calm, seamless journey on the Transtar TS1 service — curated by S9Trip.</p>
   </header>
