@@ -37,7 +37,7 @@ body {
 header {
   background:linear-gradient(135deg,#0b1f3a,#102a4c);
   color:#fff;
-  padding:3.5rem 1.5rem;
+  padding:3.5rem 1.5rem 4.5rem;
   text-align:center;
   position:relative;
 }
@@ -63,7 +63,7 @@ h1 {
   font-family:"Playfair Display",serif;
   font-size:2.2rem;
   font-weight:500;
-  margin-bottom:0.5rem;
+  margin-bottom:0.4rem;
 }
 
 header p {
@@ -74,16 +74,16 @@ header p {
 /* ===== Layout ===== */
 main {
   max-width:920px;
-  margin:auto;
-  padding:3rem 1.5rem;
+  margin:-60px auto 0;
+  padding:0 1.5rem 3rem;
 }
 
 section {
   background:#fff;
   padding:2rem;
-  border-radius:14px;
-  margin-bottom:2.5rem;
-  box-shadow:0 10px 30px rgba(11,31,58,.08);
+  border-radius:16px;
+  margin-bottom:2.8rem;
+  box-shadow:0 12px 32px rgba(11,31,58,.08);
 }
 
 h2 {
@@ -91,6 +91,32 @@ h2 {
   color:var(--navy);
   font-weight:500;
   margin-bottom:1rem;
+}
+
+/* ===== Profile Section ===== */
+.profile {
+  display:flex;
+  align-items:center;
+  gap:2.2rem;
+}
+
+.profile img {
+  width:150px;
+  height:150px;
+  object-fit:cover;
+  border-radius:50%;
+  border:2px solid var(--gold);
+  box-shadow:0 14px 30px rgba(11,31,58,.25);
+  flex-shrink:0;
+}
+
+.profile-text h2 {
+  margin:0 0 .6rem;
+}
+
+.profile-text p {
+  margin:0;
+  font-size:.96rem;
 }
 
 /* ===== WhatsApp CTA ===== */
@@ -113,13 +139,17 @@ h2 {
   font-weight:500;
 }
 
-/* ===== Mobile refinements ===== */
+/* ===== Mobile ===== */
 @media (max-width:768px){
-  h1{font-size:2rem;}
+  h1 {font-size:2rem;}
+  .profile {
+    flex-direction:column;
+    text-align:center;
+  }
 }
 </style>
 
-<!-- ===== FAQ JSON-LD (Rich Snippets) ===== -->
+<!-- ===== FAQ JSON-LD ===== -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -157,10 +187,9 @@ h2 {
 <body>
 
 <header>
-  <!-- S9Trip Logo -->
   <a href="/" aria-label="S9Trip Home">
     <img
-      src="s9trip-malaysia-travel-support-logo.png"
+      src="assets/images/s9trip-malaysia-travel-support-logo.png"
       alt="S9Trip Malaysia travel support and online trip consultation logo"
       class="site-logo"
       width="140"
@@ -174,43 +203,57 @@ h2 {
 
 <main>
 
+<!-- Profile -->
+<section class="profile">
+  <img
+    src="assets/images/terence-malaysia-registered-tourist-guide.jpg"
+    alt="Terence – Malaysia Registered Tourist Guide with 21 years of experience"
+    loading="lazy"
+    width="150"
+    height="150"
+  />
+
+  <div class="profile-text">
+    <h2>Terence Foong</h2>
+    <p>
+      Malaysia Registered Tourist Guide with over <strong>21 years of experience</strong>,
+      offering trusted local insight and professional online travel support to help
+      travellers explore Malaysia smoothly and worry free.
+    </p>
+  </div>
+</section>
+
 <section>
   <h2><span class="icon"></span> Introduction</h2>
   <p>
-    A professional and reliable licensed Malaysia tourist guide with over 21 years of experience,
-    having served travellers from all around the world. I now provide online travel support to make
-    your Malaysia journey smooth and worry free — from planning to departure.
+    A professional and reliable licensed Malaysia tourist guide who has served travellers
+    from around the world. I now provide online travel support to guide you from planning
+    to departure, ensuring a smooth and confident Malaysia journey.
   </p>
 </section>
 
 <section>
   <h2><span class="icon"></span> About Me</h2>
   <p>
-    In the past, travel services were mostly face-to-face. Times have changed — even cars are going
-    driverless. As a professional Malaysian tour guide, I’ve adapted too.
+    In the past, travel services were mostly face-to-face. Times have changed — even cars
+    are going driverless. As a professional Malaysian tour guide, I’ve adapted too.
   </p>
   <p>
-    Today, I help travellers explore Malaysia independently with trusted local insight, avoiding
-    cultural misunderstandings, tourist traps, and risky situations — so you can travel smarter
-    and with peace of mind.
+    Today, I support travellers digitally, helping them avoid cultural misunderstandings,
+    tourist traps, and risky situations — so they can travel smarter with peace of mind.
   </p>
 </section>
 
 <section>
   <h2><span class="icon"></span> Collaborate With Us</h2>
   <p>
-    Are you passionate about travel and people-first experiences? We welcome dedicated individuals
-    to collaborate and grow together.
-  </p>
-  <p>
-    We’ll help you find a role that fits your strengths and aspirations — together, we can build
-    meaningful, trusted travel support.
+    We welcome passionate individuals who believe in people-first travel experiences.
+    Together, we can build meaningful, trusted travel support for modern travellers.
   </p>
 </section>
 
 </main>
 
-<!-- WhatsApp Connected CTA -->
 <a class="whatsapp"
    href="https://wa.me/60123632338?text=Hi%20Terence,%20I%20would%20like%20to%20enquire%20about%20Malaysia%20travel%20support."
    aria-label="WhatsApp Travel Support">
