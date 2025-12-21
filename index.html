@@ -8,8 +8,9 @@
 
 <meta name="description" content="Terence, Malaysia Registered Tourist Guide with 21 years of experience. Online travel support for Malaysia trips – safe, smooth, worry-free." />
 <meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0b1f3a">
 
-<!-- ===== hreflang ===== -->
+<!-- hreflang -->
 <link rel="alternate" hreflang="en" href="https://www.s9trip.com/index.html">
 <link rel="alternate" hreflang="zh-Hans" href="https://www.s9trip.com/zh.html">
 <link rel="alternate" hreflang="x-default" href="https://www.s9trip.com/index.html">
@@ -38,7 +39,7 @@ body{
   line-height:1.7;
 }
 
-/* ===== Header ===== */
+/* Header */
 header{
   background:linear-gradient(135deg,#0b1f3a,#102a4c);
   color:#fff;
@@ -67,7 +68,7 @@ h1{
 }
 header p{color:#e6e9ee;margin:0}
 
-/* ===== Language Switch ===== */
+/* Language Switch */
 .lang-switch{
   position:absolute;
   top:16px;
@@ -83,7 +84,7 @@ header p{color:#e6e9ee;margin:0}
   font-weight:500;
 }
 
-/* ===== Layout ===== */
+/* Layout */
 main{
   max-width:920px;
   margin:0 auto;
@@ -103,14 +104,15 @@ h2{
   margin-bottom:1rem;
 }
 
-/* ===== Profile ===== */
+/* Profile */
 .profile{
   display:flex;
   align-items:center;
   gap:2.2rem;
 }
 .profile img{
-  width:150px;height:150px;
+  width:150px;
+  height:150px;
   object-fit:cover;
   border-radius:50%;
   border:2px solid var(--gold);
@@ -118,7 +120,18 @@ h2{
 }
 .profile-text p{margin:0;font-size:.96rem}
 
-/* ===== Payment ===== */
+/* Trust */
+.trust ul{
+  list-style:none;
+  padding:0;
+  margin:1.2rem 0 0;
+}
+.trust li{
+  margin-bottom:.6rem;
+  font-size:.95rem;
+}
+
+/* Payment */
 .payment{text-align:center}
 .payment p{
   max-width:640px;
@@ -126,7 +139,15 @@ h2{
   color:#374151;
 }
 
-/* ===== WhatsApp ===== */
+/* Footer */
+.site-footer{
+  text-align:center;
+  font-size:.8rem;
+  color:#6b7280;
+  padding:2rem 1rem 4rem;
+}
+
+/* WhatsApp */
 .whatsapp{
   position:fixed;
   right:18px;
@@ -142,17 +163,17 @@ h2{
 }
 .whatsapp span{color:var(--gold);font-weight:500}
 
-/* ===== Mobile ===== */
+/* Mobile */
 @media(max-width:768px){
   h1{font-size:2rem}
   .profile{flex-direction:column;text-align:center}
 }
 </style>
 
-<!-- ===== Stripe Buy Button (load once) ===== -->
+<!-- Stripe Buy Button (load once) -->
 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
-<!-- ===== Website / Language Schema ===== -->
+<!-- Website / Language Schema -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -175,6 +196,7 @@ h2{
   <a href="index.html">
     <img src="assets/images/s9trip-malaysia-travel-support-logo.png"
          alt="S9Trip Malaysia travel support logo"
+         width="140" height="40"
          class="site-logo">
   </a>
 
@@ -186,7 +208,8 @@ h2{
 
 <section class="profile">
   <img src="assets/images/terence-malaysia-registered-tourist-guide.jpg"
-       alt="Terence Malaysia Registered Tourist Guide">
+       alt="Terence Malaysia Registered Tourist Guide"
+       width="150" height="150" loading="lazy">
   <div class="profile-text">
     <h2>Terence Foong</h2>
     <p>
@@ -194,6 +217,16 @@ h2{
       providing trusted local insight and professional online travel support.
     </p>
   </div>
+</section>
+
+<section class="trust">
+  <h2><span class="icon"></span> Why Trust S9Trip</h2>
+  <ul>
+    <li>✔ Licensed Malaysia Registered Tourist Guide</li>
+    <li>✔ 21 Years of Professional Guiding Experience</li>
+    <li>✔ Secure Payments via Stripe</li>
+    <li>✔ Direct Support via WhatsApp & Live Chat</li>
+  </ul>
 </section>
 
 <section>
@@ -204,7 +237,7 @@ h2{
   </p>
 </section>
 
-<section>
+<section class="payment">
   <h2><span class="icon"></span> Online Travel Support Payment</h2>
   <p>Secure payment for personalised online travel consultation.</p>
 
@@ -214,7 +247,7 @@ h2{
   </stripe-buy-button>
 </section>
 
-<section>
+<section class="payment">
   <h2><span class="icon"></span> Quick / One-Time Payment</h2>
   <p>For short consultations or urgent travel questions.</p>
 
@@ -226,9 +259,13 @@ h2{
 
 </main>
 
+<footer class="site-footer">
+  © S9Trip · Malaysia Travel Support<br>
+  Licensed Malaysia Tourist Guide · Online Consultation Only
+</footer>
+
 <a class="whatsapp"
-   href="https://wa.me/60123632338?text=Hi%20Terence,%20I%20have%20completed%20payment%20and%20would%20like%20to%20continue."
->
+   href="https://wa.me/60123632338?text=Hi%20Terence,%20I%20have%20completed%20payment%20and%20would%20like%20to%20continue.">
   WhatsApp <span>Support</span>
 </a>
 
