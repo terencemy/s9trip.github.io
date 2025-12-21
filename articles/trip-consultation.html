@@ -32,6 +32,30 @@
       padding: 18px;
     }
 
+    /* ===== Language Switch ===== */
+    .lang-switch {
+      text-align: right;
+      margin-bottom: 14px;
+      font-size: 0.85rem;
+    }
+
+    .lang-switch a,
+    .lang-switch span {
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .lang-switch .active {
+      color: var(--gold);
+    }
+
+    .lang-switch a:hover {
+      text-decoration: underline;
+      color: var(--gold);
+    }
+
+    /* ===== Header ===== */
     header {
       background: linear-gradient(135deg, #0A1F44, #102A56);
       color: #fff;
@@ -62,6 +86,7 @@
       max-width: 640px;
     }
 
+    /* ===== Sections ===== */
     section {
       background: #fff;
       margin-top: 1.2rem;
@@ -101,6 +126,7 @@
       margin-bottom: 0.45rem;
     }
 
+    /* ===== Disclaimer ===== */
     .note {
       background: #FAFAFB;
       border-left: 4px solid var(--gold);
@@ -110,6 +136,7 @@
       border-radius: 12px;
     }
 
+    /* ===== Footer ===== */
     footer {
       text-align: center;
       font-size: 0.75rem;
@@ -121,12 +148,23 @@
       color: var(--gold);
       font-weight: 600;
     }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.55rem; }
+      section { padding: 22px; }
+    }
   </style>
 </head>
 
 <body>
 
 <div class="container">
+
+  <!-- Language Option -->
+  <div class="lang-switch">
+    <span class="active">English</span> |
+    <a href="https://terencemy.github.io/s9trip.github.io/articles/trip-consultation-zh.html">中文</a>
+  </div>
 
   <header>
     <h1>Trip Consultation (Advice-Only Service)</h1>
