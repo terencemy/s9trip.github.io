@@ -9,6 +9,11 @@
 <meta name="description" content="Terence, Malaysia Registered Tourist Guide with 21 years of experience. Online travel support for Malaysia trips – safe, smooth, worry-free." />
 <meta name="robots" content="index, follow">
 
+<!-- ===== hreflang for bilingual SEO ===== -->
+<link rel="alternate" hreflang="en" href="https://www.s9trip.com/index.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://www.s9trip.com/zh.html">
+<link rel="alternate" hreflang="x-default" href="https://www.s9trip.com/index.html">
+
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,6 +56,29 @@ header::after {
   bottom:12px;
   font-size:.75rem;
   color:rgba(255,255,255,.35);
+}
+
+/* ===== Language Switch ===== */
+.lang-switch {
+  position:absolute;
+  top:18px;
+  right:20px;
+  font-size:0.85rem;
+}
+
+.lang-switch a,
+.lang-switch span {
+  color:rgba(255,255,255,.85);
+  text-decoration:none;
+}
+
+.lang-switch .active {
+  color:var(--gold);
+  font-weight:500;
+}
+
+.lang-switch a:hover {
+  text-decoration:underline;
 }
 
 .site-logo {
@@ -155,7 +183,7 @@ h2 {
 }
 </style>
 
-<!-- Stripe Buy Button Script (LOAD ONCE ONLY) -->
+<!-- Stripe Buy Button Script -->
 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
 </head>
@@ -163,6 +191,12 @@ h2 {
 <body>
 
 <header>
+  <!-- Language Switch -->
+  <div class="lang-switch">
+    <span class="active">EN</span> |
+    <a href="zh.html">中文</a>
+  </div>
+
   <a href="/" aria-label="S9Trip Home">
     <img
       src="assets/images/s9trip-malaysia-travel-support-logo.png"
@@ -172,6 +206,7 @@ h2 {
       height="40"
     />
   </a>
+
   <h1>Hi, I’m Terence</h1>
   <p>Malaysia Registered Tourist Guide</p>
 </header>
@@ -202,22 +237,21 @@ h2 {
     A professional and reliable licensed Malaysia tourist guide with 21 years of experience,
     having served travelers from all around the world. Equipped with strong skills in handling 
     unexpected situations, and now offering online travel support for Malaysia trips, making 
-    your journey smoother and worry free from planning to departure. 
+    your journey smoother and worry free from planning to departure.
   </p>
 </section>
 
 <section>
   <h2><span class="icon"></span> About Me</h2>
   <p>
-    In the past, most travel services were done face-to-face. But times have changed, 
+    In the past, most travel services were done face-to-face. But times have changed,
     even cars are going driverless! As a professional Malaysian tour guide, I’ve adapted too.
-    I now offer personalized online travel support, helping friends who want to explore Malaysia 
-    on their own. My goal is to provide a safe, local-insider experience, avoiding cultural 
+    I now offer personalized online travel support, helping friends who want to explore Malaysia
+    on their own. My goal is to provide a safe, local-insider experience, avoiding cultural
     misunderstandings and risky situations, so you can enjoy Malaysia smarter and worry free.
   </p>
 </section>
 
-<!-- ===== Payment Option A (REPLACED) ===== -->
 <section class="payment">
   <h2><span class="icon"></span> Online Travel Support Payment</h2>
   <p>
@@ -231,7 +265,6 @@ h2 {
   </stripe-buy-button>
 </section>
 
-<!-- ===== Payment Option B (UNCHANGED) ===== -->
 <section class="payment">
   <h2><span class="icon"></span> One-Time Payment</h2>
   <p>
@@ -254,7 +287,6 @@ h2 {
 
 </main>
 
-<!-- WhatsApp CTA -->
 <a class="whatsapp"
    href="https://wa.me/60123632338?text=Hi%20Terence,%20I%20would%20like%20to%20enquire%20about%20Malaysia%20travel%20support."
    aria-label="WhatsApp Travel Support">
