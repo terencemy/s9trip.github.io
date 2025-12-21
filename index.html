@@ -9,155 +9,157 @@
 <meta name="description" content="Terence, Malaysia Registered Tourist Guide with 21 years of experience. Online travel support for Malaysia trips – safe, smooth, worry-free." />
 <meta name="robots" content="index, follow">
 
-<!-- Google Fonts (Malaysia Airlines–style pairing) -->
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- Minimal luxury icons (relative path for GitHub Pages) -->
+<!-- Icons (relative path for GitHub Pages) -->
 <link rel="stylesheet" href="assets/icons.css">
 
 <style>
 :root {
-  --navy: #0b1f3a;
-  --gold: #c9a24d;
-  --bg: #f8f9fb;
-  --text: #1e2a3a;
+  --navy:#0b1f3a;
+  --gold:#c9a24d;
+  --bg:#f8f9fb;
+  --text:#1e2a3a;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing:border-box; }
 
 body {
-  margin: 0;
-  font-family: Inter, system-ui, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
+  margin:0;
+  font-family:Inter,system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
 }
 
 /* ===== Header ===== */
 header {
-  background: linear-gradient(135deg, #0b1f3a, #102a4c);
-  color: #ffffff;
-  padding: 3.5rem 1.5rem 4.5rem;
-  text-align: center;
-  position: relative;
+  background:linear-gradient(135deg,#0b1f3a,#102a4c);
+  color:#fff;
+  padding:3.5rem 1.5rem 4rem;
+  text-align:center;
+  position:relative;
 }
 
 header::after {
-  content: "S9Trip.com";
-  position: absolute;
-  right: 14px;
-  bottom: 12px;
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.35);
-  pointer-events: none;
+  content:"S9Trip.com";
+  position:absolute;
+  right:14px;
+  bottom:12px;
+  font-size:0.75rem;
+  color:rgba(255,255,255,.35);
 }
 
 .site-logo {
-  display: block;
-  margin: 0 auto 1.2rem;
-  max-width: 160px;
-  height: auto;
+  display:block;
+  margin:0 auto 1.2rem;
+  max-width:160px;
+  height:auto;
 }
 
 h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 2.2rem;
-  font-weight: 500;
-  margin: 0 0 0.4rem;
+  font-family:"Playfair Display",serif;
+  font-size:2.2rem;
+  font-weight:500;
+  margin:0 0 .4rem;
 }
 
 header p {
-  color: #e6e9ee;
-  font-size: 1rem;
-  margin: 0;
+  color:#e6e9ee;
+  margin:0;
 }
 
 /* ===== Layout ===== */
 main {
-  max-width: 920px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem 3rem;
+  max-width:920px;
+  margin:0 auto;
+  padding:3rem 1.5rem 3rem;
 }
 
 section {
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 16px;
-  margin-bottom: 2.8rem;
-  box-shadow: 0 12px 32px rgba(11,31,58,0.08);
+  background:#fff;
+  padding:2rem;
+  border-radius:16px;
+  margin-bottom:2.8rem;
+  box-shadow:0 12px 32px rgba(11,31,58,.08);
 }
 
 h2 {
-  font-family: "Playfair Display", serif;
-  color: var(--navy);
-  font-weight: 500;
-  margin-bottom: 1rem;
+  font-family:"Playfair Display",serif;
+  color:var(--navy);
+  font-weight:500;
+  margin-bottom:1rem;
 }
 
 /* ===== Profile Section ===== */
 .profile {
-  display: flex;
-  align-items: center;
-  gap: 2.2rem;
+  display:flex;
+  align-items:center;
+  gap:2.2rem;
 }
 
 .profile img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid var(--gold);
-  box-shadow: 0 14px 30px rgba(11,31,58,0.25);
-  flex-shrink: 0;
+  width:150px;
+  height:150px;
+  object-fit:cover;
+  border-radius:50%;
+  border:2px solid var(--gold);
+  box-shadow:0 14px 30px rgba(11,31,58,.25);
+  flex-shrink:0;
 }
 
 .profile-text h2 {
-  margin: 0 0 0.6rem;
+  margin:0 0 .6rem;
 }
 
 .profile-text p {
-  margin: 0;
-  font-size: 0.96rem;
+  margin:0;
+  font-size:.96rem;
 }
 
 /* ===== WhatsApp CTA ===== */
 .whatsapp {
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  background: var(--navy);
-  color: #ffffff;
-  padding: 14px 18px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-  z-index: 100;
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  background:var(--navy);
+  color:#fff;
+  padding:14px 18px;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:.9rem;
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
+  z-index:100;
 }
 
 .whatsapp span {
-  color: var(--gold);
-  font-weight: 500;
+  color:var(--gold);
+  font-weight:500;
 }
 
 /* ===== Mobile ===== */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-
+@media (max-width:768px){
+  h1 { font-size:2rem; }
   .profile {
-    flex-direction: column;
-    text-align: center;
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+@media (max-width:640px){
+  .whatsapp {
+    bottom:16px;
+    right:16px;
+    padding:12px 16px;
+    font-size:.85rem;
   }
 }
 </style>
 
-<!-- ===== FAQ JSON-LD (Rich Snippets) ===== -->
+<!-- ===== FAQ JSON-LD ===== -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -197,36 +199,33 @@ h2 {
 <header>
   <a href="/" aria-label="S9Trip Home">
     <img
-      src="s9trip-malaysia-travel-support-logo.png"
+      src="assets/images/s9trip-malaysia-travel-support-logo.png"
       alt="S9Trip Malaysia travel support and online trip consultation logo"
       class="site-logo"
       width="140"
       height="40"
     />
   </a>
-
   <h1>Hi, I’m Terence</h1>
   <p>Malaysia Registered Tourist Guide · 21 Years Experience</p>
 </header>
 
 <main>
 
-<!-- Profile Section -->
 <section class="profile">
   <img
-    src="terence-malaysia-registered-tourist-guide.jpg"
+    src="assets/images/terence-malaysia-registered-tourist-guide.jpg"
     alt="Terence – Malaysia Registered Tourist Guide with 21 years of experience"
     loading="lazy"
     width="150"
     height="150"
   />
-
   <div class="profile-text">
     <h2>Terence Foong</h2>
     <p>
       Malaysia Registered Tourist Guide with over <strong>21 years of experience</strong>,
-      offering trusted local insight and professional online travel support to help
-      travellers explore Malaysia smoothly and worry free.
+      offering trusted local insight and professional online travel support for
+      worry-free Malaysia trips.
     </p>
   </div>
 </section>
@@ -235,20 +234,17 @@ h2 {
   <h2><span class="icon"></span> Introduction</h2>
   <p>
     A professional and reliable licensed Malaysia tourist guide who has served travellers
-    from around the world. I now provide online travel support to guide you from planning
-    to departure, ensuring a smooth and confident Malaysia journey.
+    from around the world. I now provide online travel support from planning to departure,
+    ensuring a smooth and confident Malaysia journey.
   </p>
 </section>
 
 <section>
   <h2><span class="icon"></span> About Me</h2>
   <p>
-    In the past, travel services were mostly face-to-face. Times have changed — even cars
-    are going driverless. As a professional Malaysian tour guide, I’ve adapted too.
-  </p>
-  <p>
-    Today, I support travellers digitally, helping them avoid cultural misunderstandings,
-    tourist traps, and risky situations — so they can travel smarter with peace of mind.
+    Travel has evolved. As a professional Malaysian tour guide, I’ve adapted to provide
+    trusted digital support, helping travellers avoid cultural misunderstandings,
+    tourist traps, and risky situations.
   </p>
 </section>
 
@@ -256,18 +252,33 @@ h2 {
   <h2><span class="icon"></span> Collaborate With Us</h2>
   <p>
     We welcome passionate individuals who believe in people-first travel experiences.
-    Together, we can build meaningful, trusted travel support for modern travellers.
+    Together, we can build meaningful and trusted travel support.
   </p>
 </section>
 
 </main>
 
-<!-- WhatsApp Connected CTA -->
+<!-- WhatsApp CTA -->
 <a class="whatsapp"
    href="https://wa.me/60123632338?text=Hi%20Terence,%20I%20would%20like%20to%20enquire%20about%20Malaysia%20travel%20support."
    aria-label="WhatsApp Travel Support">
   WhatsApp <span>Support</span>
 </a>
+
+<!-- Start of Tawk.to Script -->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+  var s1=document.createElement("script"),
+      s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/692d03b3b93a681983f68682/1jbbtctli';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!-- End of Tawk.to Script -->
 
 </body>
 </html>
