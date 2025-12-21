@@ -6,8 +6,13 @@
 
 <title>马来西亚注册导游｜线上旅行支持 – S9Trip</title>
 
-<meta name="description" content="Terence，拥有21年经验的马来西亚注册导游，提供专业线上旅行支持，让您的马来西亚之旅更顺畅、更安心、无忧。" />
+<meta name="description" content="Terence，拥有21年经验的马来西亚注册导游，提供专业线上旅行支持，让您的马来西亚旅程更顺畅、更安心、无忧。" />
 <meta name="robots" content="index, follow">
+
+<!-- ===== hreflang（双语 SEO）===== -->
+<link rel="alternate" hreflang="en" href="https://www.s9trip.com/index.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://www.s9trip.com/zh.html">
+<link rel="alternate" hreflang="x-default" href="https://www.s9trip.com/index.html">
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,6 +56,29 @@ header::after {
   bottom:12px;
   font-size:.75rem;
   color:rgba(255,255,255,.35);
+}
+
+/* ===== Language Switch ===== */
+.lang-switch {
+  position:absolute;
+  top:18px;
+  right:20px;
+  font-size:0.85rem;
+}
+
+.lang-switch a,
+.lang-switch span {
+  color:rgba(255,255,255,.85);
+  text-decoration:none;
+}
+
+.lang-switch .active {
+  color:var(--gold);
+  font-weight:500;
+}
+
+.lang-switch a:hover {
+  text-decoration:underline;
 }
 
 .site-logo {
@@ -155,7 +183,7 @@ h2 {
 }
 </style>
 
-<!-- Stripe Buy Button Script (LOAD ONCE ONLY) -->
+<!-- Stripe Buy Button Script（只加载一次） -->
 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
 </head>
@@ -163,6 +191,12 @@ h2 {
 <body>
 
 <header>
+  <!-- Language Switch（中文页状态） -->
+  <div class="lang-switch">
+    <a href="index.html">EN</a> |
+    <span class="active">中文</span>
+  </div>
+
   <a href="/" aria-label="S9Trip 首页">
     <img
       src="assets/images/s9trip-malaysia-travel-support-logo.png"
@@ -191,7 +225,7 @@ h2 {
     <p>
       拥有超过 <strong>21 年经验</strong> 的马来西亚注册导游，
       提供可靠的本地视角与专业的线上旅行支持，
-      协助旅客安心、无忧地展开马来西亚之旅。
+      协助旅客安心、无忧地探索马来西亚。
     </p>
   </div>
 </section>
@@ -201,7 +235,7 @@ h2 {
   <p>
     我是一名专业且值得信赖的马来西亚持牌导游，
     拥有 21 年丰富经验，曾服务来自世界各地的旅客。
-    擅长应对突发状况，
+    具备处理突发状况的丰富经验，
     目前提供线上马来西亚旅行支持服务，
     从行程规划到出发前准备，全程协助，
     让您的旅程更加顺畅、安心、无忧。
@@ -222,12 +256,11 @@ h2 {
   </p>
 </section>
 
-<!-- ===== Payment Option A ===== -->
 <section class="payment">
-  <h2><span class="icon"></span> 线上旅行支持服务付款</h2>
+  <h2><span class="icon"></span> 线上旅行支持付款</h2>
   <p>
     适用于<strong>全天线上旅行支持</strong>与咨询服务。
-    所有付款均通过 Stripe 加密处理，安全可靠。
+    所有交易均通过 Stripe 加密处理，安全可靠。
   </p>
 
   <stripe-buy-button
@@ -236,11 +269,10 @@ h2 {
   </stripe-buy-button>
 </section>
 
-<!-- ===== Payment Option B ===== -->
 <section class="payment">
   <h2><span class="icon"></span> 单次付款</h2>
   <p>
-    适用于快速咨询或 <strong>3 天游玩建议</strong>。
+    适用于快速咨询，或 <strong>3 天游玩建议</strong>。
   </p>
 
   <stripe-buy-button
@@ -259,7 +291,6 @@ h2 {
 
 </main>
 
-<!-- WhatsApp CTA -->
 <a class="whatsapp"
    href="https://wa.me/60123632338?text=你好%20Terence，我想咨询马来西亚旅行支持服务。"
    aria-label="WhatsApp 咨询">
