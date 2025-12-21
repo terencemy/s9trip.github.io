@@ -45,6 +45,27 @@ header::after{
   opacity:.4;
   letter-spacing:1px;
 }
+
+/* ===== Language Switch ===== */
+.lang-switch{
+  position:absolute;
+  top:14px;
+  right:16px;
+  font-size:13px;
+}
+.lang-switch a,
+.lang-switch span{
+  color:rgba(255,255,255,.85);
+  text-decoration:none;
+}
+.lang-switch .active{
+  color:var(--gold);
+  font-weight:600;
+}
+.lang-switch a:hover{
+  text-decoration:underline;
+}
+
 section{
   background:#ffffff;
   padding:24px;
@@ -77,6 +98,12 @@ footer{
 <div class="container">
 
 <header>
+  <!-- Language Option -->
+  <div class="lang-switch">
+    <span class="active">English</span> |
+    <a href="articles/klia-klia2-free-shuttle-bus-guide-zh.html">中文</a>
+  </div>
+
   <h1>KLIA to KLIA2 Airport Free Shuttle Bus Guide</h1>
   <p>Official free shuttle service between Terminal 1 and Terminal 2 at Kuala Lumpur International Airport.</p>
 </header>
