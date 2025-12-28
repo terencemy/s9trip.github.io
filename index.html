@@ -131,10 +131,6 @@ h2{
   box-shadow:0 16px 34px rgba(10,29,55,.25);
 }
 
-.profile-text p{
-  font-size:.96rem;
-}
-
 /* ===== Payment ===== */
 .payment{
   text-align:center;
@@ -165,7 +161,78 @@ h2{
   font-weight:500;
 }
 
-/* ===== Footer (Index Style) ===== */
+/* ===== Photo Album – Malaysia Airlines Style ===== */
+.album{
+  padding-top:2.4rem;
+}
+
+.album p{
+  max-width:620px;
+  color:#374151;
+}
+
+/* Desktop Grid */
+.album-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:1.2rem;
+}
+
+.album-item{
+  border-radius:16px;
+  overflow:hidden;
+  background:#fff;
+  border:1px solid rgba(198,162,75,.35);
+  box-shadow:0 12px 30px rgba(10,29,55,.18);
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.album-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+@media (hover:hover){
+  .album-item:hover{
+    transform:translateY(-4px);
+    box-shadow:0 18px 42px rgba(10,29,55,.35);
+    border-color:rgba(198,162,75,.6);
+  }
+}
+
+/* Mobile Slider */
+@media(max-width:768px){
+
+  h1{ font-size:2rem; }
+
+  .profile{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .album-grid{
+    display:flex;
+    gap:1rem;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:.5rem;
+  }
+
+  .album-grid::-webkit-scrollbar{
+    display:none;
+  }
+
+  .album-item{
+    flex:0 0 82%;
+    aspect-ratio:4 / 3; /* unified frame */
+    scroll-snap-align:center;
+  }
+}
+
+/* ===== Footer ===== */
 footer{
   background:var(--navy-deep);
   color:#cbd5e1;
@@ -210,86 +277,8 @@ footer{
 .company-info strong{
   color:#e5e7eb;
 }
-
-/* ===== Mobile ===== */
-@media(max-width:768px){
-  h1{ font-size:2rem; }
-  .profile{
-    flex-direction:column;
-    text-align:center;
-  }
-}
-  /* ===== Photo Album – Malaysia Airlines Style ===== */
-
-.album {
-  padding-top: 2.4rem;
-}
-
-.album p {
-  max-width: 620px;
-  color:#374151;
-}
-
-/* ===== Desktop Grid ===== */
-.album-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.2rem;
-}
-
-/* ===== Shared Frame ===== */
-.album-item {
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #fff;
-  border: 1px solid rgba(198,162,75,.35); /* Gold hint */
-  box-shadow: 0 12px 30px rgba(10,29,55,.18);
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-
-.album-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Hover (Desktop) */
-@media (hover:hover) {
-  .album-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 18px 42px rgba(10,29,55,.35);
-    border-color: rgba(198,162,75,.6);
-  }
-}
-
-/* ===== Mobile Slider ===== */
-@media (max-width: 768px) {
-
-  .album-grid {
-    display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: .5rem;
-  }
-
-  .album-grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  .album-item {
-    flex: 0 0 82%;
-    height: 240px;
-    scroll-snap-align: center;
-  }
-}
-
 </style>
-  
-<!-- Stripe -->
+
 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
 
@@ -346,56 +335,26 @@ footer{
     you avoid cultural misunderstandings and potential risks.
   </p>
 </section>
-<!-- ===== Friendly User Photo Album ===== -->
+
 <section class="album">
   <h2>Travel Moments</h2>
-  <p>
-    A glimpse of real journeys, real people, and real experiences across Malaysia.
-  </p>
+  <p>A glimpse of real journeys, real people, and real experiences across Malaysia.</p>
 
   <div class="album-grid">
-
-    <div class="album-item">
-      <img src="assets/images/22122025_1.jpeg" loading="lazy" alt="Malay Wedding Moment">
-    </div>
-
-    <div class="album-item">
-      <img src="assets/images/22122025_2.jpeg" loading="lazy" alt="Local experience in Batu Caves">
-    </div>
-
-    <div class="album-item">
-      <img src="assets/images/22122025_3.jpeg" loading="lazy" alt="Putrajaya travel moment">
-    </div>
-
-    <div class="album-item">
-      <img src="assets/images/22122025_4.jpeg" loading="lazy" alt="A lovely couple in Malaysia">
-    </div>
-
-    <div class="album-item">
-      <img src="assets/images/22122025_5.jpeg" loading="lazy" alt="The Iron Lady travel moment">
-    </div>
-
-    <div class="album-item">
-      <img src="assets/images/22122025_6.jpeg" loading="lazy" alt="Happy travel moment">
-    </div>
-
-    <div class="album-item">
-      <img src="assets/images/22122025_7.jpeg" loading="lazy" alt="Kuala Selangor happy moment">
-    </div>
-
-    <div class="album-item">
-      <img src="assets/images/22122025_8.jpeg" loading="lazy" alt="Always be happy travel moment">
-    </div>
-
+    <div class="album-item"><img src="assets/images/22122025_1.jpeg" loading="lazy" alt="Malay Wedding Moment"></div>
+    <div class="album-item"><img src="assets/images/22122025_2.jpeg" loading="lazy" alt="Batu Caves experience"></div>
+    <div class="album-item"><img src="assets/images/22122025_3.jpeg" loading="lazy" alt="Putrajaya travel moment"></div>
+    <div class="album-item"><img src="assets/images/22122025_4.jpeg" loading="lazy" alt="Lovely couple in Malaysia"></div>
+    <div class="album-item"><img src="assets/images/22122025_5.jpeg" loading="lazy" alt="The Iron Lady travel moment"></div>
+    <div class="album-item"><img src="assets/images/22122025_6.jpeg" loading="lazy" alt="Happy travel moment"></div>
+    <div class="album-item"><img src="assets/images/22122025_7.jpeg" loading="lazy" alt="Kuala Selangor happy moment"></div>
+    <div class="album-item"><img src="assets/images/22122025_8.jpeg" loading="lazy" alt="Always be happy travel moment"></div>
   </div>
 </section>
 
 <section class="payment">
   <h2>Online Travel Support Payment</h2>
-  <p>
-    Suitable for <strong>full-day online travel support</strong>.
-    All payments are securely processed by Stripe.
-  </p>
+  <p>Suitable for <strong>full-day online travel support</strong>.</p>
 
   <stripe-buy-button
     buy-button-id="buy_btn_1SYHduBjPDWSit5N6XbDiGRc"
@@ -425,21 +384,12 @@ footer{
 
 <footer>
   <div class="footer-inner">
-
     <div class="footer-title">More Travel Resources</div>
 
     <div class="footer-links">
-     <a href="articles/trip-consultation.html">
-        My Service
-      </a>
-      
-      <a href="articles/klia-to-klia2-shuttle.html">
-        KLIA T1 ↔ KLIA T2 Free Shuttle Bus
-      </a>
-
-      <a href="articles/changi-airport-to-johor-bahru-transtar-ts1.html">
-        Changi Airport to Johor Bahru
-      </a>
+      <a href="articles/trip-consultation.html">My Service</a>
+      <a href="articles/klia-to-klia2-shuttle.html">KLIA T1 ↔ KLIA T2 Free Shuttle Bus</a>
+      <a href="articles/changi-airport-to-johor-bahru-transtar-ts1.html">Changi Airport to Johor Bahru</a>
     </div>
 
     <div class="company-info">
@@ -452,7 +402,6 @@ footer{
       Seksyen 6, 43300 Seri Kembangan,<br>
       Selangor, Malaysia
     </div>
-
   </div>
 </footer>
 
@@ -461,7 +410,6 @@ footer{
   WhatsApp <span>Support</span>
 </a>
 
-<!-- Tawk.to -->
 <script>
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
