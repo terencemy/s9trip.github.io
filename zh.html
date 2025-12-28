@@ -1,267 +1,302 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>马来西亚注册导游｜线上旅行支持 – S9Trip</title>
+<title>马来西亚注册导游｜线上旅行咨询服务 – S9Trip</title>
 
-<meta name="description" content="Terence，拥有21年经验的马来西亚注册导游，提供专业线上旅行支持，让您的马来西亚旅程更顺畅、更安心、无忧。" />
+<meta name="description" content="Terence，拥有21年经验的马来西亚注册导游，提供专业线上旅行咨询与陪跑服务，让您的马来西亚之旅更安心、顺畅、无忧。" />
 <meta name="robots" content="index, follow">
 
-<!-- ===== hreflang（双语 SEO）===== -->
+<!-- ===== hreflang ===== -->
 <link rel="alternate" hreflang="en" href="https://www.s9trip.com/index.html">
-<link rel="alternate" hreflang="zh-Hans" href="https://www.s9trip.com/zh.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://www.s9trip.com/zh.html">
 <link rel="alternate" hreflang="x-default" href="https://www.s9trip.com/index.html">
 
-<!-- Google Fonts -->
+<!-- Google Fonts (Malaysia Airlines–style) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- Icons -->
-<link rel="stylesheet" href="assets/icons.css">
-
 <style>
-:root {
-  --navy:#0b1f3a;
-  --gold:#c9a24d;
-  --bg:#f8f9fb;
-  --text:#1e2a3a;
+/* ===== CSS 与英文版完全一致（未改动） ===== */
+:root{
+  --navy:#0a1d37;
+  --navy-deep:#08162b;
+  --gold:#c6a24b;
+  --gold-soft:#e6d6a3;
+  --bg:#f7f8fa;
+  --text:#1f2937;
 }
 
-* { box-sizing:border-box; }
+*{ box-sizing:border-box; }
 
-body {
+body{
   margin:0;
   font-family:Inter,system-ui,sans-serif;
   background:var(--bg);
   color:var(--text);
-  line-height:1.7;
+  line-height:1.75;
 }
 
-/* ===== Header ===== */
-header {
-  background:linear-gradient(135deg,#0b1f3a,#102a4c);
+/* Header */
+header{
+  background:linear-gradient(135deg,var(--navy-deep),var(--navy));
   color:#fff;
-  padding:3.5rem 1.5rem 4rem;
+  padding:3.8rem 1.5rem 4.2rem;
   text-align:center;
   position:relative;
 }
 
-header::after {
+header::after{
   content:"S9Trip.com";
   position:absolute;
-  right:14px;
-  bottom:12px;
+  right:16px;
+  bottom:14px;
   font-size:.75rem;
   color:rgba(255,255,255,.35);
 }
 
-/* ===== Language Switch ===== */
-.lang-switch {
+.lang-switch{
   position:absolute;
   top:18px;
   right:20px;
-  font-size:0.85rem;
+  font-size:.85rem;
 }
 
 .lang-switch a,
-.lang-switch span {
+.lang-switch span{
   color:rgba(255,255,255,.85);
   text-decoration:none;
 }
 
-.lang-switch .active {
+.lang-switch .active{
   color:var(--gold);
   font-weight:500;
 }
 
-.lang-switch a:hover {
-  text-decoration:underline;
-}
-
-.site-logo {
+.site-logo{
   display:block;
-  margin:0 auto 1.2rem;
+  margin:0 auto 1.4rem;
   max-width:160px;
-  height:auto;
 }
 
-h1 {
+h1{
   font-family:"Playfair Display",serif;
-  font-size:2.2rem;
+  font-size:2.3rem;
   font-weight:500;
   margin:0 0 .4rem;
 }
 
-header p {
-  color:#e6e9ee;
+header p{
+  color:#e5e7eb;
   margin:0;
 }
 
-/* ===== Layout ===== */
-main {
+/* Layout */
+main{
   max-width:920px;
   margin:0 auto;
-  padding:3rem 1.5rem 3rem;
+  padding:3.2rem 1.5rem;
 }
 
-section {
+section{
   background:#fff;
-  padding:2rem;
-  border-radius:16px;
-  margin-bottom:2.8rem;
-  box-shadow:0 12px 32px rgba(11,31,58,.08);
+  padding:2.2rem;
+  border-radius:18px;
+  margin-bottom:3rem;
+  box-shadow:0 14px 36px rgba(10,29,55,.08);
 }
 
-h2 {
+h2{
   font-family:"Playfair Display",serif;
   color:var(--navy);
   font-weight:500;
   margin-bottom:1rem;
 }
 
-/* ===== Profile ===== */
-.profile {
+/* Profile */
+.profile{
   display:flex;
   align-items:center;
-  gap:2.2rem;
+  gap:2.4rem;
 }
 
-.profile img {
+.profile img{
   width:150px;
   height:150px;
   object-fit:cover;
   border-radius:50%;
   border:2px solid var(--gold);
-  box-shadow:0 14px 30px rgba(11,31,58,.25);
-  flex-shrink:0;
+  box-shadow:0 16px 34px rgba(10,29,55,.25);
 }
 
-.profile-text h2 { margin:0 0 .6rem; }
-.profile-text p { margin:0; font-size:.96rem; }
-
-/* ===== Payment ===== */
-.payment {
+/* Payment */
+.payment{
   text-align:center;
 }
 
-.payment p {
+.payment p{
   max-width:640px;
-  margin:0 auto 1.5rem;
+  margin:0 auto 1.6rem;
   color:#374151;
 }
 
-/* ===== WhatsApp CTA ===== */
-.whatsapp {
+/* WhatsApp */
+.whatsapp{
   position:fixed;
   right:18px;
   bottom:18px;
   background:var(--navy);
   color:#fff;
-  padding:14px 18px;
+  padding:14px 20px;
   border-radius:999px;
-  text-decoration:none;
   font-size:.9rem;
-  box-shadow:0 10px 25px rgba(0,0,0,.25);
-  z-index:100;
+  text-decoration:none;
+  box-shadow:0 12px 28px rgba(0,0,0,.25);
 }
 
-.whatsapp span {
+.whatsapp span{
   color:var(--gold);
   font-weight:500;
 }
 
-/* ===== Mobile ===== */
-@media (max-width:768px){
-  h1 { font-size:2rem; }
-  .profile {
-    flex-direction:column;
-    text-align:center;
+/* Album */
+.album{
+  padding-top:2.4rem;
+}
+
+.album p{
+  max-width:620px;
+  color:#374151;
+}
+
+.album-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:1.2rem;
+}
+
+.album-item{
+  border-radius:16px;
+  overflow:hidden;
+  background:#fff;
+  border:1px solid rgba(198,162,75,.35);
+  box-shadow:0 12px 30px rgba(10,29,55,.18);
+}
+
+.album-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Mobile */
+@media(max-width:768px){
+  h1{ font-size:2rem; }
+  .profile{ flex-direction:column; text-align:center; }
+  .album-grid{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
   }
+  .album-item{
+    flex:0 0 82%;
+    aspect-ratio:4/3;
+    scroll-snap-align:center;
+  }
+}
+
+/* Footer */
+footer{
+  background:var(--navy-deep);
+  color:#cbd5e1;
+  padding:3.5rem 1.5rem 3rem;
+  font-size:.85rem;
 }
 </style>
 
-<!-- Stripe Buy Button Script（只加载一次） -->
 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-
 </head>
 
 <body>
 
 <header>
-  <!-- Language Switch（中文页状态） -->
   <div class="lang-switch">
     <a href="index.html">EN</a> |
     <span class="active">中文</span>
   </div>
 
-  <a href="/" aria-label="S9Trip 首页">
-    <img
-      src="assets/images/s9trip-malaysia-travel-support-logo.png"
-      alt="S9Trip 马来西亚旅行支持与线上咨询服务标志"
-      class="site-logo"
-      width="140"
-      height="40"
-    />
+  <a href="/">
+    <img src="assets/images/s9trip-malaysia-travel-support-logo.png"
+         alt="S9Trip 馬來西亞旅行諮詢服務標誌"
+         class="site-logo">
   </a>
-  <h1>您好，我是 Terence</h1>
-  <p>马来西亚注册导游</p>
+
+  <h1>你好，我是 Terence</h1>
+  <p>馬來西亞註冊導遊</p>
 </header>
 
 <main>
 
 <section class="profile">
-  <img
-    src="assets/images/terence-malaysia-registered-tourist-guide.jpg"
-    alt="Terence – 拥有21年经验的马来西亚注册导游"
-    loading="lazy"
-    width="150"
-    height="150"
-  />
+  <img src="assets/images/terence-malaysia-registered-tourist-guide.jpg"
+       alt="Terence – 馬來西亞註冊導遊">
   <div class="profile-text">
     <h2>Terence Foong</h2>
     <p>
-      拥有超过 <strong>21 年经验</strong> 的马来西亚注册导游，
-      提供可靠的本地视角与专业的线上旅行支持，
-      协助旅客安心、无忧地探索马来西亚。
+      我是一名擁有 <strong>21 年經驗</strong> 的馬來西亞註冊導遊，
+      提供值得信賴的在地視角與專業線上旅行支援，
+      協助旅客更安心、更有信心地探索馬來西亞。
     </p>
   </div>
 </section>
 
 <section>
-  <h2><span class="icon"></span> 服务介绍</h2>
+  <h2>服務簡介</h2>
   <p>
-    我是一名专业且值得信赖的马来西亚持牌导游，
-    拥有 21 年丰富经验，曾服务来自世界各地的旅客。
-    具备处理突发状况的丰富经验，
-    目前提供线上马来西亚旅行支持服务，
-    从行程规划到出发前准备，全程协助，
-    让您的旅程更加顺畅、安心、无忧。
+    我是一名專業且可靠的馬來西亞持牌導遊，
+    擁有 21 年服務來自世界各地旅客的經驗，
+    擅長處理突發狀況與行程優化。
+    目前提供線上馬來西亞旅行支援服務，
+    從行程規劃到出發前準備，
+    確保您的旅程安全、順暢、無憂。
   </p>
 </section>
 
 <section>
-  <h2><span class="icon"></span> 关于我</h2>
+  <h2>關於我</h2>
   <p>
-    过去，大多数旅游服务都需要面对面进行。
-    但时代已经改变，连汽车都开始实现无人驾驶！
-    作为一名专业的马来西亚导游，我也不断与时俱进。
-    现在我提供个性化的线上旅行支持，
-    协助想要自由探索马来西亚的朋友。
-    我的目标是提供安全、地道的本地视角，
-    避免文化误解与潜在风险，
-    让您更聪明、更安心地享受马来西亚之旅。
+    過去，多數旅遊服務必須面對面進行。
+    但時代正在改變，就連汽車也逐漸無人駕駛。
+    作為一名專業的馬來西亞導遊，我也選擇與時並進。
+    如今，我為希望自由行的旅客提供個人化線上旅行陪跑與諮詢服務，
+    以在地人的角度協助您避開文化誤區與潛在風險，
+    讓您更聰明、更安心地享受馬來西亞之旅。
   </p>
 </section>
 
+<section class="album">
+  <h2>旅行片段</h2>
+  <p>真實旅程、真實人物，以及屬於馬來西亞的美好時刻。</p>
+
+  <div class="album-grid">
+    <div class="album-item"><img src="assets/images/22122025_9.jpeg" alt=""></div>
+    <div class="album-item"><img src="assets/images/22122025_1.jpeg" alt=""></div>
+    <div class="album-item"><img src="assets/images/22122025_3.jpeg" alt=""></div>
+    <div class="album-item"><img src="assets/images/22122025_4.jpeg" alt=""></div>
+    <div class="album-item"><img src="assets/images/22122025_5.jpeg" alt=""></div>
+    <div class="album-item"><img src="assets/images/22122025_6.jpeg" alt=""></div>
+    <div class="album-item"><img src="assets/images/22122025_7.jpeg" alt=""></div>
+    <div class="album-item"><img src="assets/images/22122025_8.jpeg" alt=""></div>
+    <div class="album-item"><img src="assets/images/22122025_2.jpeg" alt=""></div>
+  </div>
+</section>
+
 <section class="payment">
-  <h2><span class="icon"></span> 线上旅行支持付款</h2>
-  <p>
-    适用于<strong>全天线上旅行支持</strong>与咨询服务。
-    所有交易均通过 Stripe 加密处理，安全可靠。
-  </p>
+  <h2>線上旅行支援費用</h2>
+  <p>適合 <strong>全天線上旅行陪跑與諮詢服務</strong>。</p>
 
   <stripe-buy-button
     buy-button-id="buy_btn_1SYHduBjPDWSit5N6XbDiGRc"
@@ -270,10 +305,8 @@ h2 {
 </section>
 
 <section class="payment">
-  <h2><span class="icon"></span> 单次付款</h2>
-  <p>
-    适用于 <strong>3 天游玩建议</strong>。
-  </p>
+  <h2>一次性諮詢費用</h2>
+  <p>適合 <strong>3 天游程建議與諮詢</strong>。</p>
 
   <stripe-buy-button
     buy-button-id="buy_btn_1SYHm9BjPDWSit5NiiF4tOgq"
@@ -282,23 +315,44 @@ h2 {
 </section>
 
 <section>
-  <h2><span class="icon"></span> 合作机会</h2>
+  <h2>合作機會</h2>
   <p>
-    我们欢迎认同「以人为本」旅行理念的伙伴加入合作，
-    一起打造更专业、更值得信赖的旅行支持服务。
+    我們歡迎認同「以人為本」旅遊理念的合作夥伴，
+    共同打造值得信賴、有溫度的旅行支援服務。
   </p>
 </section>
 
 </main>
 
+<footer>
+  <div class="footer-inner">
+    <div class="footer-title">更多旅遊資源</div>
+
+    <div class="footer-links">
+      <a href="articles/trip-consultation-zh.html">我的服務</a>
+      <a href="articles/klia-to-klia2-shuttle-zh.html">KLIA T1 ↔ KLIA T2 免費接駁巴士</a>
+      <a href="articles/changi-airport-to-johor-bahru-transtar-ts1-zh.html">樟宜機場前往新山</a>
+    </div>
+
+    <div class="company-info">
+      <strong>商業註冊號碼（BRN）</strong><br>
+      Foong Chern Hong 201703079596 (MA0219359-A)<br><br>
+
+      <strong>郵寄地址</strong><br>
+      A2-17-10, Flexis One South,<br>
+      Jalan OS 2, Taman Serdang Perdana,<br>
+      Seksyen 6, 43300 Seri Kembangan,<br>
+      Selangor, Malaysia
+    </div>
+  </div>
+</footer>
+
 <a class="whatsapp"
-   href="https://wa.me/60123632338?text=你好%20Terence，我想咨询马来西亚旅行支持服务。"
-   aria-label="WhatsApp 咨询">
-  WhatsApp <span>咨询</span>
+   href="https://wa.me/60123632338?text=Hi%20Terence,%20I%20would%20like%20to%20enquire%20about%20Malaysia%20travel%20support.">
+  WhatsApp <span>Support</span>
 </a>
 
-<!-- Tawk.to Chat -->
-<script type="text/javascript">
+<script>
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
   var s1=document.createElement("script"),
