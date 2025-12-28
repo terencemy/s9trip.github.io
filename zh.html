@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-Hans">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>马来西亚注册导游｜线上旅行咨询服务 – S9Trip</title>
 
-<meta name="description" content="Terence，拥有21年经验的马来西亚注册导游，提供专业线上旅行咨询与陪跑服务，让您的马来西亚之旅更安心、顺畅、无忧。" />
+<meta name="description" content="Terence，拥有21年经验的马来西亚注册导游，提供专业的线上旅行咨询与陪跑服务，让您的马来西亚之旅更安心、更顺畅、更无忧。" />
 <meta name="robots" content="index, follow">
 
 <!-- ===== hreflang ===== -->
 <link rel="alternate" hreflang="en" href="https://www.s9trip.com/index.html">
-<link rel="alternate" hreflang="zh-Hant" href="https://www.s9trip.com/zh.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://www.s9trip.com/zh.html">
 <link rel="alternate" hreflang="x-default" href="https://www.s9trip.com/index.html">
 
 <!-- Google Fonts (Malaysia Airlines–style) -->
@@ -19,8 +19,53 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
+<!-- ===== SEO Schema (Baidu + Google) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.s9trip.com/#organization",
+      "name": "S9Trip",
+      "url": "https://www.s9trip.com/",
+      "logo": "https://www.s9trip.com/assets/images/s9trip-malaysia-travel-support-logo.png",
+      "founder": {
+        "@type": "Person",
+        "name": "Terence Foong"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "A2-17-10, Flexis One South, Jalan OS 2, Taman Serdang Perdana, Seksyen 6",
+        "addressLocality": "Seri Kembangan",
+        "addressRegion": "Selangor",
+        "postalCode": "43300",
+        "addressCountry": "MY"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.s9trip.com/#terence-foong",
+      "name": "Terence Foong",
+      "jobTitle": "马来西亚注册导游",
+      "description": "拥有21年经验的马来西亚注册导游，提供专业的线上旅行咨询与在地陪跑服务。",
+      "worksFor": {
+        "@id": "https://www.s9trip.com/#organization"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.s9trip.com/#website",
+      "url": "https://www.s9trip.com/",
+      "name": "S9Trip 马来西亚旅行咨询",
+      "inLanguage": "zh-Hans"
+    }
+  ]
+}
+</script>
+
 <style>
-/* ===== CSS 与英文版完全一致（未改动） ===== */
+/* ===== CSS 原样保留（一行未删） ===== */
 :root{
   --navy:#0a1d37;
   --navy-deep:#08162b;
@@ -40,7 +85,7 @@ body{
   line-height:1.75;
 }
 
-/* Header */
+/* ===== Header ===== */
 header{
   background:linear-gradient(135deg,var(--navy-deep),var(--navy));
   color:#fff;
@@ -94,7 +139,7 @@ header p{
   margin:0;
 }
 
-/* Layout */
+/* ===== Layout ===== */
 main{
   max-width:920px;
   margin:0 auto;
@@ -116,7 +161,7 @@ h2{
   margin-bottom:1rem;
 }
 
-/* Profile */
+/* ===== Profile ===== */
 .profile{
   display:flex;
   align-items:center;
@@ -132,7 +177,7 @@ h2{
   box-shadow:0 16px 34px rgba(10,29,55,.25);
 }
 
-/* Payment */
+/* ===== Payment ===== */
 .payment{
   text-align:center;
 }
@@ -143,7 +188,7 @@ h2{
   color:#374151;
 }
 
-/* WhatsApp */
+/* ===== WhatsApp CTA ===== */
 .whatsapp{
   position:fixed;
   right:18px;
@@ -162,7 +207,7 @@ h2{
   font-weight:500;
 }
 
-/* Album */
+/* ===== Photo Album ===== */
 .album{
   padding-top:2.4rem;
 }
@@ -192,7 +237,6 @@ h2{
   object-fit:cover;
 }
 
-/* Mobile */
 @media(max-width:768px){
   h1{ font-size:2rem; }
   .profile{ flex-direction:column; text-align:center; }
@@ -208,7 +252,7 @@ h2{
   }
 }
 
-/* Footer */
+/* ===== Footer ===== */
 footer{
   background:var(--navy-deep);
   color:#cbd5e1;
@@ -230,56 +274,55 @@ footer{
 
   <a href="/">
     <img src="assets/images/s9trip-malaysia-travel-support-logo.png"
-         alt="S9Trip 馬來西亞旅行諮詢服務標誌"
+         alt="S9Trip 马来西亚旅行支持服务标志"
          class="site-logo">
   </a>
 
   <h1>你好，我是 Terence</h1>
-  <p>馬來西亞註冊導遊</p>
+  <p>马来西亚注册导游</p>
 </header>
 
 <main>
 
 <section class="profile">
   <img src="assets/images/terence-malaysia-registered-tourist-guide.jpg"
-       alt="Terence – 馬來西亞註冊導遊">
+       alt="Terence｜马来西亚注册导游">
   <div class="profile-text">
     <h2>Terence Foong</h2>
     <p>
-      我是一名擁有 <strong>21 年經驗</strong> 的馬來西亞註冊導遊，
-      提供值得信賴的在地視角與專業線上旅行支援，
-      協助旅客更安心、更有信心地探索馬來西亞。
+      我是一名拥有 <strong>21 年经验</strong> 的马来西亚注册导游，
+      提供值得信赖的本地视角与专业的线上旅行支持，
+      协助旅客更安心、更从容地探索马来西亚。
     </p>
   </div>
 </section>
 
 <section>
-  <h2>服務簡介</h2>
+  <h2>服务概览</h2>
   <p>
-    我是一名專業且可靠的馬來西亞持牌導遊，
-    擁有 21 年服務來自世界各地旅客的經驗，
-    擅長處理突發狀況與行程優化。
-    目前提供線上馬來西亞旅行支援服務，
-    從行程規劃到出發前準備，
-    確保您的旅程安全、順暢、無憂。
+    我是一名专业且可靠的马来西亚持牌导游，拥有 21 年服务来自世界各地旅客的经验，
+    擅长处理突发状况与行程优化。
+    目前提供线上马来西亚旅行支持服务，
+    从行程规划到出发前准备，
+    确保您的旅程安全、顺畅、无忧。
   </p>
 </section>
 
 <section>
-  <h2>關於我</h2>
+  <h2>关于我</h2>
   <p>
-    過去，多數旅遊服務必須面對面進行。
-    但時代正在改變，就連汽車也逐漸無人駕駛。
-    作為一名專業的馬來西亞導遊，我也選擇與時並進。
-    如今，我為希望自由行的旅客提供個人化線上旅行陪跑與諮詢服務，
-    以在地人的角度協助您避開文化誤區與潛在風險，
-    讓您更聰明、更安心地享受馬來西亞之旅。
+    过去，大多数旅游服务需要面对面进行。
+    但时代已经改变，就连汽车也开始自动驾驶。
+    作为一名专业的马来西亚导游，我选择与时并进。
+    如今，我为希望自由行的旅客提供个性化的线上旅行陪跑与咨询服务，
+    以在地人的角度协助您避开文化误区与潜在风险，
+    更聪明、更安心地享受马来西亚之旅。
   </p>
 </section>
 
 <section class="album">
-  <h2>旅行片段</h2>
-  <p>真實旅程、真實人物，以及屬於馬來西亞的美好時刻。</p>
+  <h2>旅行瞬间</h2>
+  <p>真实旅程、真实人物、真实的马来西亚旅行体验。</p>
 
   <div class="album-grid">
     <div class="album-item"><img src="assets/images/22122025_9.jpeg" alt=""></div>
@@ -295,8 +338,8 @@ footer{
 </section>
 
 <section class="payment">
-  <h2>線上旅行支援費用</h2>
-  <p>適合 <strong>全天線上旅行陪跑與諮詢服務</strong>。</p>
+  <h2>线上旅行支持费用</h2>
+  <p>适合 <strong>全天线上旅行支持与咨询服务</strong>。</p>
 
   <stripe-buy-button
     buy-button-id="buy_btn_1SYHduBjPDWSit5N6XbDiGRc"
@@ -305,8 +348,8 @@ footer{
 </section>
 
 <section class="payment">
-  <h2>一次性諮詢費用</h2>
-  <p>適合 <strong>3 天游程建議與諮詢</strong>。</p>
+  <h2>一次性咨询费用</h2>
+  <p>适合 <strong>3 天游程建议与咨询</strong>。</p>
 
   <stripe-buy-button
     buy-button-id="buy_btn_1SYHm9BjPDWSit5NiiF4tOgq"
@@ -315,10 +358,10 @@ footer{
 </section>
 
 <section>
-  <h2>合作機會</h2>
+  <h2>合作机会</h2>
   <p>
-    我們歡迎認同「以人為本」旅遊理念的合作夥伴，
-    共同打造值得信賴、有溫度的旅行支援服務。
+    我们欢迎认同「以人为本」旅行理念的合作伙伴，
+    一起打造值得信赖、有温度的旅行支持服务。
   </p>
 </section>
 
@@ -326,19 +369,19 @@ footer{
 
 <footer>
   <div class="footer-inner">
-    <div class="footer-title">更多旅遊資源</div>
+    <div class="footer-title">更多旅行资源</div>
 
     <div class="footer-links">
-      <a href="articles/trip-consultation-zh.html">我的服務</a>
-      <a href="articles/klia-to-klia2-shuttle-zh.html">KLIA T1 ↔ KLIA T2 免費接駁巴士</a>
-      <a href="articles/changi-airport-to-johor-bahru-transtar-ts1-zh.html">樟宜機場前往新山</a>
+      <a href="articles/trip-consultation-zh.html">我的服务</a>
+      <a href="articles/klia-to-klia2-shuttle-zh.html">KLIA T1 ↔ KLIA T2 免费接驳巴士</a>
+      <a href="articles/changi-airport-to-johor-bahru-transtar-ts1-zh.html">樟宜机场前往新山</a>
     </div>
 
     <div class="company-info">
-      <strong>商業註冊號碼（BRN）</strong><br>
+      <strong>商业注册号码（BRN）</strong><br>
       Foong Chern Hong 201703079596 (MA0219359-A)<br><br>
 
-      <strong>郵寄地址</strong><br>
+      <strong>邮寄地址</strong><br>
       A2-17-10, Flexis One South,<br>
       Jalan OS 2, Taman Serdang Perdana,<br>
       Seksyen 6, 43300 Seri Kembangan,<br>
