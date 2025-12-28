@@ -4,23 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Malaysia Registered Tourist Guide | Online Travel Support – S9Trip</title>
+<title>Travel Articles Index | Malaysia Travel Guides – S9Trip</title>
 
-<meta name="description" content="Terence, a Malaysia Registered Tourist Guide with 21 years of experience, offering professional online travel support for safe, smooth, and worry-free Malaysia trips." />
+<meta name="description" content="Browse trusted Malaysia travel guides and transport articles by a licensed Malaysia Registered Tourist Guide. Practical, experience-based advice by S9Trip." />
 <meta name="robots" content="index, follow">
 
-<!-- ===== hreflang (Bilingual SEO) ===== -->
-<link rel="alternate" hreflang="en" href="https://www.s9trip.com/index.html">
-<link rel="alternate" hreflang="zh-Hans" href="https://www.s9trip.com/zh.html">
-<link rel="alternate" hreflang="x-default" href="https://www.s9trip.com/index.html">
+<link rel="canonical" href="https://www.s9trip.com/articles/index.html">
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-<!-- Icons -->
-<link rel="stylesheet" href="assets/icons.css">
 
 <style>
 :root {
@@ -58,51 +52,21 @@ header::after {
   color:rgba(255,255,255,.35);
 }
 
-/* ===== Language Switch ===== */
-.lang-switch {
-  position:absolute;
-  top:18px;
-  right:20px;
-  font-size:0.85rem;
-}
-
-.lang-switch a,
-.lang-switch span {
-  color:rgba(255,255,255,.85);
-  text-decoration:none;
-}
-
-.lang-switch .active {
-  color:var(--gold);
-  font-weight:500;
-}
-
-.lang-switch a:hover {
-  text-decoration:underline;
-}
-
-.site-logo {
-  display:block;
-  margin:0 auto 1.2rem;
-  max-width:160px;
-  height:auto;
-}
-
-h1 {
+header h1 {
   font-family:"Playfair Display",serif;
-  font-size:2.2rem;
   font-weight:500;
-  margin:0 0 .4rem;
+  font-size:2.3rem;
+  margin:0 0 .5rem;
 }
 
 header p {
-  color:#e6e9ee;
   margin:0;
+  color:#e6e9ee;
 }
 
 /* ===== Layout ===== */
 main {
-  max-width:920px;
+  max-width:960px;
   margin:0 auto;
   padding:3rem 1.5rem 3rem;
 }
@@ -111,7 +75,7 @@ section {
   background:#fff;
   padding:2rem;
   border-radius:16px;
-  margin-bottom:2.8rem;
+  margin-bottom:2.4rem;
   box-shadow:0 12px 32px rgba(11,31,58,.08);
 }
 
@@ -119,58 +83,40 @@ h2 {
   font-family:"Playfair Display",serif;
   color:var(--navy);
   font-weight:500;
-  margin-bottom:1rem;
+  margin-top:0;
 }
 
-/* ===== Profile ===== */
-.profile {
-  display:flex;
-  align-items:center;
-  gap:2.2rem;
+/* ===== Article List ===== */
+.article-list {
+  list-style:none;
+  padding:0;
+  margin:0;
 }
 
-.profile img {
-  width:150px;
-  height:150px;
-  object-fit:cover;
-  border-radius:50%;
-  border:2px solid var(--gold);
-  box-shadow:0 14px 30px rgba(11,31,58,.25);
-  flex-shrink:0;
+.article-list li {
+  padding:1.1rem 0;
+  border-bottom:1px solid #e5e7eb;
 }
 
-.profile-text h2 { margin:0 0 .6rem; }
-.profile-text p { margin:0; font-size:.96rem; }
-
-/* ===== Payment ===== */
-.payment {
-  text-align:center;
+.article-list li:last-child {
+  border-bottom:none;
 }
 
-.payment p {
-  max-width:640px;
-  margin:0 auto 1.5rem;
-  color:#374151;
-}
-
-/* ===== WhatsApp CTA ===== */
-.whatsapp {
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  background:var(--navy);
-  color:#fff;
-  padding:14px 18px;
-  border-radius:999px;
+.article-list a {
   text-decoration:none;
-  font-size:.9rem;
-  box-shadow:0 10px 25px rgba(0,0,0,.25);
-  z-index:100;
+  color:var(--navy);
+  font-weight:500;
 }
 
-.whatsapp span {
+.article-list a:hover {
   color:var(--gold);
-  font-weight:500;
+  text-decoration:underline;
+}
+
+.article-meta {
+  font-size:.85rem;
+  color:#6b7280;
+  margin-top:.3rem;
 }
 
 /* ===== Footer ===== */
@@ -178,7 +124,7 @@ footer {
   text-align:center;
   font-size:0.85rem;
   color:#6b7280;
-  padding:1.8rem 0 2.8rem;
+  padding:2rem 1rem 3rem;
 }
 
 footer a {
@@ -193,172 +139,88 @@ footer a:hover {
 }
 
 .company-info {
-  margin-top:1.6rem;
+  margin-top:1.8rem;
   font-size:0.78rem;
   line-height:1.6;
-  color:#6b7280;
-}
-
-.company-info strong {
-  color:#374151;
 }
 
 /* ===== Mobile ===== */
 @media (max-width:768px){
-  h1 { font-size:2rem; }
-  .profile {
-    flex-direction:column;
-    text-align:center;
-  }
+  header h1 { font-size:2rem; }
 }
 </style>
-
-<!-- Stripe Buy Button Script -->
-<script async src="https://js.stripe.com/v3/buy-button.js"></script>
-
 </head>
 
 <body>
 
 <header>
-  <div class="lang-switch">
-    <span class="active">EN</span> |
-    <a href="zh.html">中文</a>
-  </div>
-
-  <a href="/" aria-label="S9Trip Home">
-    <img
-      src="assets/images/s9trip-malaysia-travel-support-logo.png"
-      alt="S9Trip Malaysia travel support and online consultation logo"
-      class="site-logo"
-      width="140"
-      height="40"
-    />
-  </a>
-
-  <h1>Hi, I’m Terence</h1>
-  <p>Malaysia Registered Tourist Guide</p>
+  <h1>Travel Articles Index</h1>
+  <p>Trusted Malaysia travel guides by a licensed local tour guide</p>
 </header>
 
 <main>
 
-<section class="profile">
-  <img
-    src="assets/images/terence-malaysia-registered-tourist-guide.jpg"
-    alt="Terence – Malaysia Registered Tourist Guide with 21 years of experience"
-    loading="lazy"
-    width="150"
-    height="150"
-  />
-  <div class="profile-text">
-    <h2>Terence Foong</h2>
-    <p>
-      A Malaysia Registered Tourist Guide with over <strong>21 years of experience</strong>,
-      providing trusted local insight and professional online travel support to help travellers
-      explore Malaysia with confidence and peace of mind.
-    </p>
-  </div>
+<section>
+  <h2>Airport & Transport Guides</h2>
+  <ul class="article-list">
+    <li>
+      <a href="/articles/klia-to-klia2-shuttle.html">
+        KLIA T1 to KLIA T2 Free Shuttle Bus Guide
+      </a>
+      <div class="article-meta">
+        Kuala Lumpur International Airport • Transport
+      </div>
+    </li>
+
+    <li>
+      <a href="/articles/changi-airport-to-johor-bahru-transtar-ts1.html">
+        Changi Airport to Johor Bahru – Transtar TS1 Guide
+      </a>
+      <div class="article-meta">
+        Singapore–Malaysia Cross Border Transport
+      </div>
+    </li>
+  </ul>
 </section>
 
 <section>
-  <h2>Service Overview</h2>
-  <p>
-    I am a professional and reliable licensed Malaysia tourist guide with 21 years of experience,
-    having served travellers from around the world. With strong expertise in handling unexpected
-    situations, I now offer online travel support for Malaysia trips — from itinerary planning
-    to pre-departure preparation — ensuring a smooth, safe, and worry-free journey.
-  </p>
+  <h2>Service & Planning Guides</h2>
+  <ul class="article-list">
+    <li>
+      <a href="/articles/trip-consultation.html">
+        Trip Consultation (Advice-Only) – How It Works
+      </a>
+      <div class="article-meta">
+        Online Travel Support • Malaysia
+      </div>
+    </li>
+  </ul>
 </section>
 
 <section>
-  <h2>About Me</h2>
+  <h2>About These Guides</h2>
   <p>
-    In the past, most travel services were conducted face-to-face. But times have changed —
-    even cars are going driverless. As a professional Malaysian tour guide, I have adapted as well.
-    Today, I provide personalised online travel support for travellers who wish to explore Malaysia
-    independently. My goal is to deliver a safe, authentic local-insider experience while helping
-    you avoid cultural misunderstandings and potential risks, so you can enjoy Malaysia smarter
-    and with greater peace of mind.
-  </p>
-</section>
-
-<section class="payment">
-  <h2>Online Travel Support Payment</h2>
-  <p>
-    Suitable for <strong>full-day online travel support</strong> and consultation services.
-    All transactions are securely encrypted and processed by Stripe.
-  </p>
-
-  <stripe-buy-button
-    buy-button-id="buy_btn_1SYHduBjPDWSit5N6XbDiGRc"
-    publishable-key="pk_live_51SY5FmBjPDWSit5Ns8phOmoGlGm3UaFctXthIBqpQX02DOkdQglkZnomZiJkFQfSbuqctbas1ArNMzVv32072Qf000gFM7CAJN">
-  </stripe-buy-button>
-</section>
-
-<section class="payment">
-  <h2>One-Time Payment</h2>
-  <p>
-    Suitable for <strong>3-day travel advice</strong>.
-  </p>
-
-  <stripe-buy-button
-    buy-button-id="buy_btn_1SYHm9BjPDWSit5NiiF4tOgq"
-    publishable-key="pk_live_51SY5FmBjPDWSit5Ns8phOmoGlGm3UaFctXthIBqpQX02DOkdQglkZnomZiJkFQfSbuqctbas1ArNMzVv32072Qf000gFM7CAJN">
-  </stripe-buy-button>
-</section>
-
-<section>
-  <h2>Collaboration Opportunities</h2>
-  <p>
-    We welcome partners who share a people-first travel philosophy.
-    Let’s work together to build meaningful and trustworthy travel support experiences.
+    All articles on S9Trip are written by a <strong>Malaysia Registered Tourist Guide</strong>
+    with over 21 years of hands-on experience. The goal is to provide practical,
+    real-world travel advice — not generic blog content — so travellers can move
+    around Malaysia safely, efficiently, and with confidence.
   </p>
 </section>
 
 </main>
 
 <footer>
-  <a href="articles/klia-to-klia2-shuttle.html">
-    Travel Article: KLIA to KLIA2 Free Shuttle Bus Guide
-  </a>
-  <br><br>
-  <a href="https://terencemy.github.io/s9trip.github.io/articles/trip-consultation.html">
-    Service Guide: Trip Consultation (Advice-Only)
-  </a>
-  <br><br>
-  <a href="https://terencemy.github.io/s9trip.github.io/articles/changi-airport-to-johor-bahru-transtar-ts1.html">
-    Travel Article: Changi Airport to Johor Bahru (Transtar TS1)
-  </a>
+  <a href="/">← Back to S9Trip Home</a>
 
   <div class="company-info">
-    Business Registration Number (BRN):<br>Foong Chern Hong 201703079596 (MA0219359-A)<br>
-    Mailing Address:<br>
+    Business Registration Number (BRN):<br>
+    <strong>Foong Chern Hong 201703079596 (MA0219359-A)</strong><br><br>
     A2-17-10, Flexis One South,<br>
     Jalan OS 2, Taman Serdang Perdana,<br>
     Seksyen 6, 43300 Seri Kembangan,<br>
     Selangor, Malaysia
   </div>
 </footer>
-
-<a class="whatsapp"
-   href="https://wa.me/60123632338?text=Hi%20Terence,%20I%20would%20like%20to%20enquire%20about%20Malaysia%20travel%20support."
-   aria-label="WhatsApp Travel Support">
-  WhatsApp <span>Support</span>
-</a>
-
-<!-- Tawk.to Chat -->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-  var s1=document.createElement("script"),
-      s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/692d03b3b93a681983f68682/1jbbtctli';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
 
 </body>
 </html>
