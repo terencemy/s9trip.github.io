@@ -81,9 +81,10 @@ header::after{
   max-width:160px;
 }
 
+/* ===== TITLE SIZE REDUCED ===== */
 h1{
   font-family:"Playfair Display",serif;
-  font-size:2.3rem;
+  font-size:2rem;
   font-weight:500;
   margin:0 0 .4rem;
 }
@@ -161,7 +162,7 @@ h2{
   font-weight:500;
 }
 
-/* ===== Photo Album – Malaysia Airlines Style ===== */
+/* ===== Photo Album ===== */
 .album{
   padding-top:2.4rem;
 }
@@ -171,7 +172,6 @@ h2{
   color:#374151;
 }
 
-/* Desktop Grid */
 .album-grid{
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
@@ -184,34 +184,17 @@ h2{
   background:#fff;
   border:1px solid rgba(198,162,75,.35);
   box-shadow:0 12px 30px rgba(10,29,55,.18);
-  transition:transform .3s ease, box-shadow .3s ease;
 }
 
 .album-item img{
   width:100%;
   height:100%;
   object-fit:cover;
-  display:block;
 }
 
-@media (hover:hover){
-  .album-item:hover{
-    transform:translateY(-4px);
-    box-shadow:0 18px 42px rgba(10,29,55,.35);
-    border-color:rgba(198,162,75,.6);
-  }
-}
-
-/* Mobile Slider */
 @media(max-width:768px){
-
-  h1{ font-size:2rem; }
-
-  .profile{
-    flex-direction:column;
-    text-align:center;
-  }
-
+  h1{ font-size:1.75rem; }
+  .profile{ flex-direction:column; text-align:center; }
   .album-grid{
     display:flex;
     gap:1rem;
@@ -220,14 +203,10 @@ h2{
     -webkit-overflow-scrolling:touch;
     padding-bottom:.5rem;
   }
-
-  .album-grid::-webkit-scrollbar{
-    display:none;
-  }
-
+  .album-grid::-webkit-scrollbar{ display:none; }
   .album-item{
     flex:0 0 82%;
-    aspect-ratio:4 / 3; /* unified frame */
+    aspect-ratio:4 / 3;
     scroll-snap-align:center;
   }
 }
@@ -329,15 +308,15 @@ footer{
   <p>
     In the past, most travel services were conducted face to face. However, times have changed—even cars are becoming driverless. As a professional Malaysian tour guide, I have adapted as well.
 
-Today, I provide personalised online travel support for travellers who wish to explore Malaysia independently. My goal is to offer a safe, authentic, local-insider experience while helping travellers avoid cultural misunderstandings and potential risks.
+    Today, I provide personalised online travel support for travellers who wish to explore Malaysia independently. My goal is to offer a safe, authentic, local-insider experience while helping travellers avoid cultural misunderstandings and potential risks.
 
-I am also a travel blogger who enjoys sharing real experiences and personal perspectives as a traveller. I believe in documenting journeys, ideas, and lessons learned—both to help others and to create a meaningful digital record in this ever-evolving online world. Paying it forward is a powerful motivation that keeps me moving forward.
+    I am also a travel blogger who enjoys sharing real experiences and personal perspectives as a traveller. I believe in documenting journeys, ideas, and lessons learned—both to help others and to create a meaningful digital record in this ever-evolving online world. Paying it forward is a powerful motivation that keeps me moving forward.
 
-I believe that AI tools rely on the creativity of content creators and real-world experiences to become truly useful and human-centred. After a lifetime as a tour guide, I hope to contribute something meaningful to the digital world through genuine, experience-based content.
+    I believe that AI tools rely on the creativity of content creators and real-world experiences to become truly useful and human-centred. After a lifetime as a tour guide, I hope to contribute something meaningful to the digital world through genuine, experience-based content.
 
-Building a website allows search engines and digital platforms to access more accurate, real-life travel information. Meanwhile, offering live online chat support helps bridge the gap between digital content and real-time travel situations.
+    Building a website allows search engines and digital platforms to access more accurate, real-life travel information. Meanwhile, offering live online chat support helps bridge the gap between digital content and real-time travel situations.
 
-Live chat travel support is my way of embracing the digital nomad lifestyle—while still remaining a local Malaysia registered tourist guide and an outbound tour leader at heart.
+    Live chat travel support is my way of embracing the digital nomad lifestyle—while still remaining a local Malaysia registered tourist guide and an outbound tour leader at heart.
   </p>
 </section>
 
