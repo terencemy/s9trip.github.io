@@ -67,10 +67,6 @@
       color: var(--gold);
     }
 
-    .lang-switch a:hover {
-      text-decoration: underline;
-    }
-
     h1 {
       font-size: 1.6rem;
       margin-bottom: 0.4rem;
@@ -107,6 +103,53 @@
       margin-bottom: 0.4rem;
     }
 
+    /* ===== Photo Album (NEW, non-intrusive) ===== */
+    .album {
+      margin-top: 1rem;
+    }
+
+    .album-track {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 0.5rem;
+    }
+
+    .album-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .album-item {
+      flex: 0 0 82%;
+      max-width: 360px;
+      aspect-ratio: 4 / 3;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid rgba(201,162,77,0.45);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.18);
+      scroll-snap-align: center;
+    }
+
+    .album-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      .album-track {
+        overflow-x: visible;
+        flex-wrap: wrap;
+      }
+      .album-item {
+        flex: 0 0 calc(50% - 0.5rem);
+      }
+    }
+
     footer {
       text-align: center;
       font-size: 0.75rem;
@@ -126,7 +169,6 @@
 <div class="container">
 
   <header>
-    <!-- Language Option -->
     <div class="lang-switch">
       <span class="active">English</span> |
       <a href="https://terencemy.github.io/s9trip.github.io/articles/changi-airport-to-johor-bahru-transtar-ts1-zh.html">中文</a>
@@ -135,6 +177,43 @@
     <h1>Changi Airport to Johor Bahru by Cross-Border Coach</h1>
     <p>A calm, seamless journey on the Transtar TS1 service — curated by S9Trip.</p>
   </header>
+
+  <!-- ===== Photo Album (Added only, no content removed) ===== -->
+  <section class="album">
+    <h2>Travel Moments</h2>
+
+    <div class="album-track">
+      <div class="album-item">
+        <img src="assets/images/12VNSAPA1325SQ_1.jpeg" alt="Tran Quoc Pagoda">
+      </div>
+      <div class="album-item">
+        <img src="assets/images/12VNSAPA1325SQ_2.jpeg" alt="St Joseph Cathedral">
+      </div>
+      <div class="album-item">
+        <img src="assets/images/12VNSAPA1325SQ_3.jpeg" alt="Halong Bay">
+      </div>
+      <div class="album-item">
+        <img src="assets/images/12VNSAPA1325SQ_4.jpeg" alt="Boat Ride">
+      </div>
+      <div class="album-item">
+        <img src="assets/images/12VNSAPA1325SQ_5.jpeg" alt="Limestone karsts scenery">
+      </div>
+      <div class="album-item">
+        <img src="assets/images/12VNSAPA1325SQ_6.jpeg" alt="Emerald waters">
+      </div>
+      <div class="album-item">
+        <img src="assets/images/12VNSAPA1325SQ_7.jpeg" alt="Luxury Cruise">
+      </div>
+      <div class="album-item">
+        <img src="assets/images/12VNSAPA1325SQ_8.jpeg" alt="Vietnam China Border">
+      </div>
+      <div class="album-item">
+        <img src="assets/images/12VNSAPA1325SQ_9.jpeg" alt="Sapa Street View">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ORIGINAL CONTENT BELOW (UNCHANGED) ===== -->
 
   <section>
     <h2>Service Overview</h2>
