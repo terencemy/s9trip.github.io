@@ -220,7 +220,73 @@ footer{
   }
 }
 </style>
+  /* ===== Photo Album – Malaysia Airlines Style ===== */
 
+.album {
+  padding-top: 2.4rem;
+}
+
+.album p {
+  max-width: 620px;
+  color:#374151;
+}
+
+/* ===== Desktop Grid ===== */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+/* ===== Shared Frame ===== */
+.album-item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(198,162,75,.35); /* Gold hint */
+  box-shadow: 0 12px 30px rgba(10,29,55,.18);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.album-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hover (Desktop) */
+@media (hover:hover) {
+  .album-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 42px rgba(10,29,55,.35);
+    border-color: rgba(198,162,75,.6);
+  }
+}
+
+/* ===== Mobile Slider ===== */
+@media (max-width: 768px) {
+
+  .album-grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: .5rem;
+  }
+
+  .album-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .album-item {
+    flex: 0 0 82%;
+    height: 240px;
+    scroll-snap-align: center;
+  }
+}
 <!-- Stripe -->
 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
@@ -286,39 +352,42 @@ footer{
   </p>
 
   <div class="album-grid">
+
     <div class="album-item">
       <img src="assets/images/22122025_1.jpeg" loading="lazy" alt="Malay Wedding Moment">
     </div>
 
     <div class="album-item">
-      <img src="assets/images/22122025_2.jpeg" loading="lazy" alt="Local experience in Batu Cave">
+      <img src="assets/images/22122025_2.jpeg" loading="lazy" alt="Local experience in Batu Caves">
     </div>
 
     <div class="album-item">
-      <img src="assets/images/22122025_3.jpeg" loading="lazy" alt="Putrajaya">
+      <img src="assets/images/22122025_3.jpeg" loading="lazy" alt="Putrajaya travel moment">
     </div>
 
     <div class="album-item">
-      <img src="assets/images/22122025_4.jpeg" loading="lazy" alt="A Lovely Couple">
+      <img src="assets/images/22122025_4.jpeg" loading="lazy" alt="A lovely couple in Malaysia">
     </div>
 
     <div class="album-item">
-      <img src="assets/images/22122025_5.jpeg" loading="lazy" alt="The Iron Lady">
+      <img src="assets/images/22122025_5.jpeg" loading="lazy" alt="The Iron Lady travel moment">
     </div>
 
     <div class="album-item">
-      <img src="assets/images/22122025_6.jpeg" loading="lazy" alt="We Love This Moment">
+      <img src="assets/images/22122025_6.jpeg" loading="lazy" alt="Happy travel moment">
     </div>
 
     <div class="album-item">
-      <img src="assets/images/22122025_7.jpeg" loading="lazy" alt="Kuala Selangor Happy Moment">
+      <img src="assets/images/22122025_7.jpeg" loading="lazy" alt="Kuala Selangor happy moment">
     </div>
 
     <div class="album-item">
-      <img src="assets/images/22122025_8.jpeg" loading="lazy" alt="Always Be Happy">
+      <img src="assets/images/22122025_8.jpeg" loading="lazy" alt="Always be happy travel moment">
     </div>
+
   </div>
 </section>
+
 <section class="payment">
   <h2>Online Travel Support Payment</h2>
   <p>
