@@ -1,276 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-  <title>Changi Airport to Johor Bahru Bus | Transtar TS1 | S9Trip</title>
-  <meta name="description" content="Premium travel guide for Transtar TS1 cross-border coach from Changi Airport to Johor Bahru. Curated by S9Trip.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changi Airport to Johor Bahru Bus (Transtar TS1) – Route, Fare & Boarding Guide | S9Trip</title>
+<meta name="description" content="Complete guide to taking the Transtar TS1 bus from Changi Airport to Johor Bahru. Route, fare, boarding point, immigration process and real travel experience.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- hreflang -->
-  <link rel="alternate" hreflang="en" href="changi-airport-to-johor-bahru-transtar-ts1.html">
-  <link rel="alternate" hreflang="zh-Hans" href="changi-airport-to-johor-bahru-transtar-ts1-zh.html">
+<link rel="alternate" hreflang="en" href="changi-airport-to-johor-bahru-transtar-ts1.html">
+<link rel="alternate" hreflang="zh-Hans" href="changi-airport-to-johor-bahru-transtar-ts1-zh.html">
 
-  <style>
-    :root {
-      --navy: #002B5C;
-      --gold: #C9A24D;
-      --light-gray: #F6F7F9;
-      --text-dark: #1F2933;
-    }
+<!-- HowTo + BusTrip Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["HowTo", "BusTrip"],
+  "name": "How to Take Transtar TS1 Bus from Changi Airport to Johor Bahru",
+  "description": "Step-by-step guide to taking the Transtar TS1 cross-border bus from Changi Airport to Johor Bahru.",
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "SGD",
+    "value": "11"
+  },
+  "totalTime": "PT2H",
+  "step": [
+    { "@type": "HowToStep", "name": "Go to Terminal 1", "text": "Proceed to Changi Airport Terminal 1 Coach Bay B or C." },
+    { "@type": "HowToStep", "name": "Board Transtar TS1", "text": "Board the TS1 bus and prepare exact fare if paying cash." },
+    { "@type": "HowToStep", "name": "Clear Immigration", "text": "Clear immigration at Woodlands Checkpoint with the same bus." },
+    { "@type": "HowToStep", "name": "Arrive Johor Bahru", "text": "Bus continues directly to Johor Bahru CIQ / Larkin Terminal." }
+  ]
+}
+</script>
 
-    * { box-sizing: border-box; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Inter", Roboto, sans-serif;
-      background: var(--light-gray);
-      margin: 0;
-      color: var(--text-dark);
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 15px;
-    }
-
-    header {
-      background: var(--navy);
-      color: #fff;
-      padding: 26px;
-      border-radius: 14px;
-      position: relative;
-    }
-
-    header::after {
-      content: "S9Trip.com";
-      position: absolute;
-      right: 14px;
-      bottom: 10px;
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.35);
-      letter-spacing: 1px;
-    }
-
-    /* ===== Language Switch ===== */
-    .lang-switch {
-      position: absolute;
-      top: 14px;
-      right: 16px;
-      font-size: 0.8rem;
-    }
-
-    .lang-switch a,
-    .lang-switch span {
-      color: rgba(255,255,255,0.9);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .lang-switch .active {
-      color: var(--gold);
-    }
-
-    h1 {
-      font-size: 1.6rem;
-      margin-bottom: 0.4rem;
-    }
-
-    p {
-      font-size: 0.95rem;
-      line-height: 1.7;
-      margin: 0.8rem 0;
-    }
-
-    section {
-      background: #fff;
-      padding: 18px;
-      border-radius: 14px;
-      margin-top: 1rem;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-    }
-
-    h2 {
-      font-size: 1.1rem;
-      color: var(--navy);
-      border-left: 4px solid var(--gold);
-      padding-left: 0.6rem;
-      margin-bottom: 0.6rem;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    li {
-      font-size: 0.92rem;
-      margin-bottom: 0.4rem;
-    }
-
-    /* ===== Photo Album ===== */
-    .album {
-      margin-top: 1rem;
-    }
-
-    .album-track {
-      display: flex;
-      gap: 1rem;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      padding-bottom: 0.5rem;
-    }
-
-    .album-track::-webkit-scrollbar {
-      display: none;
-    }
-
-    .album-item {
-      flex: 0 0 82%;
-      aspect-ratio: 4 / 3;
-      border-radius: 14px;
-      overflow: hidden;
-      background: #fff;
-      border: 1px solid rgba(201,162,77,0.45);
-      box-shadow: 0 10px 26px rgba(0,0,0,0.18);
-      scroll-snap-align: center;
-    }
-
-    .album-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* ===== Desktop: 3 photos per row ===== */
-    @media (min-width: 768px) {
-      .album-track {
-        overflow-x: visible;
-        flex-wrap: wrap;
-      }
-      .album-item {
-        flex: 0 0 calc(33.333% - 0.67rem);
-      }
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.75rem;
-      color: #6b7280;
-      margin: 1.8rem 0 1rem;
-    }
-
-    footer span {
-      color: var(--gold);
-      font-weight: 600;
-    }
-  </style>
+<style>
+:root{
+  --navy:#002B5C;
+  --gold:#C9A24D;
+  --bg:#F6F7F9;
+  --text:#1F2933;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Inter",Roboto,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+.container{max-width:900px;margin:auto;padding:15px}
+header{
+  background:var(--navy);
+  color:#fff;
+  padding:26px;
+  border-radius:14px;
+  position:relative;
+}
+header::after{
+  content:"S9Trip.com";
+  position:absolute;
+  right:14px;
+  bottom:10px;
+  font-size:.75rem;
+  color:rgba(255,255,255,.35);
+}
+.lang-switch{
+  position:absolute;
+  top:14px;
+  right:16px;
+  font-size:.8rem;
+}
+.lang-switch a,.lang-switch span{
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+.lang-switch .active{color:var(--gold)}
+h1{font-size:1.6rem;margin-bottom:.4rem}
+p{font-size:.95rem;line-height:1.7}
+section{
+  background:#fff;
+  padding:18px;
+  border-radius:14px;
+  margin-top:1rem;
+  box-shadow:0 6px 18px rgba(0,0,0,.05);
+}
+h2{
+  font-size:1.1rem;
+  color:var(--navy);
+  border-left:4px solid var(--gold);
+  padding-left:.6rem;
+}
+.album-track{
+  display:flex;
+  gap:1rem;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+}
+.album-track::-webkit-scrollbar{display:none}
+.album-item{
+  flex:0 0 82%;
+  aspect-ratio:4/3;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid rgba(201,162,77,.45);
+  box-shadow:0 10px 26px rgba(0,0,0,.18);
+  scroll-snap-align:center;
+}
+.album-item img{width:100%;height:100%;object-fit:cover}
+@media(min-width:768px){
+  .album-track{flex-wrap:wrap;overflow:visible}
+  .album-item{flex:0 0 calc(33.333% - .67rem)}
+}
+footer{
+  text-align:center;
+  font-size:.75rem;
+  color:#6b7280;
+  margin:2rem 0 1rem;
+}
+footer span{color:var(--gold);font-weight:600}
+</style>
 </head>
 
 <body>
-
 <div class="container">
 
-  <header>
-    <div class="lang-switch">
-      <span class="active">English</span> |
-      <a href="changi-airport-to-johor-bahru-transtar-ts1-zh.html">中文</a>
-    </div>
+<header>
+  <div class="lang-switch">
+    <span class="active">English</span> |
+    <a href="changi-airport-to-johor-bahru-transtar-ts1-zh.html">中文</a>
+  </div>
+  <h1>Changi Airport to Johor Bahru Bus – Transtar TS1 Cross-Border Coach Guide</h1>
+  <p>A calm, seamless journey on the Transtar TS1 service — curated by S9Trip.</p>
+</header>
 
-    <h1>Changi Airport to Johor Bahru by Cross-Border Coach</h1>
-    <p>A calm, seamless journey on the Transtar TS1 service — curated by S9Trip.</p>
-  </header>
+<section>
+  <h2>Travel Moments</h2>
+  <div class="album-track">
+    <div class="album-item"><img src="../assets/images/changitojb01.jpeg"></div>
+    <div class="album-item"><img src="../assets/images/changitojb02.jpeg"></div>
+    <div class="album-item"><img src="../assets/images/changitojb03.jpeg"></div>
+    <div class="album-item"><img src="../assets/images/changitojb04.jpeg"></div>
+    <div class="album-item"><img src="../assets/images/changitojb05.jpeg"></div>
+    <div class="album-item"><img src="../assets/images/changitojb06.jpeg"></div>
+    <div class="album-item"><img src="../assets/images/changitojb07.jpeg"></div>
+    <div class="album-item"><img src="../assets/images/changitojb08.jpeg"></div>
+    <div class="album-item"><img src="../assets/images/changitojb09.jpeg"></div>
+  </div>
+</section>
 
-  <!-- ===== Photo Album (UNCHANGED) ===== -->
-  <section class="album">
-    <h2>Travel Moments</h2>
+<section>
+<h2>First Time Taking a Cross-Border Bus from Changi Airport to Johor Bahru</h2>
+<p>
+This was my first time taking the Transtar cross-border bus directly from Changi Airport to Johor Bahru, and the whole experience was much smoother than I expected. The TS1 route departs from the airport, goes through the Woodlands checkpoint, and heads straight to Johor Bahru CIQ—no need to change buses, which is very friendly for first-time passengers.
+</p>
+<p>
+The only thing to note is that the driver has a bit of personality, so make sure you prepare exact change, as he doesn’t give change.
+</p>
+<p>
+The boarding point is at Terminal 1, following the signs to the Coach parking area (Coach Bay B). It’s easy to find, and you go through immigration together with the bus. The adult fare is only SGD 11, making it both budget-friendly and convenient.
+</p>
+<p>
+Next time I travel from Singapore Airport to Johor Bahru, I’d definitely consider taking this bus again.
+</p>
+</section>
 
-    <div class="album-track">
-      <div class="album-item"><img src="../assets/images/changitojb01.jpeg" alt="Signage Skytrain to T1"></div>
-      <div class="album-item"><img src="../assets/images/changitojb02.jpeg" alt="Signage Coach Platform B"></div>
-      <div class="album-item"><img src="../assets/images/changitojb03.jpeg" alt="Bus Ticket Counter"></div>
-      <div class="album-item"><img src="../assets/images/changitojb04.jpeg" alt="Bus Schedule"></div>
-      <div class="album-item"><img src="../assets/images/changitojb05.jpeg" alt="Published Price and Operation Hour"></div>
-      <div class="album-item"><img src="../assets/images/changitojb06.jpeg" alt="Coach Platform B"></div>
-      <div class="album-item"><img src="../assets/images/changitojb07.jpeg" alt="Transtar Coach"></div>
-      <div class="album-item"><img src="../assets/images/changitojb08.jpeg" alt="Receipt for Transtar Ticket"></div>
-      <div class="album-item"><img src="../assets/images/changitojb09.jpeg" alt="Jewel Fountain in T1"></div>
-    </div>
-  </section>
+<section>
+<h2>Service Overview</h2>
+<p>The Transtar TS1 is a direct cross-border coach from Changi Airport to Larkin Terminal, Johor Bahru.</p>
+</section>
 
-  <!-- ===== NEW SECTION: First-Time Experience (ADDED ONLY) ===== -->
-  <section>
-    <h2>First Time Taking a Cross-Border Bus from Changi Airport to Johor Bahru</h2>
-    <p>
-      This was my first time taking the Transtar cross-border bus directly from Changi Airport to Johor Bahru,
-      and the whole experience was much smoother than I expected. The TS1 route departs from the airport,
-      goes through the Woodlands checkpoint, and heads straight to Johor Bahru CIQ — no need to change buses,
-      which is very friendly for first-time passengers.
-    </p>
-    <p>
-      One thing to note is that the driver has a bit of personality, so it’s best to prepare exact change,
-      as he does not provide change.
-    </p>
-    <p>
-      The boarding point is at Terminal 1, following the signs to the Coach parking area (Coach Bay B).
-      It is easy to locate, and passengers go through immigration together with the bus.
-      The adult fare is only SGD 11, making this option both budget-friendly and convenient.
-    </p>
-    <p>
-      Next time I travel from Singapore Airport to Johor Bahru, I would definitely consider taking this bus again.
-    </p>
-  </section>
+<section>
+<h2>Boarding Information</h2>
+<ul>
+<li><strong>Terminal 1:</strong> Arrival Coach Bay B / C</li>
+<li><strong>Terminal 4:</strong> Arrival Coach Bay 7 / 8</li>
+</ul>
+</section>
 
-  <!-- ===== ORIGINAL CONTENT (UNCHANGED) ===== -->
+<section>
+<h2>Route & Immigration</h2>
+<p>The coach travels via Woodlands Checkpoint. Immigration is completed together with the bus.</p>
+</section>
 
-  <section>
-    <h2>Service Overview</h2>
-    <p>
-      The Transtar TS1 is a direct cross-border coach from Changi Airport to
-      Larkin Terminal, Johor Bahru. It is ideal for travellers who prefer
-      a simple and stress-free journey without multiple transfers.
-    </p>
-  </section>
+<section>
+<h2>Fares & Payment</h2>
+<ul>
+<li>Adult S$11 | Child S$5.50</li>
+</ul>
+</section>
 
-  <section>
-    <h2>Boarding Information</h2>
-    <ul>
-      <li><strong>Terminal 1:</strong> Arrival Coach Bay B / C</li>
-      <li><strong>Terminal 4:</strong> Arrival Coach Bay 7 / 8</li>
-    </ul>
-    <p>
-      Travellers arriving at Terminal 2 or 3 should proceed to Terminal 1
-      via Skytrain or walking route.
-    </p>
-  </section>
-
-  <section>
-    <h2>Route & Immigration</h2>
-    <p>
-      The coach travels via Woodlands Checkpoint. Immigration is completed
-      together with the bus, and passengers continue on the same vehicle
-      throughout the process.
-    </p>
-  </section>
-
-  <section>
-    <h2>Fares & Payment</h2>
-    <ul>
-      <li>Changi Airport → Larkin Terminal: Adult S$11 | Child S$5.50</li>
-      <li>Larkin Terminal → Changi Airport: Adult RM13 | Child RM6.50</li>
-    </ul>
-    <p>
-      Payment is by cash or EZ-Link only. Tickets are non-refundable and
-      exact payment is recommended.
-    </p>
-  </section>
-
-  <footer>
-    Curated by <span>S9Trip.com</span> · Travel smarter, travel seamlessly
-  </footer>
+<footer>
+Curated by <span>S9Trip.com</span> · Travel smarter, travel seamlessly
+</footer>
 
 </div>
-
 </body>
 </html>
