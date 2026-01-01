@@ -7,7 +7,6 @@
   <title>Website Setup | S9Trip</title>
 
   <meta name="description" content="Professional website setup for business freelancers and small businesses. Fast, SEO-friendly websites with full ownership, no monthly fees, and clear pricing.">
-
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph -->
@@ -27,7 +26,6 @@
   <!-- Stripe Buy Button -->
   <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
-  <!-- Malaysia Airlines–Style CSS -->
   <style>
     :root {
       --navy: #0b1f3a;
@@ -118,16 +116,13 @@
       margin-bottom: 0.5rem;
     }
 
-    /* Pricing layout */
     .pricing-flex {
       display: flex;
       gap: 2rem;
       align-items: flex-start;
     }
 
-    .pricing-details {
-      flex: 2;
-    }
+    .pricing-details { flex: 2; }
 
     .pricing-payment {
       flex: 1;
@@ -137,12 +132,8 @@
     }
 
     @media (max-width: 768px) {
-      .pricing-flex {
-        flex-direction: column;
-      }
-      .pricing-payment {
-        justify-content: flex-start;
-      }
+      .pricing-flex { flex-direction: column; }
+      .pricing-payment { justify-content: flex-start; }
     }
 
     footer {
@@ -156,6 +147,25 @@
     footer p {
       margin: 0;
       color: #d6d6d6;
+    }
+
+    /* Floating WhatsApp */
+    .whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: #25D366;
+      color: #ffffff;
+      padding: 14px 20px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      box-shadow: 0 12px 28px rgba(0,0,0,.25);
+      z-index: 9999;
+    }
+
+    .whatsapp span {
+      font-weight: 600;
     }
   </style>
 </head>
@@ -186,7 +196,6 @@
 <section>
   <h2>Website Setup Pricing (USD)</h2>
 
-  <!-- Starter Package -->
   <article class="pricing-flex">
     <div class="pricing-details">
       <h3>Starter — Website Setup</h3>
@@ -211,7 +220,6 @@
     </div>
   </article>
 
-  <!-- Standard Package -->
   <article class="pricing-flex">
     <div class="pricing-details">
       <h3>Standard — Content Website (Most Popular)</h3>
@@ -249,7 +257,6 @@
 
 <section>
   <h2>Frequently Asked Questions</h2>
-
   <article>
     <h3>What is content formatting & cleanup?</h3>
     <p>
@@ -257,7 +264,6 @@
       and professional website layout — without rewriting your content.
     </p>
   </article>
-
 </section>
 
 <section>
@@ -270,9 +276,9 @@
     <li>Built for long-term publishing</li>
   </ul>
 </section>
+
 <section>
   <h2>Frequently Asked Questions</h2>
-
   <article>
     <h3>What does “No Wix or Squarespace lock-in” mean?</h3>
     <p>
@@ -281,6 +287,7 @@
     </p>
   </article>
 </section>
+
 <section>
   <h2>Payment & Process</h2>
   <ul>
@@ -297,6 +304,12 @@
     Fast · SEO-Ready · Fully Owned Websites
   </p>
 </footer>
+
+<!-- Floating WhatsApp -->
+<a class="whatsapp"
+   href="https://wa.me/60123632338?text=Hi%20Terence,%20I%20would%20like%20to%20enquire%20about%20Malaysia%20travel%20support.">
+  WhatsApp <span>Support</span>
+</a>
 
 </body>
 </html>
