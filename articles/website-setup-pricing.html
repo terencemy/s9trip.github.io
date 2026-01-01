@@ -125,15 +125,15 @@
       align-items: flex-start;
     }
 
+    .pricing-details {
+      flex: 2;
+    }
+
     .pricing-payment {
       flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-
-    .pricing-details {
-      flex: 2;
     }
 
     @media (max-width: 768px) {
@@ -189,13 +189,7 @@
   <!-- Starter Package -->
   <article class="pricing-flex">
 
-    <div class="pricing-payment">
-      <stripe-buy-button
-        buy-button-id="buy_btn_1SkfHbBjPDWSit5NQNlkr2Kt"
-        publishable-key="pk_live_51SY5FmBjPDWSit5Ns8phOmoGlGm3UaFctXthIBqpQX02DOkdQglkZnomZiJkFQfSbuqctbas1ArNMzVv32072Qf000gFM7CAJN">
-      </stripe-buy-button>
-    </div>
-
+    <!-- LEFT: Description -->
     <div class="pricing-details">
       <h3>Starter — Website Setup</h3>
       <div class="price">$650</div>
@@ -209,6 +203,14 @@
         <li>Live website handover</li>
       </ul>
       <p><em>Timeline: 5–7 business days</em></p>
+    </div>
+
+    <!-- RIGHT: Payment -->
+    <div class="pricing-payment">
+      <stripe-buy-button
+        buy-button-id="buy_btn_1SkfHbBjPDWSit5NQNlkr2Kt"
+        publishable-key="pk_live_51SY5FmBjPDWSit5Ns8phOmoGlGm3UaFctXthIBqpQX02DOkdQglkZnomZiJkFQfSbuqctbas1ArNMzVv32072Qf000gFM7CAJN">
+      </stripe-buy-button>
     </div>
 
   </article>
@@ -258,6 +260,7 @@
       You can move or update your site anytime without restrictions.
     </p>
   </article>
+
 </section>
 
 <section>
