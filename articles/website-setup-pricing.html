@@ -16,7 +16,6 @@
   <meta property="og:type" content="website">
 
   <!-- Google Analytics (GA4) -->
-  <!-- 🔁 Replace G-XXXXXXXXXX with your real Measurement ID -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -24,6 +23,9 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
+
+  <!-- Stripe -->
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
   <!-- Malaysia Airlines–Style CSS -->
   <style>
@@ -109,16 +111,38 @@
       margin-bottom: 2rem;
     }
 
-    article strong {
-      color: var(--navy);
-      font-size: 1.1rem;
-    }
-
     .price {
       font-size: 1.8rem;
       font-weight: 600;
       color: var(--gold);
       margin-bottom: 0.5rem;
+    }
+
+    /* Pricing layout */
+    .pricing-flex {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .pricing-payment {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pricing-details {
+      flex: 2;
+    }
+
+    @media (max-width: 768px) {
+      .pricing-flex {
+        flex-direction: column;
+      }
+      .pricing-payment {
+        justify-content: flex-start;
+      }
     }
 
     footer {
@@ -133,18 +157,7 @@
       margin: 0;
       color: #d6d6d6;
     }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-
-      h2 {
-        font-size: 1.4rem;
-      }
-    }
   </style>
-
 </head>
 
 <body>
@@ -159,7 +172,7 @@
 <section>
   <h2>Who This Is For</h2>
   <p>
-    Designed for <strong>business freelancers, consultants, and small business owners</strong>
+    Designed for <strong>freelancers, consultants, and small business owners</strong>
     who want a professional website without subscriptions or platform lock-in.
   </p>
   <ul>
@@ -173,29 +186,34 @@
 <section>
   <h2>Website Setup Pricing (USD)</h2>
 
-  <article>
-    <h3>Starter — Website Setup</h3>
-    <div class="price">$650</div>
-    <p>Best for freelancers and solo professionals.</p>
-    <ul>
-      <li>1–3 page static website</li>
-      <li>Mobile-friendly layout</li>
-      <li>SEO-ready HTML structure</li>
-      <li>Domain & GitHub Pages setup</li>
-      <li>Google Analytics installed</li>
-      <li>Live website handover</li>
-    </ul>
-    <p><em>Timeline: 5–7 business days</em></p>
-  </article>
-<script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
+  <!-- Starter Package -->
+  <article class="pricing-flex">
 
-<stripe-buy-button
-  buy-button-id="buy_btn_1SkfHbBjPDWSit5NQNlkr2Kt"
-  publishable-key="pk_live_51SY5FmBjPDWSit5Ns8phOmoGlGm3UaFctXthIBqpQX02DOkdQglkZnomZiJkFQfSbuqctbas1ArNMzVv32072Qf000gFM7CAJN"
->
-</stripe-buy-button>
+    <div class="pricing-payment">
+      <stripe-buy-button
+        buy-button-id="buy_btn_1SkfHbBjPDWSit5NQNlkr2Kt"
+        publishable-key="pk_live_51SY5FmBjPDWSit5Ns8phOmoGlGm3UaFctXthIBqpQX02DOkdQglkZnomZiJkFQfSbuqctbas1ArNMzVv32072Qf000gFM7CAJN">
+      </stripe-buy-button>
+    </div>
+
+    <div class="pricing-details">
+      <h3>Starter — Website Setup</h3>
+      <div class="price">$650</div>
+      <p>Best for freelancers and solo professionals.</p>
+      <ul>
+        <li>1–3 page static website</li>
+        <li>Mobile-friendly layout</li>
+        <li>SEO-ready HTML structure</li>
+        <li>Domain & GitHub Pages setup</li>
+        <li>Google Analytics installed</li>
+        <li>Live website handover</li>
+      </ul>
+      <p><em>Timeline: 5–7 business days</em></p>
+    </div>
+
+  </article>
+
+  <!-- Standard Package -->
   <article>
     <h3>Standard — Content Website (Most Popular)</h3>
     <div class="price">$1,250</div>
@@ -218,9 +236,10 @@
     <li>Additional page: <strong>$120 / page</strong></li>
     <li>Bilingual structure (EN / 中文): <strong>from $350</strong></li>
     <li>Content formatting & cleanup: <strong>from $150</strong></li>
-    <li>Updates & support: <strong>$90 / page</strong></li>
+    <li>Updates & support: <strong>$90 / hour</strong></li>
   </ul>
 </section>
+
 <section>
   <h2>Frequently Asked Questions</h2>
 
@@ -232,6 +251,13 @@
     </p>
   </article>
 
+  <article>
+    <h3>What does “No Wix or Squarespace lock-in” mean?</h3>
+    <p>
+      You fully own your website and are not tied to monthly platform subscriptions.
+      You can move or update your site anytime without restrictions.
+    </p>
+  </article>
 </section>
 
 <section>
@@ -244,17 +270,6 @@
     <li>Built for long-term publishing</li>
   </ul>
 </section>
-<section>
-  <h2>Frequently Asked Questions</h2>
-
-  <article>
-  <h3>What does “No Wix or Squarespace lock-in” mean?</h3>
-  <p>
-    It means your website is not tied to a platform subscription.
-    You fully own your website files and can update or move your site anytime
-    without being forced into monthly fees or platform restrictions.
-  </p>
-</article>
 
 <section>
   <h2>Payment & Process</h2>
