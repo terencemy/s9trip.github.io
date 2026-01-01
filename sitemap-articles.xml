@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-  xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="https://www.w3.org/1999/xhtml">
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <!-- ========================= -->
   <!-- Trip Consultation -->
@@ -11,6 +11,7 @@
     <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+
     <xhtml:link
       rel="alternate"
       hreflang="en"
@@ -19,6 +20,10 @@
       rel="alternate"
       hreflang="zh-Hans"
       href="https://www.s9trip.com/articles/trip-consultation-zh.html" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://www.s9trip.com/articles/trip-consultation.html" />
   </url>
 
   <!-- ========================= -->
@@ -29,6 +34,7 @@
     <lastmod>2025-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.70</priority>
+
     <xhtml:link
       rel="alternate"
       hreflang="en"
@@ -37,6 +43,10 @@
       rel="alternate"
       hreflang="zh-Hans"
       href="https://www.s9trip.com/articles/klia-klia2-free-shuttle-bus-guide-zh.html" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://www.s9trip.com/articles/klia-to-klia2-shuttle.html" />
   </url>
 
   <!-- ========================= -->
@@ -47,6 +57,7 @@
     <lastmod>2025-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.75</priority>
+
     <xhtml:link
       rel="alternate"
       hreflang="en"
@@ -55,6 +66,33 @@
       rel="alternate"
       hreflang="zh-Hans"
       href="https://www.s9trip.com/articles/changi-airport-to-johor-bahru-transtar-ts1-zh.html" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://www.s9trip.com/articles/changi-airport-to-johor-bahru-transtar-ts1.html" />
+  </url>
+
+  <!-- ========================= -->
+  <!-- Website Setup Pricing -->
+  <!-- ========================= -->
+  <url>
+    <loc>https://www.s9trip.com/articles/website-setup-pricing.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.s9trip.com/articles/website-setup-pricing.html" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="https://www.s9trip.com/articles/website-setup-pricing-zh.html" />
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://www.s9trip.com/articles/website-setup-pricing.html" />
   </url>
 
 </urlset>
