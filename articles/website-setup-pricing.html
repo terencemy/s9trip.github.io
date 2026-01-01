@@ -24,7 +24,7 @@
     gtag('config', 'G-XXXXXXXXXX');
   </script>
 
-  <!-- Stripe -->
+  <!-- Stripe Buy Button (ONLY ONCE PER PAGE) -->
   <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
   <!-- Malaysia Airlines–Style CSS -->
@@ -118,7 +118,7 @@
       margin-bottom: 0.5rem;
     }
 
-    /* Pricing layout */
+    /* FLEX PRICING LAYOUT */
     .pricing-flex {
       display: flex;
       gap: 2rem;
@@ -189,7 +189,6 @@
   <!-- Starter Package -->
   <article class="pricing-flex">
 
-    <!-- LEFT: Description -->
     <div class="pricing-details">
       <h3>Starter — Website Setup</h3>
       <div class="price">$650</div>
@@ -205,7 +204,6 @@
       <p><em>Timeline: 5–7 business days</em></p>
     </div>
 
-    <!-- RIGHT: Payment -->
     <div class="pricing-payment">
       <stripe-buy-button
         buy-button-id="buy_btn_1SkfHbBjPDWSit5NQNlkr2Kt"
@@ -216,18 +214,29 @@
   </article>
 
   <!-- Standard Package -->
-  <article>
-    <h3>Standard — Content Website (Most Popular)</h3>
-    <div class="price">$1,250</div>
-    <p>Ideal for content-driven freelancers and small businesses.</p>
-    <ul>
-      <li>5–7 structured pages</li>
-      <li>SEO-optimized headings & metadata</li>
-      <li>Google Analytics & Search Console setup</li>
-      <li>Clear navigation and hierarchy</li>
-      <li>2 revision rounds</li>
-    </ul>
-    <p><em>Timeline: 7–10 business days</em></p>
+  <article class="pricing-flex">
+
+    <div class="pricing-details">
+      <h3>Standard — Content Website (Most Popular)</h3>
+      <div class="price">$1,250</div>
+      <p>Ideal for content-driven freelancers and small businesses.</p>
+      <ul>
+        <li>5–7 structured pages</li>
+        <li>SEO-optimized headings & metadata</li>
+        <li>Google Analytics & Search Console setup</li>
+        <li>Clear navigation and hierarchy</li>
+        <li>2 revision rounds</li>
+      </ul>
+      <p><em>Timeline: 7–10 business days</em></p>
+    </div>
+
+    <div class="pricing-payment">
+      <stripe-buy-button
+        buy-button-id="buy_btn_1SkfZbBjPDWSit5NZvoznyuL"
+        publishable-key="pk_live_51SY5FmBjPDWSit5Ns8phOmoGlGm3UaFctXthIBqpQX02DOkdQglkZnomZiJkFQfSbuqctbas1ArNMzVv32072Qf000gFM7CAJN">
+      </stripe-buy-button>
+    </div>
+
   </article>
 
 </section>
