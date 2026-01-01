@@ -46,28 +46,6 @@
       line-height: 1.7;
     }
 
-    /* Brand Bar */
-    .brand-bar {
-      background-color: #ffffff;
-      border-bottom: 1px solid #e6e6e6;
-      padding: 0.75rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .brand-logo {
-      font-size: 1.3rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      color: var(--navy);
-    }
-
-    .brand-tagline {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
     header {
       background: linear-gradient(135deg, var(--navy), #06162b);
       color: #ffffff;
@@ -140,6 +118,7 @@
       margin-bottom: 0.5rem;
     }
 
+    /* Pricing layout */
     .pricing-flex {
       display: flex;
       gap: 2rem;
@@ -164,9 +143,6 @@
       .pricing-payment {
         justify-content: flex-start;
       }
-      .brand-tagline {
-        display: none;
-      }
     }
 
     footer {
@@ -181,25 +157,10 @@
       margin: 0;
       color: #d6d6d6;
     }
-
-    .brand-watermark {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      font-size: 4rem;
-      font-weight: 700;
-      color: rgba(11, 31, 58, 0.05);
-      pointer-events: none;
-    }
   </style>
 </head>
 
 <body>
-
-<div class="brand-bar">
-  <div class="brand-logo">S9Trip</div>
-  <div class="brand-tagline">Website Setup & Publishing Support</div>
-</div>
 
 <header>
   <h1>Website Setup & Publishing Support</h1>
@@ -207,8 +168,6 @@
 </header>
 
 <main>
-
-<!-- ALL YOUR CONTENT BELOW IS UNCHANGED -->
 
 <section>
   <h2>Who This Is For</h2>
@@ -227,6 +186,7 @@
 <section>
   <h2>Website Setup Pricing (USD)</h2>
 
+  <!-- Starter Package -->
   <article class="pricing-flex">
     <div class="pricing-details">
       <h3>Starter — Website Setup</h3>
@@ -251,6 +211,7 @@
     </div>
   </article>
 
+  <!-- Standard Package -->
   <article class="pricing-flex">
     <div class="pricing-details">
       <h3>Standard — Content Website (Most Popular)</h3>
@@ -273,6 +234,57 @@
       </stripe-buy-button>
     </div>
   </article>
+
+</section>
+
+<section>
+  <h2>Optional Add-Ons</h2>
+  <ul>
+    <li>Additional page: <strong>$120 / page</strong></li>
+    <li>Bilingual structure (EN / 中文): <strong>from $350</strong></li>
+    <li>Content formatting & cleanup: <strong>from $150</strong></li>
+    <li>Updates & support: <strong>$90 / hour</strong></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Frequently Asked Questions</h2>
+
+  <article>
+    <h3>What is content formatting & cleanup?</h3>
+    <p>
+      It means organizing your existing text and images into a clean, readable,
+      and professional website layout — without rewriting your content.
+    </p>
+  </article>
+
+  <article>
+    <h3>What does “No Wix or Squarespace lock-in” mean?</h3>
+    <p>
+      You fully own your website and are not tied to monthly platform subscriptions.
+      You can move or update your site anytime without restrictions.
+    </p>
+  </article>
+</section>
+
+<section>
+  <h2>Why Clients Choose This</h2>
+  <ul>
+    <li>No monthly website fees</li>
+    <li>Full ownership of your site</li>
+    <li>Fast-loading and SEO-friendly</li>
+    <li>No Wix or Squarespace lock-in</li>
+    <li>Built for long-term publishing</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Payment & Process</h2>
+  <ul>
+    <li>50% upfront, 50% after launch</li>
+    <li>Payment via Wise or Stripe</li>
+    <li>Clear scope, timeline, and deliverables</li>
+  </ul>
 </section>
 
 </main>
@@ -283,8 +295,6 @@
     Fast · SEO-Ready · Fully Owned Websites
   </p>
 </footer>
-
-<div class="brand-watermark">S9Trip</div>
 
 </body>
 </html>
