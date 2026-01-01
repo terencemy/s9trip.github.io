@@ -58,7 +58,7 @@
       position: relative;
     }
 
-    /* Language Switch */
+    /* Language switch */
     .lang-switch {
       position: absolute;
       top: 18px;
@@ -68,9 +68,9 @@
 
     .lang-switch a,
     .lang-switch span {
-      color: rgba(255,255,255,0.85);
+      color: rgba(255,255,255,.85);
       text-decoration: none;
-      margin-left: 8px;
+      margin-left: 6px;
     }
 
     .lang-switch .active {
@@ -97,7 +97,9 @@
       padding: 3rem 1.5rem;
     }
 
-    section { margin-bottom: 3.5rem; }
+    section {
+      margin-bottom: 3.5rem;
+    }
 
     h2 {
       font-size: 1.6rem;
@@ -113,11 +115,19 @@
       font-size: 1.3rem;
     }
 
-    p { margin: 0.5rem 0 1rem; color: var(--text-muted); }
+    p {
+      margin: 0.5rem 0 1rem;
+      color: var(--text-muted);
+    }
 
-    ul { padding-left: 1.2rem; margin: 0.5rem 0 1.2rem; }
+    ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0 1.2rem;
+    }
 
-    ul li { margin-bottom: 0.4rem; }
+    ul li {
+      margin-bottom: 0.4rem;
+    }
 
     article {
       background-color: var(--bg-light);
@@ -152,7 +162,6 @@
     @media (max-width: 768px) {
       .pricing-flex { flex-direction: column; }
       .pricing-payment { justify-content: flex-start; }
-      .lang-switch { top: 14px; right: 14px; }
     }
 
     footer {
@@ -163,7 +172,10 @@
       font-size: 0.9rem;
     }
 
-    footer p { margin: 0; color: #d6d6d6; }
+    footer p {
+      margin: 0;
+      color: #d6d6d6;
+    }
 
     /* Floating WhatsApp */
     .whatsapp {
@@ -201,10 +213,125 @@
   <p>Simple · Fast · Fully Yours</p>
 </header>
 
-<!-- 🔽 CONTENT BELOW REMAINS 100% UNCHANGED 🔽 -->
-<!-- (Your entire main content stays exactly as you provided) -->
+<main>
 
-<!-- Floating WhatsApp -->
+<section>
+  <h2>Who This Is For</h2>
+  <p>
+    Designed for <strong>freelancers, consultants, and small business owners</strong>
+    who want a professional website without subscriptions or platform lock-in.
+  </p>
+  <ul>
+    <li>Freelancers building credibility online</li>
+    <li>Consultants and coaches publishing services or content</li>
+    <li>Small businesses that want full website ownership</li>
+    <li>Non-technical founders who value clarity</li>
+  </ul>
+</section>
+
+<section>
+  <h2>How Website Setup Works</h2>
+  <ul>
+    <li><strong>Step 1:</strong> Confirm package and scope</li>
+    <li><strong>Step 2:</strong> 50% upfront payment to begin</li>
+    <li><strong>Step 3:</strong> Website structure and SEO setup</li>
+    <li><strong>Step 4:</strong> Review and revisions</li>
+    <li><strong>Step 5:</strong> Website published and handed over</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Website Setup Pricing (USD)</h2>
+
+  <article class="pricing-flex">
+    <div class="pricing-details">
+      <h3>Starter — Website Setup</h3>
+      <div class="price">$650</div>
+      <p>Best for freelancers and solo professionals.</p>
+      <ul>
+        <li>1–3 page static website</li>
+        <li>Mobile-friendly layout</li>
+        <li>SEO-ready HTML structure</li>
+        <li>Domain & GitHub Pages setup</li>
+        <li>Google Analytics installed</li>
+        <li>Live website handover</li>
+      </ul>
+      <p><em>Timeline: 5–7 business days</em></p>
+    </div>
+
+    <div class="pricing-payment">
+      <stripe-buy-button
+        buy-button-id="buy_btn_1SkfHbBjPDWSit5NQNlkr2Kt"
+        publishable-key="pk_live_51SY5FmBjPDWSit5Ns8phOmoGlGm3UaFctXthIBqpQX02DOkdQglkZnomZiJkFQfSbuqctbas1ArNMzVv32072Qf000gFM7CAJN">
+      </stripe-buy-button>
+    </div>
+  </article>
+
+  <article class="pricing-flex">
+    <div class="pricing-details">
+      <h3>Standard — Content Website (Most Popular)</h3>
+      <div class="price">$1,250</div>
+      <p>Ideal for content-driven freelancers and small businesses.</p>
+      <ul>
+        <li>5–7 structured pages</li>
+        <li>SEO-optimized headings & metadata</li>
+        <li>Google Analytics & Search Console setup</li>
+        <li>Clear navigation and hierarchy</li>
+        <li>2 revision rounds</li>
+      </ul>
+      <p><em>Timeline: 7–10 business days</em></p>
+    </div>
+
+    <div class="pricing-payment">
+      <stripe-buy-button
+        buy-button-id="buy_btn_1SkfZbBjPDWSit5NZvoznyuL"
+        publishable-key="pk_live_51SY5FmBjPDWSit5Ns8phOmoGlGm3UaFctXthIBqpQX02DOkdQglkZnomZiJkFQfSbuqctbas1ArNMzVv32072Qf000gFM7CAJN">
+      </stripe-buy-button>
+    </div>
+  </article>
+
+</section>
+
+<section>
+  <h2>How Much Does Website Setup Cost?</h2>
+  <p>
+    Professional website setup typically costs between <strong>$650 and $1,250</strong>,
+    depending on page count and SEO preparation.
+  </p>
+  <p>
+    This is a one-time cost with full ownership and no monthly platform fees.
+  </p>
+</section>
+
+<section>
+  <h2>Website Setup SEO: What’s Included</h2>
+  <ul>
+    <li>Clean HTML and heading structure</li>
+    <li>SEO-friendly titles and metadata</li>
+    <li>Fast-loading static pages</li>
+    <li>Mobile-friendly layout</li>
+    <li>Analytics and search readiness</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Payment & Process</h2>
+  <ul>
+    <li>Payment via Wise or Stripe</li>
+    <li>Clear scope and timeline</li>
+    <li>50% upfront, 50% after website is published</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <p>
+    &copy; 2026 S9Trip · Website Setup & Publishing Support<br>
+    Fast · SEO-Ready · Fully Owned Websites
+  </p>
+</footer>
+
 <a class="whatsapp"
    href="https://wa.me/60123632338?text=Hi%20Terence,%20I%20would%20like%20to%20enquire%20about%20Website%20Setup%20Support.">
   WhatsApp <span>Support</span>
