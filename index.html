@@ -46,6 +46,66 @@ body{
   color:var(--text);
   line-height:1.75;
 }
+/* ===== Hamburger ===== */
+.hamburger{
+  position:fixed;
+  top:18px;
+  left:18px;
+  width:28px;
+  height:22px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  background:none;
+  border:none;
+  cursor:pointer;
+  z-index:1200;
+}
+.hamburger span{
+  height:3px;
+  width:100%;
+  background:#fff;
+  border-radius:2px;
+}
+
+/* ===== Drawer ===== */
+.nav-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.45);
+  opacity:0;
+  pointer-events:none;
+  transition:.3s;
+  z-index:1100;
+}
+.nav-overlay.active{
+  opacity:1;
+  pointer-events:auto;
+}
+.nav-drawer{
+  position:fixed;
+  top:0;
+  left:-280px;
+  width:260px;
+  height:100%;
+  background:var(--navy);
+  padding:24px 20px;
+  transition:.35s ease;
+  z-index:1200;
+}
+.nav-drawer.active{left:0}
+.nav-drawer h3{
+  color:var(--gold);
+  font-family:"Playfair Display",serif;
+}
+.nav-drawer a{
+  display:block;
+  padding:12px 0;
+  color:#e5e7eb;
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav-drawer a:hover{color:var(--gold-soft)}
 
 /* ===== Header ===== */
 header{
@@ -150,7 +210,28 @@ h2{
   margin:0 auto 1.6rem;
   color:#374151;
 }
-
+/* ===== Back To Top ===== */
+.back-to-top{
+  position:fixed;
+  right:18px;
+  bottom:80px;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),var(--gold-soft));
+  color:var(--navy);
+  font-size:20px;
+  border:none;
+  cursor:pointer;
+  opacity:0;
+  visibility:hidden;
+  transition:.3s;
+  z-index:900;
+}
+.back-to-top.show{
+  opacity:1;
+  visibility:visible;
+}
 /* ===== WhatsApp CTA ===== */
 .whatsapp{
   position:fixed;
@@ -264,13 +345,33 @@ footer{
 .company-info strong{
   color:#e5e7eb;
 }
+  /* ===== Desktop: hide hamburger ===== */
+@media (min-width:1024px){
+  .hamburger{display:none}
+}
+
 </style>
 
 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
 
 <body>
+<!-- Hamburger -->
+<button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+  <span></span><span></span><span></span>
+</button>
 
+<div class="nav-overlay" onclick="toggleMenu()"></div>
+
+<nav class="nav-drawer">
+  <h3>S9Trip</h3>
+  <a href="index.html">Home</a>
+  <a href="about.html">About My Website Journey</a>
+  <a href="articles/trip-consultation.html">Trip Consultation Service</a>
+  <a href="articles/website-setup-pricing.html">Website Setup & Publishing Service</a>
+  <a href="articles/klia-to-klia2-shuttle.html">KLIA T1 ↔ KLIA T2 Free Shuttle Bus</a>
+  <a href="articles/changi-airport-to-johor-bahru-transtar-ts1.html">Changi Airport → Johor Bahru</a>
+</nav>
 <header>
   <div class="lang-switch">
     <span class="active">EN</span> |
@@ -419,6 +520,7 @@ footer{
     publishable-key="pk_live_51SY5FmBjPDWSit5Ns8phOmoGlGm3UaFctXthIBqpQX02DOkdQglkZnomZiJkFQfSbuqctbas1ArNMzVv32072Qf000gFM7CAJN">
   </stripe-buy-button>
 </section>
+<section class="collaboration">
   <h2>Collaboration Opportunities</h2>
   <p>
     We welcome partners who prioritise people over profit. Let’s work together to create travel support experiences built on trust, care, and authenticity.
@@ -436,7 +538,7 @@ footer{
       <a href="articles/trip-consultation.html">Trip Consultation Service</a>
       <a href="articles/website-setup-pricing.html">Website Setup & Publishing Service</a>
       <a href="articles/klia-to-klia2-shuttle.html">KLIA T1 ↔ KLIA T2 Free Shuttle Bus</a>
-      <a href="articles/changi-airport-to-johor-bahru-transtar-ts1.html">Changi Airport to Johor Bahru</a>
+      <a href="articles/changi-airport-to-johor-bahru-transtar-ts1.html">Changi Airport → Johor Bahru</a>
     </div>
 
     <div class="company-info">
@@ -451,12 +553,35 @@ footer{
     </div>
   </div>
 </footer>
+<button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top">↑</button>
 
 <a class="whatsapp"
    href="https://wa.me/60123632338?text=Hi%20Terence,%20I%20would%20like%20to%20enquire%20about%20Malaysia%20travel%20support.">
   WhatsApp <span>Support</span>
 </a>
+<!-- Navigation & Back To Top Logic -->
+<script>
+const drawer = document.querySelector('.nav-drawer');
+const overlay = document.querySelector('.nav-overlay');
+const backToTop = document.querySelector('.back-to-top');
 
+function toggleMenu(){
+  drawer.classList.toggle('active');
+  overlay.classList.toggle('active');
+}
+
+document.querySelectorAll('.nav-drawer a').forEach(a=>{
+  a.addEventListener('click', toggleMenu);
+});
+
+window.addEventListener('scroll',()=>{
+  backToTop.classList.toggle('show', window.scrollY > 400);
+});
+
+function scrollToTop(){
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
 <script>
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
