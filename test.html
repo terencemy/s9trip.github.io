@@ -4,28 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Travel | Blog | S9Trip</title>
+<title>Travel | Blog | S9Trip </title>
 
-<meta name="description" content="Terence, Malaysia Tourist Guide and a Digital Nomad, offering professional online travel support for safe, smooth, and worry-free Malaysia trips.">
+<meta name="description" content="Terence, Malaysia Tourist Guide and a Digital Nomad, offering professional online travel support for safe, smooth, and worry-free Malaysia trips." />
 <meta name="robots" content="index, follow">
 
-<!-- hreflang -->
+<!-- ===== hreflang ===== -->
 <link rel="alternate" hreflang="en" href="https://www.s9trip.com/index.html">
 <link rel="alternate" hreflang="zh-Hans" href="https://www.s9trip.com/zh.html">
 <link rel="alternate" hreflang="x-default" href="https://www.s9trip.com/index.html">
 
-<!-- Google Fonts -->
+<!-- Google Fonts (Malaysia Airlines–style) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-<!-- Google Analytics 4 -->
+<!-- ✅ Google Analytics 4 (OFFICIAL POSITION) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDNM2V4CS2"></script>
 <script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-GDNM2V4CS2');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GDNM2V4CS2');
 </script>
 
 <style>
@@ -38,7 +37,7 @@ gtag('config', 'G-GDNM2V4CS2');
   --text:#1f2937;
 }
 
-*{box-sizing:border-box}
+*{ box-sizing:border-box; }
 
 body{
   margin:0;
@@ -47,7 +46,6 @@ body{
   color:var(--text);
   line-height:1.75;
 }
-
 /* ===== Hamburger ===== */
 .hamburger{
   position:fixed;
@@ -65,6 +63,7 @@ body{
 }
 .hamburger span{
   height:3px;
+  width:100%;
   background:#fff;
   border-radius:2px;
 }
@@ -108,10 +107,6 @@ body{
 }
 .nav-drawer a:hover{color:var(--gold-soft)}
 
-@media(min-width:1024px){
-  .hamburger{display:none}
-}
-
 /* ===== Header ===== */
 header{
   background:linear-gradient(135deg,var(--navy-deep),var(--navy));
@@ -120,6 +115,7 @@ header{
   text-align:center;
   position:relative;
 }
+
 header::after{
   content:"S9Trip.com";
   position:absolute;
@@ -128,36 +124,51 @@ header::after{
   font-size:.75rem;
   color:rgba(255,255,255,.35);
 }
+
 .lang-switch{
   position:absolute;
   top:18px;
   right:20px;
   font-size:.85rem;
 }
+
 .lang-switch a,
 .lang-switch span{
   color:rgba(255,255,255,.85);
   text-decoration:none;
 }
-.lang-switch .active{color:var(--gold)}
+
+.lang-switch .active{
+  color:var(--gold);
+  font-weight:500;
+}
 
 .site-logo{
+  display:block;
   margin:0 auto 1.4rem;
   max-width:160px;
-  display:block;
 }
+
+/* ===== TITLE SIZE REDUCED ===== */
 h1{
   font-family:"Playfair Display",serif;
   font-size:2rem;
+  font-weight:500;
   margin:0 0 .4rem;
+}
+
+header p{
+  color:#e5e7eb;
+  margin:0;
 }
 
 /* ===== Layout ===== */
 main{
   max-width:920px;
-  margin:auto;
+  margin:0 auto;
   padding:3.2rem 1.5rem;
 }
+
 section{
   background:#fff;
   padding:2.2rem;
@@ -165,42 +176,40 @@ section{
   margin-bottom:3rem;
   box-shadow:0 14px 36px rgba(10,29,55,.08);
 }
+
 h2{
   font-family:"Playfair Display",serif;
   color:var(--navy);
+  font-weight:500;
+  margin-bottom:1rem;
 }
 
 /* ===== Profile ===== */
 .profile{
   display:flex;
-  gap:2.4rem;
   align-items:center;
+  gap:2.4rem;
 }
+
 .profile img{
   width:150px;
   height:150px;
+  object-fit:cover;
   border-radius:50%;
   border:2px solid var(--gold);
-  object-fit:cover;
+  box-shadow:0 16px 34px rgba(10,29,55,.25);
 }
 
-/* ===== Album ===== */
-.album-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-  gap:1.2rem;
-}
-.album-item{
-  border-radius:16px;
-  overflow:hidden;
-  border:1px solid rgba(198,162,75,.35);
-}
-.album-item img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+/* ===== Payment ===== */
+.payment{
+  text-align:center;
 }
 
+.payment p{
+  max-width:640px;
+  margin:0 auto 1.6rem;
+  color:#374151;
+}
 /* ===== Back To Top ===== */
 .back-to-top{
   position:fixed;
@@ -223,8 +232,7 @@ h2{
   opacity:1;
   visibility:visible;
 }
-
-/* ===== WhatsApp ===== */
+/* ===== WhatsApp CTA ===== */
 .whatsapp{
   position:fixed;
   right:18px;
@@ -233,22 +241,121 @@ h2{
   color:#fff;
   padding:14px 20px;
   border-radius:999px;
+  font-size:.9rem;
   text-decoration:none;
+  box-shadow:0 12px 28px rgba(0,0,0,.25);
 }
-.whatsapp span{color:var(--gold)}
 
+.whatsapp span{
+  color:var(--gold);
+  font-weight:500;
+}
+
+/* ===== Photo Album ===== */
+.album{
+  padding-top:2.4rem;
+}
+
+.album p{
+  max-width:620px;
+  color:#374151;
+}
+
+.album-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:1.2rem;
+}
+
+.album-item{
+  border-radius:16px;
+  overflow:hidden;
+  background:#fff;
+  border:1px solid rgba(198,162,75,.35);
+  box-shadow:0 12px 30px rgba(10,29,55,.18);
+}
+
+.album-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+@media(max-width:768px){
+  h1{ font-size:1.75rem; }
+  .profile{ flex-direction:column; text-align:center; }
+  .album-grid{
+    display:flex;
+    gap:1rem;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:.5rem;
+  }
+  .album-grid::-webkit-scrollbar{ display:none; }
+  .album-item{
+    flex:0 0 82%;
+    aspect-ratio:4 / 3;
+    scroll-snap-align:center;
+  }
+}
+
+/* ===== Footer ===== */
 footer{
   background:var(--navy-deep);
   color:#cbd5e1;
-  padding:3rem 1.5rem;
+  padding:3.5rem 1.5rem 3rem;
+  font-size:.85rem;
 }
+
+.footer-inner{
+  max-width:920px;
+  margin:0 auto;
+}
+
+.footer-title{
+  font-family:"Playfair Display",serif;
+  color:var(--gold);
+  font-size:1.1rem;
+  margin-bottom:1.2rem;
+}
+
+.footer-links{
+  display:grid;
+  gap:.8rem;
+}
+
+.footer-links a{
+  color:#e5e7eb;
+  text-decoration:none;
+}
+
+.footer-links a:hover{
+  color:var(--gold-soft);
+  text-decoration:underline;
+}
+
+.company-info{
+  margin-top:2.4rem;
+  font-size:.78rem;
+  line-height:1.7;
+  color:#9ca3af;
+}
+
+.company-info strong{
+  color:#e5e7eb;
+}
+  /* ===== Desktop: hide hamburger ===== */
+@media (min-width:1024px){
+  .hamburger{display:none}
+}
+
 </style>
 
 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
 
 <body>
-
 <!-- Hamburger -->
 <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
   <span></span><span></span><span></span>
@@ -265,45 +372,193 @@ footer{
   <a href="articles/klia-to-klia2-shuttle.html">KLIA Shuttle</a>
   <a href="articles/changi-airport-to-johor-bahru-transtar-ts1.html">Changi → JB</a>
 </nav>
-
 <header>
   <div class="lang-switch">
-    <span class="active">EN</span> | <a href="zh.html">中文</a>
+    <span class="active">EN</span> |
+    <a href="zh.html">中文</a>
   </div>
 
-  <img src="assets/images/s9trip-malaysia-travel-support-logo.png" class="site-logo" alt="S9Trip logo">
+  <a href="/">
+    <img src="assets/images/s9trip-malaysia-travel-support-logo.png"
+         alt="S9Trip Malaysia travel support logo"
+         class="site-logo">
+  </a>
 
   <h1>Happy New Year! Welcome to my Digital World.</h1>
-  <p>Malaysia Tourist Guide · Digital Nomad · Global Travel Support</p>
+  <p>I am a Malaysia Tourist Guide and a Digital Nomad, working with travellers around the world without borders.</p>
 </header>
 
 <main>
 
 <section class="profile">
-  <img src="assets/images/terence-malaysia-registered-tourist-guide.jpg" alt="Terence">
-  <div>
+  <img src="assets/images/terence-malaysia-registered-tourist-guide.jpg"
+       alt="Terence – Malaysia Registered Tourist Guide">
+  <div class="profile-text">
     <h2>Terence Foong</h2>
-    <p>Licensed Malaysia Tourist Guide providing calm, experience-based online travel support.</p>
+    <p>
+      A licensed Malaysia Tourist Guide delivering reliable local expertise and
+      professional online travel support for confident, safe, and worry-free journeys across Malaysia.
+    </p>
   </div>
 </section>
 
 <section>
+  <h2>Service Overview</h2>
+
+  <p>
+    Travel Live Chat Support (Malaysia)<br>
+    Trusted by travellers worldwide, I provide real on-ground experience and calm,
+    practical guidance — from itinerary ideas to pre-departure tips — so travellers
+    can plan with confidence and enjoy smoother, worry-free journeys.
+  </p>
+
+  <p>
+    Website Setup & Publishing Support<br>
+    For freelancers and small businesses who want a clean, reliable online presence.
+    No ongoing fees. No platform lock-in. Fully owned by you. Built to last.
+  </p>
+</section>
+
+<section>
+  <h2>About Me</h2>
+  <p>
+    In the past, most travel services were conducted face to face. However, times have changed — even cars are becoming driverless.
+    As a professional Malaysian tour guide, I’ve adapted along with the world.
+  </p>
+
+  <p>
+    Today, I provide personalised online travel support for travellers who wish to explore Malaysia independently.
+    My goal is to offer safe, authentic, local-insider guidance while helping travellers avoid cultural misunderstandings and potential risks —
+    even when I’m not physically beside them.
+  </p>
+
+  <p>
+    Alongside this, I’m also a travel blogger who enjoys documenting real experiences, observations,
+    and lessons learned along the way. I believe in sharing journeys honestly — not only to help others,
+    but also to create a meaningful digital record in an ever-evolving online world.
+  </p>
+
+  <p>
+    Paying knowledge forward has always been a strong motivation that keeps me moving.
+    I believe AI tools become truly useful and human-centred only when they are supported by
+    real-world experience and thoughtful content creation.
+  </p>
+
+  <p>
+    After a lifetime in frontline tourism, I hope to contribute something meaningful to the digital space
+    through genuine, experience-based stories and practical insights.
+  </p>
+
+  <p>
+    Building my own website — and helping others build theirs — is a natural extension of this belief.
+    A well-structured website allows search engines and digital platforms to access
+    accurate, real-life information, while giving creators and small businesses
+    full ownership of their work.
+  </p>
+
+  <p>
+    This is why I also offer Website Setup &amp; Publishing Support,
+    creating clean, SEO-ready websites without ongoing platform lock-in or monthly fees.
+  </p>
+
+  <p>
+    Live online travel chat support and website publishing together represent my way of embracing
+    the digital nomad lifestyle — working across borders while staying grounded in local knowledge.
+  </p>
+
+  <p>
+    At heart, I remain a Malaysia tourist guide and outbound tour leader,
+    combining on-the-ground experience with modern digital tools to support travellers
+    and creators worldwide.
+  </p>
+</section>
+
+<section class="album">
+  <h2>Travel Moments</h2>
+  <p>A glimpse of real journeys, real people, and real experiences across the world.</p>
+
+  <div class="album-grid">
+    <div class="album-item"><img src="assets/images/22122025_9.jpeg" loading="lazy" alt="Malay Wedding Moment"></div>
+    <div class="album-item"><img src="assets/images/22122025_1.jpeg" loading="lazy" alt="Batu Caves experience"></div>
+    <div class="album-item"><img src="assets/images/22122025_3.jpeg" loading="lazy" alt="Putrajaya travel moment"></div>
+    <div class="album-item"><img src="assets/images/22122025_4.jpeg" loading="lazy" alt="Lovely couple in Malaysia"></div>
+    <div class="album-item"><img src="assets/images/22122025_5.jpeg" loading="lazy" alt="The Iron Lady travel moment"></div>
+    <div class="album-item"><img src="assets/images/22122025_6.jpeg" loading="lazy" alt="Happy travel moment"></div>
+    <div class="album-item"><img src="assets/images/22122025_7.jpeg" loading="lazy" alt="Kuala Selangor happy moment"></div>
+    <div class="album-item"><img src="assets/images/22122025_8.jpeg" loading="lazy" alt="Always be happy travel moment"></div>
+    <div class="album-item"><img src="assets/images/22122025_2.jpeg" loading="lazy" alt="Always be happy travel moment"></div>
+    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_1.jpeg" loading="lazy" alt="Tran Quoc Pagoda"></div>
+    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_2.jpeg" loading="lazy" alt="St Joseph Cathedral"></div>
+    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_3.jpeg" loading="lazy" alt="Halong Bay"></div>
+    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_4.jpeg" loading="lazy" alt="Boat Ride"></div>
+    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_5.jpeg" loading="lazy" alt="Enjoy The Stuning Scenery with limestone karsts"></div>
+    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_6.jpeg" loading="lazy" alt="Beautiful Emeral waters"></div>
+    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_7.jpeg" loading="lazy" alt="Luxury Cruise"></div>
+    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_8.jpeg" loading="lazy" alt="Vietnam-China Border"></div>
+    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_9.jpeg" loading="lazy" alt="Sapa Street View"></div>
+  </div>
+</section>
+
+<!-- PAYMENT 1 -->
+<section class="payment">
+  <h2>Malaysia Online Live Chat Payment</h2>
+  <p>Suitable for full-day online travel Live Chat.</p>
+
+  <stripe-buy-button
+    buy-button-id="buy_btn_1Skg16BjPDWSit5NOgI2pSQE"
+    publishable-key="pk_live_51SY5FmBjPDWSit5Ns8phOmoGlGm3UaFctXthIBqpQX02DOkdQglkZnomZiJkFQfSbuqctbas1ArNMzVv32072Qf000gFM7CAJN">
+  </stripe-buy-button>
+</section>
+
+<!-- PAYMENT 2 -->
+<section class="payment">
+  <h2>Malaysia Online Live Chat Payment</h2>
+  <p>Suitable for 3-day online travel Live Chat.</p>
+
+  <stripe-buy-button
+    buy-button-id="buy_btn_1SkftJBjPDWSit5NEbIdyqwJ"
+    publishable-key="pk_live_51SY5FmBjPDWSit5Ns8phOmoGlGm3UaFctXthIBqpQX02DOkdQglkZnomZiJkFQfSbuqctbas1ArNMzVv32072Qf000gFM7CAJN">
+  </stripe-buy-button>
+</section>
+<section class="collaboration">
   <h2>Collaboration Opportunities</h2>
-  <p>We welcome partners who value trust, care, and authenticity.</p>
+  <p>
+    We welcome partners who prioritise people over profit. Let’s work together to create travel support experiences built on trust, care, and authenticity.
+  </p>
 </section>
 
 </main>
 
 <footer>
-  © S9Trip.com · Built on real experience
+  <div class="footer-inner">
+    <div class="footer-title">More Travel Resources</div>
+
+    <div class="footer-links">
+      <a href="about.html">About My Website Journey</a>
+      <a href="articles/trip-consultation.html">Trip Consultation Service</a>
+      <a href="articles/website-setup-pricing.html">Website Setup & Publishing Service</a>
+      <a href="articles/klia-to-klia2-shuttle.html">KLIA T1 ↔ KLIA T2 Free Shuttle Bus</a>
+      <a href="articles/changi-airport-to-johor-bahru-transtar-ts1.html">Changi Airport to Johor Bahru</a>
+    </div>
+
+    <div class="company-info">
+      Business Registration Number (BRN)<br>
+      Foong Chern Hong 201703079596 (MA0219359-A)<br><br>
+
+      Mailing Address<br>
+      A2-17-10, Flexis One South,<br>
+      Jalan OS 2, Taman Serdang Perdana,<br>
+      Seksyen 6, 43300 Seri Kembangan,<br>
+      Selangor, Malaysia
+    </div>
+  </div>
 </footer>
+<button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top">↑</button>
 
-<button class="back-to-top" onclick="scrollToTop()">↑</button>
-
-<a class="whatsapp" href="https://wa.me/60123632338">
+<a class="whatsapp"
+   href="https://wa.me/60123632338?text=Hi%20Terence,%20I%20would%20like%20to%20enquire%20about%20Malaysia%20travel%20support.">
   WhatsApp <span>Support</span>
 </a>
-
 <!-- Navigation & Back To Top Logic -->
 <script>
 const drawer = document.querySelector('.nav-drawer');
@@ -327,18 +582,16 @@ function scrollToTop(){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 </script>
-
-<!-- Tawk -->
 <script>
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
-var s1=document.createElement("script"),
-s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/692d03b3b93a681983f68682/1jbbtctli';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
+  var s1=document.createElement("script"),
+      s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/692d03b3b93a681983f68682/1jbbtctli';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 
