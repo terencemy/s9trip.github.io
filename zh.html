@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>旅行 | 博客 | S9Trip</title>
+<title>马来西亚旅行博客｜线上旅行咨询｜S9Trip</title>
 
-<meta name="description" content="泰伦斯，一名马来西亚导游，也是线上游牧者。
-我透过线上方式，为旅人提供实用、即时的旅行支持，希望让每一趟马来西亚之旅都走得更安心、更顺畅，也更贴近真实的在地生活。" />
+<meta name="description" content="泰伦斯（Terence），马来西亚导游与线上游牧者，透过线上方式为旅人提供实用、即时的马来西亚旅行咨询，让每一趟旅程更安心、更顺畅、更贴近真实在地生活。" />
+
 <meta name="robots" content="index, follow">
 
 <!-- ===== hreflang ===== -->
@@ -46,8 +46,6 @@ body{
   color:var(--text);
   line-height:1.75;
 }
-
-/* ===== Header ===== */
 header{
   background:linear-gradient(135deg,var(--navy-deep),var(--navy));
   color:#fff;
@@ -64,6 +62,66 @@ header::after{
   font-size:.75rem;
   color:rgba(255,255,255,.35);
 }
+/* ===== Hamburger Menu ===== */
+.hamburger{
+  position:fixed;
+  top:18px;
+  left:18px;
+  width:28px;
+  height:22px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  background:none;
+  border:none;
+  cursor:pointer;
+  z-index:1200;
+}
+.hamburger span{
+  height:3px;
+  width:100%;
+  background:#fff;
+  border-radius:2px;
+}
+
+/* ===== Drawer ===== */
+.nav-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.45);
+  opacity:0;
+  pointer-events:none;
+  transition:.3s;
+  z-index:1100;
+}
+.nav-overlay.active{
+  opacity:1;
+  pointer-events:auto;
+}
+.nav-drawer{
+  position:fixed;
+  top:0;
+  left:-280px;
+  width:260px;
+  height:100%;
+  background:var(--navy);
+  padding:24px 20px;
+  transition:.35s ease;
+  z-index:1200;
+}
+.nav-drawer.active{left:0}
+.nav-drawer h3{
+  color:var(--gold);
+  font-family:"Playfair Display",serif;
+}
+.nav-drawer a{
+  display:block;
+  padding:12px 0;
+  color:#e5e7eb;
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav-drawer a:hover{color:var(--gold-soft)}
 
 .lang-switch{
   position:absolute;
@@ -169,6 +227,28 @@ h2{
   color:var(--gold);
   font-weight:500;
 }
+/* ===== Back To Top ===== */
+.back-to-top{
+  position:fixed;
+  right:18px;
+  bottom:80px;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),var(--gold-soft));
+  color:var(--navy);
+  font-size:20px;
+  border:none;
+  cursor:pointer;
+  opacity:0;
+  visibility:hidden;
+  transition:.3s;
+  z-index:900;
+}
+.back-to-top.show{
+  opacity:1;
+  visibility:visible;
+}
 
 /* ===== Photo Album ===== */
 .album{
@@ -264,13 +344,32 @@ footer{
 .company-info strong{
   color:#e5e7eb;
 }
+@media (min-width:1024px){
+  .hamburger{display:none;}
+}
+
 </style>
 
 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
 
 <body>
+<button class="hamburger" onclick="toggleMenu()" aria-label="菜单">
+  <span></span><span></span><span></span>
+</button>
+<div class="nav-overlay" onclick="toggleMenu()"></div>
 
+<nav class="nav-drawer">
+  <h3>S9Trip</h3>
+  <a href="zh.html">首页</a>
+  <a href="about-zh.html">创站背景</a>
+  <a href="articles/trip-consultation-zh.html">旅行咨询服务</a>
+  <a href="articles/website-setup-zh.html">网站搭建服务</a>
+  <a href="articles/klia-klia2-free-shuttle-bus-guide-zh.html">吉隆坡国际机场T1 ↔ 吉隆坡国际机场T2 免费接驳巴士</a>
+  <a href="articles/changi-airport-to-johor-bahru-transtar-ts1-zh.html">樟宜机场前往新山</a>
+</nav>
+
+  
 <header>
   <div class="lang-switch">
     <a href="index.html">EN</a> |
@@ -291,9 +390,9 @@ footer{
 
 <section class="profile">
   <img src="assets/images/terence-malaysia-registered-tourist-guide.jpg"
-       alt="Terence – 马来西亚注册导游">
+       alt="泰伦斯（Terence）– 马来西亚注册导游">
   <div class="profile-text">
-    <h2>泰伦斯</h2>
+    <h2>泰伦斯（Terence）</h2>
     <p>
       我是一名持牌的马来西亚导游，提供可靠的在地专业知识与线上旅行聊天服务，
       协助旅客安心、安全、无忧地探索马来西亚。
@@ -457,11 +556,35 @@ footer{
     </div>
   </div>
 </footer>
+<button class="back-to-top" onclick="scrollToTop()">↑</button>
 
 <a class="whatsapp"
    href="https://wa.me/60123632338?text=Hi%20泰伦斯,%20我想咨询马来西亚旅行相关聊天咨询服务。">
   WhatsApp <span>Support</span>
 </a>
+<script>
+const drawer=document.querySelector('.nav-drawer');
+const overlay=document.querySelector('.nav-overlay');
+const backToTop=document.querySelector('.back-to-top');
+
+function toggleMenu(){
+  drawer.classList.toggle('active');
+  overlay.classList.toggle('active');
+}
+
+/* ✅ 关键：点菜单链接自动关 drawer */
+document.querySelectorAll('.nav-drawer a').forEach(a=>{
+  a.addEventListener('click', toggleMenu);
+});
+
+window.addEventListener('scroll',()=>{
+  backToTop.classList.toggle('show',window.scrollY>400);
+});
+
+function scrollToTop(){
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
 
 <script>
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
