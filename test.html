@@ -42,13 +42,19 @@ body{
   margin:auto;
   padding:15px;
 }
+/* ✅ HEADER FIX (MATCHES OTHER PAGES) */
 header{
   background:var(--navy);
   color:#fff;
   padding:26px;
   border-radius:14px;
   position:relative;
+  min-height:220px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
+
 header::after{
   content:"S9Trip.com";
   position:absolute;
