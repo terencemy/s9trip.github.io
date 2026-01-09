@@ -115,6 +115,48 @@ li{font-size:.92rem;margin-bottom:.4rem}
   .album-track{flex-wrap:wrap;overflow:visible}
   .album-item{flex:0 0 calc(33.333% - .67rem)}
 }
+/* ===== Image Lightbox ===== */
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  pointer-events:none;
+  transition:.3s ease;
+  z-index:2000;
+}
+
+.lightbox.show{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.lightbox img{
+  max-width:92%;
+  max-height:92%;
+  border-radius:14px;
+  box-shadow:0 20px 60px rgba(0,0,0,.6);
+  animation:zoomIn .35s ease;
+}
+
+@keyframes zoomIn{
+  from{transform:scale(.92);opacity:.6}
+  to{transform:scale(1);opacity:1}
+}
+.album-item img{
+  user-select:none;
+  -webkit-user-drag:none;
+  cursor:zoom-in;
+}
+.lightbox img{
+  cursor:zoom-out;
+}
+body.lightbox-open{
+  overflow:hidden;
+}
 
 footer{
   text-align:center;
@@ -236,5 +278,45 @@ Transtar TS1 是一条从樟宜机场直达柔佛新山 Larkin 的跨境巴士�
 </footer>
 
 </div>
+  <!-- Image Lightbox -->
+<div class="lightbox" id="lightbox">
+  <img id="lightbox-img" alt="">
+</div>
+<script>
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+/* 点击缩图 → 打开 Lightbox + 记录 GA 事件 */
+document.querySelectorAll('.album-item img').forEach(img=>{
+  img.addEventListener('click', ()=>{
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt || '';
+    lightbox.classList.add('show');
+    document.body.classList.add('lightbox-open');
+
+    /* ✅ GA4 图片查看事件 */
+    gtag('event', 'image_view', {
+      image_url: img.src,
+      image_alt: img.alt || 'album image'
+    });
+  });
+});
+
+/* 点击背景 → 关闭 Lightbox */
+lightbox.addEventListener('click', ()=>{
+  lightbox.classList.remove('show');
+  document.body.classList.remove('lightbox-open');
+});
+
+/* ESC 键关闭 */
+document.addEventListener('keydown', e=>{
+  if(e.key === 'Escape' && lightbox.classList.contains('show')){
+    lightbox.classList.remove('show');
+    document.body.classList.remove('lightbox-open');
+  }
+});
+</script>
+
 </body>
 </html>
+
