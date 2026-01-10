@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Travel | Blog | S9Trip </title>
+<title>马来西亚旅行博客｜线上旅行咨询｜S9Trip</title>
+  
+<meta name="author" content="泰伦斯 Terence｜S9Trip">
+<meta name="description" content="泰伦斯（Terence），马来西亚导游与线上游牧者，透过线上方式为旅人提供实用、即时的马来西亚旅行咨询，让每一趟旅程更安心、更顺畅、更贴近真实在地生活。" />
 
-<meta name="description" content="Terence, Malaysia Tourist Guide and a Digital Nomad, offering professional online travel support for safe, smooth, and worry-free Malaysia trips." />
 <meta name="robots" content="index, follow">
 
 <!-- ===== hreflang ===== -->
@@ -18,15 +20,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<!-- ✅ Google Analytics 4 (OFFICIAL POSITION) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GDNM2V4CS2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-GDNM2V4CS2');
-</script>
-
+<!-- ✅ GA4（放这里） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDNM2V4CS2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GDNM2V4CS2');
+  </script>
 <style>
 :root{
   --navy:#0a1d37;
@@ -46,7 +47,23 @@ body{
   color:var(--text);
   line-height:1.75;
 }
-/* ===== Hamburger ===== */
+header{
+  background:linear-gradient(135deg,var(--navy-deep),var(--navy));
+  color:#fff;
+  padding:3.8rem 1.5rem 4.2rem;
+  text-align:center;
+  position:relative;
+}
+
+header::after{
+  content:"S9Trip.com";
+  position:absolute;
+  right:16px;
+  bottom:14px;
+  font-size:.75rem;
+  color:rgba(255,255,255,.35);
+}
+/* ===== Hamburger Menu ===== */
 .hamburger{
   position:fixed;
   top:18px;
@@ -107,24 +124,6 @@ body{
 }
 .nav-drawer a:hover{color:var(--gold-soft)}
 
-/* ===== Header ===== */
-header{
-  background:linear-gradient(135deg,var(--navy-deep),var(--navy));
-  color:#fff;
-  padding:3.8rem 1.5rem 4.2rem;
-  text-align:center;
-  position:relative;
-}
-
-header::after{
-  content:"S9Trip.com";
-  position:absolute;
-  right:16px;
-  bottom:14px;
-  font-size:.75rem;
-  color:rgba(255,255,255,.35);
-}
-
 .lang-switch{
   position:absolute;
   top:18px;
@@ -149,7 +148,7 @@ header::after{
   max-width:160px;
 }
 
-/* ===== TITLE SIZE REDUCED ===== */
+/* ===== Title ===== */
 h1{
   font-family:"Playfair Display",serif;
   font-size:2rem;
@@ -210,6 +209,25 @@ h2{
   margin:0 auto 1.6rem;
   color:#374151;
 }
+
+/* ===== WhatsApp CTA ===== */
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  background:var(--navy);
+  color:#fff;
+  padding:14px 20px;
+  border-radius:999px;
+  font-size:.9rem;
+  text-decoration:none;
+  box-shadow:0 12px 28px rgba(0,0,0,.25);
+}
+
+.whatsapp span{
+  color:var(--gold);
+  font-weight:500;
+}
 /* ===== Back To Top ===== */
 .back-to-top{
   position:fixed;
@@ -231,24 +249,6 @@ h2{
 .back-to-top.show{
   opacity:1;
   visibility:visible;
-}
-/* ===== WhatsApp CTA ===== */
-.whatsapp{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  background:var(--navy);
-  color:#fff;
-  padding:14px 20px;
-  border-radius:999px;
-  font-size:.9rem;
-  text-decoration:none;
-  box-shadow:0 12px 28px rgba(0,0,0,.25);
-}
-
-.whatsapp span{
-  color:var(--gold);
-  font-weight:500;
 }
 
 /* ===== Photo Album ===== */
@@ -385,9 +385,8 @@ footer{
 .company-info strong{
   color:#e5e7eb;
 }
-  /* ===== Desktop: hide hamburger ===== */
 @media (min-width:1024px){
-  .hamburger{display:none}
+  .hamburger{display:none;}
 }
 
 </style>
@@ -396,153 +395,157 @@ footer{
 </head>
 
 <body>
-<!-- Hamburger -->
-<button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+<button class="hamburger" onclick="toggleMenu()" aria-label="菜单">
   <span></span><span></span><span></span>
 </button>
-
 <div class="nav-overlay" onclick="toggleMenu()"></div>
 
 <nav class="nav-drawer">
   <h3>S9Trip</h3>
-  <a href="index.html">Home</a>
-  <a href="about.html">About My Website Journey</a>
-  <a href="articles/trip-consultation.html">Trip Consultation Service</a>
-  <a href="articles/website-setup-pricing.html">Website Setup & Publishing Service</a>
-  <a href="articles/klia-to-klia2-shuttle.html">KLIA T1 ↔ KLIA T2 Free Shuttle Bus</a>
-  <a href="articles/changi-airport-to-johor-bahru-transtar-ts1.html">Changi Airport → Johor Bahru</a>
+  <a href="zh.html">首页</a>
+  <a href="about-zh.html">创站背景</a>
+  <a href="articles/trip-consultation-zh.html">旅行咨询服务</a>
+  <a href="articles/website-setup-zh.html">网站搭建服务</a>
+  <a href="articles/klia-klia2-free-shuttle-bus-guide-zh.html">吉隆坡国际机场T1 ↔ 吉隆坡国际机场T2 免费接驳巴士</a>
+  <a href="articles/changi-airport-to-johor-bahru-transtar-ts1-zh.html">樟宜机场前往新山</a>
 </nav>
+
+  
 <header>
   <div class="lang-switch">
-    <span class="active">EN</span> |
-    <a href="zh.html">中文</a>
+    <a href="index.html">EN</a> |
+    <span class="active">中文</span>
   </div>
 
   <a href="/">
     <img src="assets/images/s9trip-malaysia-travel-support-logo.png"
-         alt="S9Trip Malaysia travel support logo"
+         alt="S9Trip 马来西亚旅行线上聊天服务标志"
          class="site-logo">
   </a>
 
-  <h1>Happy New Year! Welcome to my Digital World.</h1>
-  <p>I am a Malaysia Tourist Guide and a Digital Nomad, working with travellers around the world without borders.</p>
+  <h1>新年快乐！欢迎来到我的数字世界。</h1>
+  <p>我是一名马来西亚导游，同时也是一名线上游民，为世界各地的旅客提供无国界的旅行聊天服务。</p>
 </header>
 
 <main>
 
 <section class="profile">
   <img src="assets/images/terence-malaysia-registered-tourist-guide.jpg"
-       alt="Terence – Malaysia Registered Tourist Guide">
+       alt="泰伦斯（Terence）– 马来西亚注册导游">
   <div class="profile-text">
-    <h2>Terence Foong</h2>
+    <h2>泰伦斯（Terence）</h2>
     <p>
-      A licensed Malaysia Tourist Guide delivering reliable local expertise and
-      professional online travel support for confident, safe, and worry-free journeys across Malaysia.
+      我是一名持牌的马来西亚导游，提供可靠的在地专业知识与线上旅行聊天服务，
+      协助旅客安心、安全、无忧地探索马来西亚。
     </p>
   </div>
 </section>
 
 <section>
-  <h2>Service Overview</h2>
-
+  <h2>服务说明</h2>
   <p>
-    Travel Live Chat Support (Malaysia)<br>
-    Trusted by travellers worldwide, I provide real on-ground experience and calm,
-    practical guidance — from itinerary ideas to pre-departure tips — so travellers
-    can plan with confidence and enjoy smoother, worry-free journeys.
+    马来西亚旅游线上即时聊天服务<br>
+    深受来自世界各地旅客的信任，凭借真实的在地经验与冷静、实用的判断，
+    提供从行程建议到出发前准备的线上即时咨询，帮助旅客更安心规划行程，
+    享受更顺畅、无压力的马来西亚旅程。
   </p>
 
   <p>
-    Website Setup & Publishing Support<br>
-    For freelancers and small businesses who want a clean, reliable online presence.
-    No ongoing fees. No platform lock-in. Fully owned by you. Built to last.
+    网站搭建服务<br>
+    适合自由职业者与小型企业，打造简洁、稳定、可信赖的官方网站。
+    无月费、无平台绑定，网站完全归你所有，适合长期使用与持续发布。
   </p>
 </section>
 
 <section>
-  <h2>About Me</h2>
+  <h2>关于写者</h2>
   <p>
-    In the past, most travel services were conducted face to face. However, times have changed — even cars are becoming driverless.
-    As a professional Malaysian tour guide, I’ve adapted along with the world.
-  </p>
+  过去，大多数旅游服务都是面对面进行的。然而，时代已经改变——就连汽车都开始走向无人驾驶。
+  作为一名专业的马来西亚导游，我也随着时代不断调整与前进。
+</p>
 
-  <p>
-    Today, I provide personalised online travel support for travellers who wish to explore Malaysia independently.
-    My goal is to offer safe, authentic, local-insider guidance while helping travellers avoid cultural misunderstandings and potential risks —
-    even when I’m not physically beside them.
-  </p>
+<p>
+  目前，我为希望自由探索马来西亚的旅客提供
+  个性化的线上旅游即时聊天服务。
+  我的目标是在不陪同在身边的情况下，依然提供安全、真实且具备本地视角的建议，
+  协助旅客避免文化误解与潜在风险。
+</p>
 
-  <p>
-    Alongside this, I’m also a travel blogger who enjoys documenting real experiences, observations,
-    and lessons learned along the way. I believe in sharing journeys honestly — not only to help others,
-    but also to create a meaningful digital record in an ever-evolving online world.
-  </p>
+<p>
+  同时，我也是一名旅游博客写者，喜欢记录真实的旅行经历、观察与心得。
+  我相信，真诚地分享旅程，不仅能帮助他人，也能在这个不断变化的数码世界中，
+  留下一份有意义的个人记录。
+</p>
 
-  <p>
-    Paying knowledge forward has always been a strong motivation that keeps me moving.
-    I believe AI tools become truly useful and human-centred only when they are supported by
-    real-world experience and thoughtful content creation.
-  </p>
+<p>
+  将经验与知识分享出去，一直是推动我前行的重要动力。
+  我也相信，只有结合真实世界的经验与内容创作者的用心投入，
+  AI 工具才能真正变得有温度、有价值。
+</p>
 
-  <p>
-    After a lifetime in frontline tourism, I hope to contribute something meaningful to the digital space
-    through genuine, experience-based stories and practical insights.
-  </p>
+<p>
+  在多年第一线旅游工作的积累下，我希望能通过真实、经验导向的内容，
+  为数码世界贡献一些有意义的东西。
+</p>
 
-  <p>
-    Building my own website — and helping others build theirs — is a natural extension of this belief.
-    A well-structured website allows search engines and digital platforms to access
-    accurate, real-life information, while giving creators and small businesses
-    full ownership of their work.
-  </p>
+<p>
+  建立自己的网站，并协助他人建立网站，
+  正是这一理念的自然延伸。
+  一个结构良好的网站，能让搜索引擎与数码平台
+  获取更准确、贴近现实的信息，
+  同时也让创作者与小型企业真正拥有属于自己的内容资产。
+</p>
 
-  <p>
-    This is why I also offer Website Setup &amp; Publishing Support,
-    creating clean, SEO-ready websites without ongoing platform lock-in or monthly fees.
-  </p>
+<p>
+  因此，我也提供
+  网站搭建服务，
+  协助打造简洁、SEO 友好、无平台绑定、无月费的专业网站。
+</p>
 
-  <p>
-    Live online travel chat support and website publishing together represent my way of embracing
-    the digital nomad lifestyle — working across borders while staying grounded in local knowledge.
-  </p>
+<p>
+  线上旅游即时聊天服务与网站搭建服务，
+  是我实践
+  数码游牧（Digital Nomad）生活方式的方式，
+  在跨越国界工作的同时，依然扎根于本地知识与经验。
+</p>
 
-  <p>
-    At heart, I remain a Malaysia tourist guide and outbound tour leader,
-    combining on-the-ground experience with modern digital tools to support travellers
-    and creators worldwide.
-  </p>
+<p>
+  在内心深处，我始终是一名马来西亚导游与出境团领队，
+  结合第一线经验与现代数码工具，
+  为来自世界各地的旅客与内容创作者提供帮助。
+</p>
 </section>
 
 <section class="album">
-  <h2>Travel Moments</h2>
-  <p>A glimpse of real journeys, real people, and real experiences across the world.</p>
+  <h2>旅行瞬间</h2>
+  <p>真实旅程、真实人物，以及发生在世界各地的真实旅行故事。</p>
 
   <div class="album-grid">
-    <div class="album-item"><img src="assets/images/22122025_9.jpeg" loading="lazy" alt="Malay Wedding Moment"></div>
-    <div class="album-item"><img src="assets/images/22122025_1.jpeg" loading="lazy" alt="Batu Caves experience"></div>
-    <div class="album-item"><img src="assets/images/22122025_3.jpeg" loading="lazy" alt="Putrajaya travel moment"></div>
-    <div class="album-item"><img src="assets/images/22122025_4.jpeg" loading="lazy" alt="Lovely couple in Malaysia"></div>
-    <div class="album-item"><img src="assets/images/22122025_5.jpeg" loading="lazy" alt="The Iron Lady travel moment"></div>
-    <div class="album-item"><img src="assets/images/22122025_6.jpeg" loading="lazy" alt="Happy travel moment"></div>
-    <div class="album-item"><img src="assets/images/22122025_7.jpeg" loading="lazy" alt="Kuala Selangor happy moment"></div>
-    <div class="album-item"><img src="assets/images/22122025_8.jpeg" loading="lazy" alt="Always be happy travel moment"></div>
-    <div class="album-item"><img src="assets/images/22122025_2.jpeg" loading="lazy" alt="Always be happy travel moment"></div>
-    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_1.jpeg" loading="lazy" alt="Tran Quoc Pagoda"></div>
-    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_2.jpeg" loading="lazy" alt="St Joseph Cathedral"></div>
-    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_3.jpeg" loading="lazy" alt="Halong Bay"></div>
-    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_4.jpeg" loading="lazy" alt="Boat Ride"></div>
-    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_5.jpeg" loading="lazy" alt="Enjoy The Stuning Scenery with limestone karsts"></div>
-    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_6.jpeg" loading="lazy" alt="Beautiful Emeral waters"></div>
-    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_7.jpeg" loading="lazy" alt="Luxury Cruise"></div>
-    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_8.jpeg" loading="lazy" alt="Vietnam-China Border"></div>
-    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_9.jpeg" loading="lazy" alt="Sapa Street View"></div>
-  </div>
+    <div class="album-item"><img src="assets/images/22122025_9.jpeg" loading="lazy" alt="马来西亚旅行｜马来婚礼"></div>
+    <div class="album-item"><img src="assets/images/22122025_1.jpeg" loading="lazy" alt="马来西亚旅行｜黑风洞体验"></div>
+    <div class="album-item"><img src="assets/images/22122025_3.jpeg" loading="lazy" alt="马来西亚旅行｜布城旅行"></div>
+    <div class="album-item"><img src="assets/images/22122025_4.jpeg" loading="lazy" alt="马来西亚旅行｜幸福情侣"></div>
+    <div class="album-item"><img src="assets/images/22122025_5.jpeg" loading="lazy" alt="马来西亚旅行｜旅行瞬间"></div>
+    <div class="album-item"><img src="assets/images/22122025_6.jpeg" loading="lazy" alt="马来西亚旅行｜快乐旅程"></div>
+    <div class="album-item"><img src="assets/images/22122025_7.jpeg" loading="lazy" alt="马来西亚旅行｜瓜拉雪兰莪"></div>
+    <div class="album-item"><img src="assets/images/22122025_8.jpeg" loading="lazy" alt="马来西亚旅行｜美好回忆"></div>
+    <div class="album-item"><img src="assets/images/22122025_2.jpeg" loading="lazy" alt="马来西亚旅行｜游河体验"></div>
+    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_1.jpeg" loading="lazy" alt="越南旅行｜镇国寺（河内）"></div>
+<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_2.jpeg" loading="lazy" alt="越南旅行｜圣约瑟夫大教堂（河内）"></div>
+<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_3.jpeg" loading="lazy" alt="越南旅行｜下龙湾"></div>
+<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_4.jpeg" loading="lazy" alt="越南旅行｜游船体验"></div>
+<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_5.jpeg" loading="lazy" alt="越南旅行｜石灰岩喀斯特地貌的壮丽景色"></div>
+<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_6.jpeg" loading="lazy" alt="越南旅行｜翡翠般清澈的海水"></div>
+<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_7.jpeg" loading="lazy" alt="越南旅行｜豪华游轮"></div>
+<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_8.jpeg" loading="lazy" alt="越南旅行｜越中边境"></div>
+<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_9.jpeg" loading="lazy" alt="越南旅行｜沙坝街景"></div>
+</div>
 </section>
 
 <!-- PAYMENT 1 -->
 <section class="payment">
-  <h2>Malaysia Online Live Chat Payment</h2>
-  <p>Suitable for full-day online travel Live Chat.</p>
+  <h2>马来西亚线上即时聊天服务</h2>
+  <p>适合全天线上旅行即时聊天支持。</p>
 
   <stripe-buy-button
     buy-button-id="buy_btn_1Skg16BjPDWSit5NOgI2pSQE"
@@ -552,18 +555,19 @@ footer{
 
 <!-- PAYMENT 2 -->
 <section class="payment">
-  <h2>Malaysia Online Live Chat Payment</h2>
-  <p>Suitable for 3-day online travel Live Chat.</p>
+  <h2>马来西亚线上即时聊天服务</h2>
+  <p>适合 3 天游程的线上即时聊天支持。</p>
 
   <stripe-buy-button
     buy-button-id="buy_btn_1SkftJBjPDWSit5NEbIdyqwJ"
     publishable-key="pk_live_51SY5FmBjPDWSit5Ns8phOmoGlGm3UaFctXthIBqpQX02DOkdQglkZnomZiJkFQfSbuqctbas1ArNMzVv32072Qf000gFM7CAJN">
   </stripe-buy-button>
 </section>
-<section class="collaboration">
-  <h2>Collaboration Opportunities</h2>
+<section>
+  <h2>合作机会</h2>
   <p>
-    We welcome partners who prioritise people over profit. Let’s work together to create travel support experiences built on trust, care, and authenticity.
+    我们欢迎重视“以人为本”理念的合作伙伴，
+    一起打造建立在信任、关怀与真实之上的旅行支持服务。
   </p>
 </section>
 
@@ -571,21 +575,21 @@ footer{
 
 <footer>
   <div class="footer-inner">
-    <div class="footer-title">More Travel Resources</div>
+    <div class="footer-title">更多旅行资源</div>
 
     <div class="footer-links">
-      <a href="about.html">About My Website Journey</a>
-      <a href="articles/trip-consultation.html">Trip Consultation Service</a>
-      <a href="articles/website-setup-pricing.html">Website Setup & Publishing Service</a>
-      <a href="articles/klia-to-klia2-shuttle.html">KLIA T1 ↔ KLIA T2 Free Shuttle Bus</a>
-      <a href="articles/changi-airport-to-johor-bahru-transtar-ts1.html">Changi Airport → Johor Bahru</a>
+      <a href="about-zh.html">创站背景</a>
+      <a href="articles/trip-consultation-zh.html">旅行咨询服务</a>
+      <a href="articles/website-setup-zh.html">网站搭建服务</a>
+      <a href="articles/klia-klia2-free-shuttle-bus-guide-zh.html">吉隆坡国际机场T1 ↔ 吉隆坡国际机场T2 免费接驳巴士</a>
+      <a href="articles/changi-airport-to-johor-bahru-transtar-ts1-zh.html">樟宜机场前往新山</a>
     </div>
 
     <div class="company-info">
-      Business Registration Number (BRN)<br>
+      商业注册号码（BRN）<br>
       Foong Chern Hong 201703079596 (MA0219359-A)<br><br>
 
-      Mailing Address<br>
+      邮寄地址<br>
       A2-17-10, Flexis One South,<br>
       Jalan OS 2, Taman Serdang Perdana,<br>
       Seksyen 6, 43300 Seri Kembangan,<br>
@@ -593,35 +597,37 @@ footer{
     </div>
   </div>
 </footer>
-<button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+<button class="back-to-top" onclick="scrollToTop()">↑</button>
 
 <a class="whatsapp"
-   href="https://wa.me/60123632338?text=Hi%20Terence,%20I%20would%20like%20to%20enquire%20about%20Malaysia%20travel%20support.">
+   href="https://wa.me/60123632338?text=Hi%20%E6%B3%B0%E4%BC%A6%E6%96%AF%EF%BC%8C%E6%88%91%E6%83%B3%E5%92%A8%E8%AF%A2%E9%A9%AC%E6%9D%A5%E8%A5%BF%E4%BA%9A%E6%97%85%E8%A1%8C%E7%9B%B8%E5%85%B3%E8%81%8A%E5%A4%A9%E5%92%A8%E8%AF%A2%E6%9C%8D%E5%8A%A1%E3%80%82"
+>
   WhatsApp <span>Support</span>
 </a>
-<!-- Navigation & Back To Top Logic -->
 <script>
-const drawer = document.querySelector('.nav-drawer');
-const overlay = document.querySelector('.nav-overlay');
-const backToTop = document.querySelector('.back-to-top');
+const drawer=document.querySelector('.nav-drawer');
+const overlay=document.querySelector('.nav-overlay');
+const backToTop=document.querySelector('.back-to-top');
 
 function toggleMenu(){
   drawer.classList.toggle('active');
   overlay.classList.toggle('active');
 }
 
+/* ✅ 关键：点菜单链接自动关 drawer */
 document.querySelectorAll('.nav-drawer a').forEach(a=>{
   a.addEventListener('click', toggleMenu);
 });
 
 window.addEventListener('scroll',()=>{
-  backToTop.classList.toggle('show', window.scrollY > 400);
+  backToTop.classList.toggle('show',window.scrollY>400);
 });
 
 function scrollToTop(){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 </script>
+
 <script>
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
@@ -634,12 +640,11 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
   s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
-  <!-- Global Lightbox -->
+<!-- Global Lightbox -->
 <div class="lightbox" id="lightbox">
   <img id="lightbox-img" alt="">
 </div>
-
-  <script>
+<script>
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 
@@ -658,7 +663,6 @@ document.querySelectorAll('.album-item img').forEach(img=>{
     });
   });
 });
-
 
 /* Click to close */
 lightbox.addEventListener('click', ()=>{
