@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>马来西亚旅行博客｜线上旅行咨询｜S9Trip</title>
-
+  
+<meta name="author" content="泰伦斯 Terence｜S9Trip">
 <meta name="description" content="泰伦斯（Terence），马来西亚导游与线上游牧者，透过线上方式为旅人提供实用、即时的马来西亚旅行咨询，让每一趟旅程更安心、更顺畅、更贴近真实在地生活。" />
 
 <meta name="robots" content="index, follow">
@@ -278,6 +279,9 @@ h2{
   width:100%;
   height:100%;
   object-fit:cover;
+  cursor:zoom-in;
+  user-select:none;
+  -webkit-user-drag:none;
 }
 
 @media(max-width:768px){
@@ -297,6 +301,43 @@ h2{
     aspect-ratio:4 / 3;
     scroll-snap-align:center;
   }
+}
+/* ===== Lightbox (Global Album) ===== */
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  pointer-events:none;
+  transition:.35s ease;
+  z-index:3000;
+}
+
+.lightbox.show{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.lightbox img{
+  max-width:92vw;
+  max-height:92vh;
+  object-fit:contain;
+  border-radius:14px;
+  box-shadow:0 30px 80px rgba(0,0,0,.6);
+  animation:zoomIn .35s ease;
+  cursor:zoom-out;
+}
+
+@keyframes zoomIn{
+  from{transform:scale(.92);opacity:.6}
+  to{transform:scale(1);opacity:1}
+}
+
+body.lightbox-open{
+  overflow:hidden;
 }
 
 /* ===== Footer ===== */
@@ -480,24 +521,24 @@ footer{
   <p>真实旅程、真实人物，以及发生在世界各地的真实旅行故事。</p>
 
   <div class="album-grid">
-    <div class="album-item"><img src="assets/images/22122025_9.jpeg" loading="lazy" alt="马来婚礼"></div>
-    <div class="album-item"><img src="assets/images/22122025_1.jpeg" loading="lazy" alt="黑风洞体验"></div>
-    <div class="album-item"><img src="assets/images/22122025_3.jpeg" loading="lazy" alt="布城旅行"></div>
-    <div class="album-item"><img src="assets/images/22122025_4.jpeg" loading="lazy" alt="幸福情侣"></div>
-    <div class="album-item"><img src="assets/images/22122025_5.jpeg" loading="lazy" alt="旅行瞬间"></div>
-    <div class="album-item"><img src="assets/images/22122025_6.jpeg" loading="lazy" alt="快乐旅程"></div>
-    <div class="album-item"><img src="assets/images/22122025_7.jpeg" loading="lazy" alt="瓜拉雪兰莪"></div>
-    <div class="album-item"><img src="assets/images/22122025_8.jpeg" loading="lazy" alt="美好回忆"></div>
-    <div class="album-item"><img src="assets/images/22122025_2.jpeg" loading="lazy" alt="旅行记录"></div>
-    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_1.jpeg" loading="lazy" alt="镇国寺（河内）"></div>
-<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_2.jpeg" loading="lazy" alt="圣约瑟夫大教堂（河内）"></div>
-<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_3.jpeg" loading="lazy" alt="下龙湾"></div>
-<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_4.jpeg" loading="lazy" alt="游船体验"></div>
-<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_5.jpeg" loading="lazy" alt="石灰岩喀斯特地貌的壮丽景色"></div>
-<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_6.jpeg" loading="lazy" alt="翡翠般清澈的海水"></div>
-<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_7.jpeg" loading="lazy" alt="豪华游轮"></div>
-<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_8.jpeg" loading="lazy" alt="越中边境"></div>
-<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_9.jpeg" loading="lazy" alt="沙坝街景"></div>
+    <div class="album-item"><img src="assets/images/22122025_9.jpeg" loading="lazy" alt="马来西亚旅行｜马来婚礼"></div>
+    <div class="album-item"><img src="assets/images/22122025_1.jpeg" loading="lazy" alt="马来西亚旅行｜黑风洞体验"></div>
+    <div class="album-item"><img src="assets/images/22122025_3.jpeg" loading="lazy" alt="马来西亚旅行｜布城旅行"></div>
+    <div class="album-item"><img src="assets/images/22122025_4.jpeg" loading="lazy" alt="马来西亚旅行｜幸福情侣"></div>
+    <div class="album-item"><img src="assets/images/22122025_5.jpeg" loading="lazy" alt="马来西亚旅行｜旅行瞬间"></div>
+    <div class="album-item"><img src="assets/images/22122025_6.jpeg" loading="lazy" alt="马来西亚旅行｜快乐旅程"></div>
+    <div class="album-item"><img src="assets/images/22122025_7.jpeg" loading="lazy" alt="马来西亚旅行｜瓜拉雪兰莪"></div>
+    <div class="album-item"><img src="assets/images/22122025_8.jpeg" loading="lazy" alt="马来西亚旅行｜美好回忆"></div>
+    <div class="album-item"><img src="assets/images/22122025_2.jpeg" loading="lazy" alt="马来西亚旅行｜游河体验"></div>
+    <div class="album-item"><img src="assets/images/12VNSAPA1325SQ_1.jpeg" loading="lazy" alt="越南旅行｜镇国寺（河内）"></div>
+<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_2.jpeg" loading="lazy" alt="越南旅行｜圣约瑟夫大教堂（河内）"></div>
+<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_3.jpeg" loading="lazy" alt="越南旅行｜下龙湾"></div>
+<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_4.jpeg" loading="lazy" alt="越南旅行｜游船体验"></div>
+<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_5.jpeg" loading="lazy" alt="越南旅行｜石灰岩喀斯特地貌的壮丽景色"></div>
+<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_6.jpeg" loading="lazy" alt="越南旅行｜翡翠般清澈的海水"></div>
+<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_7.jpeg" loading="lazy" alt="越南旅行｜豪华游轮"></div>
+<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_8.jpeg" loading="lazy" alt="越南旅行｜越中边境"></div>
+<div class="album-item"><img src="assets/images/12VNSAPA1325SQ_9.jpeg" loading="lazy" alt="越南旅行｜沙坝街景"></div>
 </div>
 </section>
 
@@ -559,7 +600,8 @@ footer{
 <button class="back-to-top" onclick="scrollToTop()">↑</button>
 
 <a class="whatsapp"
-   href="https://wa.me/60123632338?text=Hi%20泰伦斯,%20我想咨询马来西亚旅行相关聊天咨询服务。">
+   href="https://wa.me/60123632338?text=Hi%20%E6%B3%B0%E4%BC%A6%E6%96%AF%EF%BC%8C%E6%88%91%E6%83%B3%E5%92%A8%E8%AF%A2%E9%A9%AC%E6%9D%A5%E8%A5%BF%E4%BA%9A%E6%97%85%E8%A1%8C%E7%9B%B8%E5%85%B3%E8%81%8A%E5%A4%A9%E5%92%A8%E8%AF%A2%E6%9C%8D%E5%8A%A1%E3%80%82"
+>
   WhatsApp <span>Support</span>
 </a>
 <script>
@@ -597,6 +639,44 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
   s1.setAttribute('crossorigin','*');
   s0.parentNode.insertBefore(s1,s0);
 })();
+</script>
+<!-- Global Lightbox -->
+<div class="lightbox" id="lightbox">
+  <img id="lightbox-img" alt="">
+</div>
+<script>
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+/* Album image click */
+document.querySelectorAll('.album-item img').forEach(img=>{
+  img.addEventListener('click', ()=>{
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt || '';
+    lightbox.classList.add('show');
+    document.body.classList.add('lightbox-open');
+
+    // ✅ GA4 image view event
+    gtag('event', 'image_view', {
+      image_src: img.src,
+      image_alt: img.alt || 'album image'
+    });
+  });
+});
+
+/* Click to close */
+lightbox.addEventListener('click', ()=>{
+  lightbox.classList.remove('show');
+  document.body.classList.remove('lightbox-open');
+});
+
+/* ESC to close */
+document.addEventListener('keydown', e=>{
+  if(e.key === 'Escape' && lightbox.classList.contains('show')){
+    lightbox.classList.remove('show');
+    document.body.classList.remove('lightbox-open');
+  }
+});
 </script>
 
 </body>
